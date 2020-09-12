@@ -1,0 +1,7 @@
+4. Igényelt üzleti folyamatok
+4.1 Mobil alkalmazás
+4.1.1 Kiadás felvitele a lokális fájlba: új kiadás felvitele menüpont => kiadás típusa és mennyisége => véglegesítés
+4.1.2 Bevétel felvitele a lokális fájlba: új bevétel felvitele menüpont => bevétel mennyisége => véglegesítés
+4.2 Összesítés: Az alkalmazás bármikor egy gombnyomásra képes összesíteni a felvitt adatokat.
+4.2.1. Tételcsoportok összegzése: Kiértékelés menüpont => Tételcsoport kiválasztása => összegzés gomb megnyomása
+4.2.2. Tételek csoportosítása: Összesítéskor az alkalmazás automatikusan csoportosítja a tételeket.
