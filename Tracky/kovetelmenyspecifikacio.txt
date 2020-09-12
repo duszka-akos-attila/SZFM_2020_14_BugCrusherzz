@@ -5,3 +5,11 @@
 4.2 Összesítés: Az alkalmazás bármikor egy gombnyomásra képes összesíteni a felvitt adatokat.
 4.2.1. Tételcsoportok összegzése: Kiértékelés menüpont => Tételcsoport kiválasztása => összegzés gomb megnyomása
 4.2.2. Tételek csoportosítása: Összesítéskor az alkalmazás automatikusan csoportosítja a tételeket.
+
+5. A rendszerre vonatkozó szabályok
+Az alkalmazás java nyelven készüljön.
+A Grafikus felhasználói felület szabványos android grafikai csomaggal készüljön.
+A képek jpeg és png formátumúak lehetnek.
+Az alkalmazás támogassa az európai és amerikai kontinensek karakterkészleteit.
+Az megadott adatok az eszközön szabványos csv formátumú fájlokban legyenek eltárolva.
+
