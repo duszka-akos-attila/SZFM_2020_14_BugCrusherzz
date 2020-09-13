@@ -1,3 +1,6 @@
+Követelmény specifikáció
+========================
+
 1. Jelenlegi helyzet
 Jelenleg a bevételek és kiadások kezeléséhez is egy papír alapú rendszert használ jelenleg a cégünk,
 de ennek a rendszernek a fenntartása sok erőforrást igényel, főleg, hogy egyetlen egy ember vezeti, mivel másképp káosz lenne.
