@@ -10,6 +10,13 @@ Az erőforrások optimalizálása érdekében szeretnénk egy korszerű adminisz
 Célunk, hogy a mindennapi költségek vezetése egyszerűbb legyen, az időszakos összegzések áttekintését gyorsan és könnyedén meg lehessen tenni. 
 Szeretnénk a nyilvántartás digitális kezelését megoldani, hogy minden illetékes folyamatosan tisztában legyen az aktuális anyagi helyzettel.
 
+3. Jelenlegi üzleti folyamatok
+3.1. Személyes költekezések vezetése: papír alapon kézzel vezetve
+3.1.1. Kiadás jegyzése: új kiadás => füzetbe való bejegyzése
+3.1.2. Bevétel jegyzése: új bevétel => füzetbe való bejegyzése
+3.2. Összesítés: Kézzel történő összesítés papír füzetben, fejben vagy számológép általi számítás, tételek manuális szortírozása
+3.2.1. Tételcsoportok összegzése: Minden elszámolás alkalmával segédjegyzetbe gyűjteni az egyes csoportok tételeit, majd manuális szummázni
+3.2.2. Tételek csoportosítása: Felvételkor idő alapú lineáris jegyzés, sor végi azonosító kulcsszó segítségével
 
 4. Igényelt üzleti folyamatok
 4.1 Mobil alkalmazás
