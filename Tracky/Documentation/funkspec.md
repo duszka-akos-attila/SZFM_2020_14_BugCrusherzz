@@ -75,67 +75,63 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 ## Használati esetek
  - **Aktorok:** A cég alkalmazottai
  - **Funkciók:**
-	 - Kiadások kezelése, azon belül:
+	 - **Kiadások kezelése**, azon belül:
 
-		--Kiadás rögzítése
+		- Kiadás rögzítése: Az aktoroknak lehetősége van kiadást rögzíteni.
 
-		--Kiadás módosítása
+		- Kiadás módosítása: Az aktoroknak lehetősége van kiadást módosítani.
 
-		--Kiadás törlése
+		- Kiadás törlése: Az aktoroknak lehetősége van kiadást törölni.
 
-		--Kiadás csoport rögzítése
+		- Kiadás csoport rögzítése: Az aktoroknak lehetősége van kiadás csoportot rögzíteni.
 
-	 	--Kiadás csoport módosítása
+		- Kiadás csoport módosítása: Az aktoroknak lehetősége van kiadás csoportot módosítani.
 
-	 	--Kiadás csoport törlése
+	 	- Kiadás csoport törlése: Az aktoroknak lehetősége van kiadás csoportot törölni.
 		
-	 - Bevételek kezelése, azon belül:
+	 - **Bevételek kezelése**, azon belül:
 
-		 --Bevétel rögzítése 
+		- Bevétel rögzítése: Az aktoroknak lehetősége van bevételt rögzíteni.
 
-		 --Bevétel módosítása
+		- Bevétel módosítása: Az aktoroknak lehetősége van bevételt módosítani.
 
-		 --Bevétel törlése
+		- Bevétel törlése: Az aktoroknak lehetősége van bevételt törölni.
 		 
-	 - Összesítés, azon belül:
+	 - **Összesítés**, azon belül:
 
-		 --Tételcsoportok összegzése
+		- Egyenleg megtekintése: Az aktorok meg tudják nézni az egyenlegüket.
 
-		 --Tételek csoportosítása
+		- Bevételek listázása idő szerinti szűrésekkel: Az aktoroknak lehetősége van idő alapján kilistázni a bevételeket.
 
-		 --Egyenleg megtekintése.
+		- Kiadások listázása idő szerinti szűrésekkel: Az aktoroknak lehetősége van idő alapján kilistázni a kiadásokat.
 
-		 --Bevételek listázása idő szerinti szűrésekkel.
+		- Kiadások listázása csoportok szerinti szűrésekkel: Az aktoroknak lehetősége van csoportok alapján kilistázni a kiadásokat.
 
-		 --Kiadások listázása idő szerinti szűrésekkel.
+		- Kiadások és bevételek összesítése: Az aktoroknak lehetősége van összesíteni a kiadásokat és a bevételeket.
 
-		 --Kiadások listázása csoportok szerinti szűrésekkel.
+	 - **Sablonok kezelése**, azon belül:
 
-		 --Kiadások és bevételek összesítése
+		- Sablon kiadások létrehozása: Az aktoroknak lehetősége van létrehozni sablon kiadásokat.
 
-	 - Sablonok kezelése, azon belül:
+		- Sablon kiadások módosítása: : Az aktoroknak lehetősége van módosítani a sablon kiadásokat.
 
-		 --Sablon kiadások létrehozása.
+		- Sablon kiadások törlése: Az aktoroknak lehetősége van törölni a sablon kiadásokat.
 
-		 --Sablon kiadások módosítása.
+		- Sablon bevételek létrehozása: Az aktoroknak lehetősége van sablon bevételek létrehozására.
 
-		 --Sablon kiadások törlése.
+		- Sablon bevételek módosítása: Az aktoroknak lehetősége van módosítani a sablon bevételeket.
 
-		 --Sablon bevételek létrehozása.
+		- Sablon bevételek törlése: Az aktoroknak lehetősége van törölni a sablon bevételeket.
 
-		 --Sablon bevételek módosítása.
+	 - **Adatok mozgatása**, azon belül:
 
-		 --Sablon bevételek törlése. 
+		- Adatok importálása .json fájlból: Az aktoroknak lehetősége van tételeket tartalmazó .json fájlok importálására.
 
-	 - Adatok mozgatása, azon belül:
+		- Adatok exportálása .json fájlba: Az aktoroknak lehetősége van tételeket tartalmazó .json fájlok exportálására.
 
-		 --Adatok importálása .json fájlból.
+		- Adatok importálása .csv fájlból: Az aktoroknak lehetősége van tételeket tartalmazó .csv fájlok importálására.
 
-		 --Adatok exportálása .json fájlba.
-
-		 --Adatok importálása .csv fájlból.
-
-		 --Adatok exportálása .csv fájlba.
+		- Adatok exportálása .csv fájlba: Az aktoroknak lehetősége van tételeket tartalmazó .csv fájlok exportálására.
 		 
 
 ## Képernyő tervek
