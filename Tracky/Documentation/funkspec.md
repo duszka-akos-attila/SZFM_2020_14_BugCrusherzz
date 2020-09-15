@@ -32,7 +32,8 @@ vizualis módon tekinthetnénk meg.
 ## Igényelt üzleti folyamatok modellje
 6.1 **Mobil alkalmazás**
 
-6.1.1 Kiadás felvitele a lokális fájlba: új kiadás felvitele menüpont kiválasztása, majd a megjelenő ablakban a kiadás típusának és mennyiségenek a megadása. Végül pedig a mentés gomb
+6.1.1 Kiadás felvitele a lokális fájlba: új kiadás felvitele menüpont kiválasztása, majd a
+megjelenő ablakban a kiadás típusának és mennyiségenek a megadása. Végül pedig a mentés gomb
 megnyomásával rögzítődik a kiadás.
 
 6.1.2 Bevétel felvitele a lokális fájlba: új bevétel felvitele menüpont kiválasztása, majd a
@@ -56,9 +57,54 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 |Adat kezelői modul|DH-03|Bevétel törlése|1.0|A már rögzített bevétel törlése.|
 
 ## Használati esetek
+ - **Aktorok:** A cég alkalmazottai
+ - **Funkciók:**
+	 - Kiadások kezelése, azon belül:
+		--Kiadás rögzítése
+		--Kiadás módosítása
+		--Kiadás törlése
+		--Kiadás csoport rögzítése
+	 	--Kiadás csoport módosítása
+	 	--Kiadás csoport törlése
+		
+	 - Bevételek kezelése, azon belül:
+		 --Bevétel rögzítése 
+		 --Bevétel módosítása
+		 --Bevétel törlése
+		 
+	 - Összesítés, azon belül:
+		 --Tételcsoportok összegzése
+		 --Tételek csoportosítása
+		 --Egyenleg megtekintése.
+		 --Bevételek listázása idő szerinti szűrésekkel.
+		 --Kiadások listázása idő szerinti szűrésekkel.
+		 --Kiadások listázása csoportok szerinti szűrésekkel.
+		 --Kiadások és bevételek összesítése
+	 - Sablonok kezelése, azon belül:
+		 --Sablon kiadások létrehozása.
+		 --Sablon kiadások módosítása.
+		 --Sablon kiadások törlése.
+		 --Sablon bevételek létrehozása.
+		 --Sablon bevételek módosítása.
+		 --Sablon bevételek törlése. 
+	 - Adatok mozgatása, azon belül:
+		 --Adatok importálása .json fájlból.
+		 --Adatok exportálása .json fájlba.
+		 --Adatok importálása .csv fájlból.
+		 --Adatok exportálása .csv fájlba.
 
 ## Képernyő tervek
 
 ## Funkció - követelmény megfeleltetés
 
 ## Fogalomszótár
+>*Erőforrás:* Olyan szellemi, anyagi, gazdasági, társadalmi tényező,
+amely lehetőséget ad vagy alkalmas Eszköz lehet adott cél megvalósításához.
+
+>*Optimalizálás:* Legjobb állapot illetve cselekvés kiválasztására alkalmas eljárás, valamely előre meghatározott kritérium alapján.
+
+>*Lokális adattárolás:* Az adatok tárolása az adatkezelő rendszerrel azonos helyen történik.
+
+>*Aktor:* Az felhasználó, aki a rendszert használja.
+
+>*Funkció:* a rendszer egy szolgáltatása, viselkedési mintája.
