@@ -5,6 +5,14 @@
 ## Jelenlegi helyzet
 
 ## Vágyálom rendszer
+Az erőforrások optimalizálása érdekében szeretnénk egy modern, az adminisztrációs és költségkezelési
+feladatokat segítő alkalmazást.
+Szeretnénk, ha a cég mindennapos költségeinek vezetése könnyebben és gyorsabban történhetne.
+Az időnkénti költségvetés elemzést egyszerűen el lehessen végezni, külső segítség
+igénybevétele nélkül. Szeretnénk ha a nyilvántartást digitálisan lehetne kezelni,
+annak érdekében, hogy minden olyan személy, akinek tisztában kell lennie az aktuális anyagi helyzettel,
+mindig napra készek legyenek. Fontos lenne a cég számára, ha a kimutatásokat valamilyen
+vizualis módon tekinthetnénk meg.
 
 ## A rendszerre vonatkozó külső megszorítások
 
