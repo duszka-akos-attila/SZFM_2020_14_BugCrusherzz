@@ -15,6 +15,16 @@ mindig napra készek legyenek. Fontos lenne a cég számára, ha a kimutatásoka
 vizualis módon tekinthetnénk meg.
 
 ## A rendszerre vonatkozó külső megszorítások
+A gyermekek védelméről szóló törvény alapján 13 évnél fiatalabb személyek az alkalmazást nem használhatják.
+Az Európai parlament, személyes adatok védelméről szóló rendelete alapján,
+minden felhasználónak bele kell egyeznie, hogy adatait a szolgáltatás javítása 
+érdekében a fejlesztő csapat felhasználhatja, és továbbíthatja harmadik félnek.
+A felhasználó minden adat továbbítás előtt értesítést kell, hogy kapjon.
+A fejlesztői csapat - BugCrusherzz, tulajdonosai: Duszka Ákos Attila, Rácz András és Halász Ádám,
+fenntartják a jogot, hogy ezen dokumentumok, valamint az applikáció forráskódja
+az ő szellemi tulajdonukat illeti, ez alól kivételt képeznek a felhasználók személyes adatai,
+amelyek közül az eszköz azonosító, a tartózkodási hely valamint az életkor adataik 
+statisztikai felhasználás céljaiból a felhasználók engedélyével tárolnak és publikálnak.
 
 ## Jelenlegi üzleti folyamatok modellje
 5.1.**Személyes költekezések vezetése: papír alapon kézzel vezetve**
@@ -25,7 +35,7 @@ vizualis módon tekinthetnénk meg.
 
 5.2. **Összesítés: Kézzel történő összesítés papír füzetben, fejben vagy számológép általi számítás, tételek manuális szortírozása**
 
-5.2.1. Tételcsoportok összegzése: Minden elszámolás alkalmával segédjegyzetbe gyűjteni az egyes csoportok  tételeit, majd manuálisan szummázni
+5.2.1. Tételcsoportok összegzése: Minden elszámolás alkalmával segédjegyzetbe gyűjteni az egyes csoportok tételeit, majd manuálisan szummázni
 
 5.2.2. Tételek csoportosítása: Felvételkor idő alapú lineáris jegyzés, sor végi azonosító kulcsszó segítségével
 
