@@ -20,7 +20,6 @@ Fontos lenne számunkra, hogy a kimutatásokat valamilyen módon vizualizálva t
 3.1.1. Kiadás jegyzése: új kiadás => füzetbe való bejegyzése
 3.1.2. Bevétel jegyzése: új bevétel => füzetbe való bejegyzése
 
----
 3.2. **Összesítés: Kézzel történő összesítés papír füzetben, fejben vagy számológép általi számítás, tételek manuális szortírozása**
 3.2.1. Tételcsoportok összegzése: Minden elszámolás alkalmával segédjegyzetbe gyűjteni az egyes csoportok  tételeit, majd manuális szummázni
 3.2.2. Tételek csoportosítása: Felvételkor idő alapú lineáris jegyzés, sor végi azonosító kulcsszó segítségével
@@ -30,7 +29,6 @@ Fontos lenne számunkra, hogy a kimutatásokat valamilyen módon vizualizálva t
 4.1.1 Kiadás felvitele a lokális fájlba: új kiadás felvitele menüpont => kiadás típusa és mennyisége => véglegesítés
 4.1.2 Bevétel felvitele a lokális fájlba: új bevétel felvitele menüpont => bevétel mennyisége => véglegesítés
 
----
 4.2 **Összesítés: Az alkalmazás bármikor egy gombnyomásra képes összesíteni a felvitt adatokat.**
 4.2.1. Tételcsoportok összegzése: Kiértékelés menüpont => Tételcsoport kiválasztása => összegzés gomb megnyomása
 4.2.2. Tételek csoportosítása: Összesítéskor az alkalmazás automatikusan csoportosítja a tételeket.
