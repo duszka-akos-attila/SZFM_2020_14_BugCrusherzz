@@ -16,7 +16,7 @@ hogy minden illetékes folyamatosan tisztában legyen az aktuális anyagi helyze
 Fontos lenne számunkra, hogy a kimutatásokat valamilyen módon vizualizálva tekinthessük meg.
 
 ## Jelenlegi üzleti folyamatok
-3.1.** Személyes költekezések vezetése: papír alapon kézzel vezetve**
+3.1.**Személyes költekezések vezetése: papír alapon kézzel vezetve**
 --- 3.1.1. Kiadás jegyzése: új kiadás => füzetbe való bejegyzése
 --- 3.1.2. Bevétel jegyzése: új bevétel => füzetbe való bejegyzése
 
@@ -32,7 +32,7 @@ Fontos lenne számunkra, hogy a kimutatásokat valamilyen módon vizualizálva t
 
 ---
 4.2 **Összesítés: Az alkalmazás bármikor egy gombnyomásra képes összesíteni a felvitt adatokat.**
----  4.2.1. Tételcsoportok összegzése: Kiértékelés menüpont => Tételcsoport kiválasztása => összegzés gomb megnyomása
+--- 4.2.1. Tételcsoportok összegzése: Kiértékelés menüpont => Tételcsoport kiválasztása => összegzés gomb megnyomása
 --- 4.2.2. Tételek csoportosítása: Összesítéskor az alkalmazás automatikusan csoportosítja a tételeket.
 
 ## A rendszerre vonatkozó szabályok
