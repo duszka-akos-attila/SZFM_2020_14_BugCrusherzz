@@ -45,6 +45,15 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 6.2.2. Tételek csoportosítása: Az összesítés gomb megnyomásakor az alkalmazás automatikusan csoportosítja a tételeket.
 
 ## Követelménylista
+|Modul|ID|Név|Verzió|Kifejtés|
+|--|--|--|--|--|
+|Adat tárolási modul|DS-01|Mentés|1.0|Adatok mentése .json fájlba|
+|Adat tárolási modul|DS-02|Megnyitás|1.0|Adatok beolvasása .json fájlból.|
+|Adat tárolási modul|DS-03|Exportálás|2.0|Adatok mentése .csv fájlba|
+|Adat tárolási modul|DS-04|Importálás|2.0|Adatok beolvasása .csv fájlból.|
+|Adat kezelői modul|DH-01|Új bevétel|1.0|Bevétel rögzítése az eszközre.|
+|Adat kezelői modul|DH-02|Bevétel szerkesztése|1.0|A már rögzített bevétel módosítása.|
+|Adat kezelői modul|DH-03|Bevétel törlése|1.0|A már rögzített bevétel törlése.|
 
 ## Használati esetek
 
