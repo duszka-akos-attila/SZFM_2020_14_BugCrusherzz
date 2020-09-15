@@ -50,12 +50,28 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 |--|--|--|--|--|
 |Adat tárolási modul|DS-01|Mentés|1.0|Adatok mentése .json fájlba|
 |Adat tárolási modul|DS-02|Megnyitás|1.0|Adatok beolvasása .json fájlból.|
-|Adat tárolási modul|DS-03|Exportálás|2.0|Adatok mentése .csv fájlba|
-|Adat tárolási modul|DS-04|Importálás|2.0|Adatok beolvasása .csv fájlból.|
+|Adat tárolási modul|DS-03|Exportálás|1.0|Adatok mentése .csv fájlba|
+|Adat tárolási modul|DS-04|Importálás|1.0|Adatok beolvasása .csv fájlból.|
 |Adat kezelői modul|DH-01|Új bevétel|1.0|Bevétel rögzítése az eszközre.|
 |Adat kezelői modul|DH-02|Bevétel szerkesztése|1.0|A már rögzített bevétel módosítása.|
 |Adat kezelői modul|DH-03|Bevétel törlése|1.0|A már rögzített bevétel törlése.|
-
+|Adat kezelői modul|DH-04|Új kiadás|1.0|Kiadás rögzítése az eszközre.|
+|Adat kezelői modul|DH-05|Kiadás szerkesztése|1.0|A már rögzített kiadás módosítása.|
+|Adat kezelői modul|DH-06|Kiadás törlése|1.0|A már rögzített kiadás törlése.|
+|Adat kezelői modul|DH-07|Új kiadás csoport|1.0|Kiadás csoport rögzítése az eszközre.|
+|Adat kezelői modul|DH-08|Kiadás csoport szerkesztése|1.0|A már rögzített kiadás csoport módosítása.|
+|Adat kezelői modul|DH-09|Kiadás csoport törlése|1.0|A már rögzített kiadás törlése.|
+|Adat elemző modul|DA-01|Egyenleg|1.0|Egyenleg megtekintése.|
+|Adat elemző modul|DA-02|Bevételek listázása|1.0|Bevételek listázása idő szerinti szűrésekkel.|
+|Adat elemző modul|DA-03|Kiadások listázása|1.0|Kiadások listázása idő szerinti szűrésekkel.|
+|Adat elemző modul|DA-04|Kiadások csoportosítása|1.0|Kiadások listázása csoportok szerinti szűrésekkel.|
+|Adat elemző modul|DA-05|Összesítés|1.0|Kiadások és bevételek összesítése.|
+|Sablon kezelő modul|TH-01|Kiadás sablon létrehozása|1.0|Egy sablon készítése a kiadásról.|
+|Sablon kezelő modul|TH-02|Kiadás sablon módosítása|1.0|Egy létező kiadás sablon szerkesztése.|
+|Sablon kezelő modul|TH-03|Kiadás sablon törlése|1.0|Egy létező kiadás sablon eltávolítása.|
+|Sablon kezelő modul|TH-04|Bevétel sablon létrehozása|1.0|Egy sablon készítése a bevételről.|
+|Sablon kezelő modul|TH-05|Bevétel sablon módosítása|1.0|Egy létező bevétel sablon szerkesztése.|
+|Sablon kezelő modul|TH-06|Bevétel sablon törlése|1.0|Egy létező bevétel sablon eltávolítása.|
 ## Használati esetek
  - **Aktorok:** A cég alkalmazottai
  - **Funkciók:**
