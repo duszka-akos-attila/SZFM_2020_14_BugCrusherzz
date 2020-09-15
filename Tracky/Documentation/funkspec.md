@@ -60,38 +60,67 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
  - **Aktorok:** A cég alkalmazottai
  - **Funkciók:**
 	 - Kiadások kezelése, azon belül:
+
 		--Kiadás rögzítése
+
 		--Kiadás módosítása
+
 		--Kiadás törlése
+
 		--Kiadás csoport rögzítése
+
 	 	--Kiadás csoport módosítása
+
 	 	--Kiadás csoport törlése
 		
 	 - Bevételek kezelése, azon belül:
+
 		 --Bevétel rögzítése 
+
 		 --Bevétel módosítása
+
 		 --Bevétel törlése
 		 
 	 - Összesítés, azon belül:
+
 		 --Tételcsoportok összegzése
+
 		 --Tételek csoportosítása
+
 		 --Egyenleg megtekintése.
+
 		 --Bevételek listázása idő szerinti szűrésekkel.
+
 		 --Kiadások listázása idő szerinti szűrésekkel.
+
 		 --Kiadások listázása csoportok szerinti szűrésekkel.
+
 		 --Kiadások és bevételek összesítése
+
 	 - Sablonok kezelése, azon belül:
+
 		 --Sablon kiadások létrehozása.
+
 		 --Sablon kiadások módosítása.
+
 		 --Sablon kiadások törlése.
+
 		 --Sablon bevételek létrehozása.
+
 		 --Sablon bevételek módosítása.
+
 		 --Sablon bevételek törlése. 
+
 	 - Adatok mozgatása, azon belül:
+
 		 --Adatok importálása .json fájlból.
+
 		 --Adatok exportálása .json fájlba.
+
 		 --Adatok importálása .csv fájlból.
+
 		 --Adatok exportálása .csv fájlba.
+		 
 
 ## Képernyő tervek
 
