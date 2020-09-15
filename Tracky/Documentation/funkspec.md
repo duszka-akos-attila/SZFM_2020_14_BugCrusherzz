@@ -72,6 +72,7 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 |Sablon kezelő modul|TH-04|Bevétel sablon létrehozása|1.0|Egy sablon készítése a bevételről.|
 |Sablon kezelő modul|TH-05|Bevétel sablon módosítása|1.0|Egy létező bevétel sablon szerkesztése.|
 |Sablon kezelő modul|TH-06|Bevétel sablon törlése|1.0|Egy létező bevétel sablon eltávolítása.|
+
 ## Használati esetek
  - **Aktorok:** A cég alkalmazottai
  - **Funkciók:**
@@ -146,6 +147,6 @@ amely lehetőséget ad vagy alkalmas Eszköz lehet adott cél megvalósításáh
 
 >*Lokális adattárolás:* Az adatok tárolása az adatkezelő rendszerrel azonos helyen történik.
 
->*Aktor:* Az felhasználó, aki a rendszert használja.
+>*Aktor:* Az a felhasználó, aki a rendszert használja.
 
->*Funkció:* a rendszer egy szolgáltatása, viselkedési mintája.
+>*Funkció:* A rendszer egy szolgáltatása, viselkedési mintája.
