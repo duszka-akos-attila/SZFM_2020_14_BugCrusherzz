@@ -10,8 +10,10 @@ mivel mindent fel kell cimkézni és időrendbe pakolni, ezek nélkül egy adott
 
 2. Vágyálom rendszer
 Az erőforrások optimalizálása érdekében szeretnénk egy korszerű adminisztratív és költségkezelő rendszert.
-Célunk, hogy a mindennapi költségek vezetése egyszerűbb legyen, az időszakos összegzések áttekintését gyorsan és könnyedén meg lehessen tenni. 
-Szeretnénk a nyilvántartás digitális kezelését megoldani, hogy minden illetékes folyamatosan tisztában legyen az aktuális anyagi helyzettel.
+Célunk, hogy a mindennapi költségek vezetése egyszerűbb legyen, az időszakos összegzések áttekintését
+gyorsan és könnyedén meg lehessen tenni. Szeretnénk a nyilvántartás digitális kezelését megoldani,
+hogy minden illetékes folyamatosan tisztában legyen az aktuális anyagi helyzettel.
+Fontos lenne számunkra, hogy a kimutatásokat valamilyen módon vizualizálva tekinthessük meg.
 
 3. Jelenlegi üzleti folyamatok
 3.1. Személyes költekezések vezetése: papír alapon kézzel vezetve
