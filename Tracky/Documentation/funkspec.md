@@ -2,7 +2,23 @@
 
 ## A rendszer céljai és nem céljai
 
+* **Célok :**
+    *  Grafikus felület
+    * Adatok exportálása .csv fájlba
+    * Adatok rendezése többféle képpen
+    * Statisztika létrehozása adatokból
+    * Multiplatform
+
+* **Nem célok :**
+    * Online adattárolás
+    * Online hitelesítés
+    * Több felhasználó általi használat
+    * Egyidejüleg több költségvetés kezelése
+    * Akadálymentes mód 
+    * Több nyelv támogatása
+
 ## Jelenlegi helyzet
+Papír formában vezetett jelenleg a kiadásaink és bevételeink is. Ez a rendszer számunkra nem hatékony, mivel nagyon energiaigényes, mind a tárolása, mind a kezelése. Tárolása egyrészt nagyon sok helyet igényel, papírt és a dossziékat is ha, rendezni akarjuk. Majd a kezelése is ezen alapszik. Egyénileg nagyon időigényes, nehéz az átnézése, ellenőrzése. A felvitt adatok változtatása bonyolult, mivel új sorokat kell használni a hibák javítására. Ha esetlegesen régebbi dokumentumokhoz szeretnénk hozzáférni, mindegyiket felkell tüntetni év, hónap akár nap szerint is. Majd a sok sok lap/dosszié közül kikeresni azt amire éppen szükségünk van.
 
 ## Vágyálom rendszer
 Az erőforrások optimalizálása érdekében szeretnénk egy modern, az adminisztrációs és költségkezelési
