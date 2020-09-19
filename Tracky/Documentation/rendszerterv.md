@@ -9,6 +9,18 @@ Az alkalmazásnak nincs olyan része, ami online kapcsolatot igényelne, éppen 
 ## Követelmények
 ## Funkcionális terv
 ## Fizikai környezet
+- Az alkalmazás androidos mobiltelefonokra, java nyelven kell, hogy elkészüljön, mivel ez a nyelv a legkedveltebb a mobil alkalmazások készítéséhez.
+
+- Az alkalmazás elkészítéséhez az Android studio nevű programot fogjuk használni, mert egyszerűen lehet androidos alkalmazásokat készíteni vele, különösen a programok frontend részét.
+
+- A programnak a minimális erőforrásigénye miatt nincs semmilyen különleges hardverigénye.
+
+- A programnak nincs semmilyen internetkapcsolatot igénylő eleme, éppen ezért nem támaszt semmilyen igényt sem az eszköz tűzfalával, sem a portokkal kapcsolatban.
+
+- Minden esetleges függőség a program részét fogja képezni, és azzal eggyütt fog feltelepülni, éppen ezért nincs szükség semmilyen külső szoftverre az alkalmazás helyes működéséhez.
+
+- Az adatok lokális fájlba mentéséhez, valamint a lokális fájlból az adatok megnyitásához a felhasználónak engedélyezni kellesz azt, hogy az alkalmazás hozzáférjen a mobiltelefon tárhelyéhez, és módosítsa azt.
+
 ## Absztrakt domain modell
 ## Architekturális terv
 ## Implementációs terv
