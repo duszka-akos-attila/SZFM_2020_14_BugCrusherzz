@@ -162,8 +162,38 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 		 
 
 ## Képernyő tervek
-Az alkalmazás elindítása után a felhasználó a kezdőképernyőn az aktuális egyenlegét fogja látni. Az egyenleg alatt lesz látható a néhány legutolsó tranzakció. A bal felül lévő gombot lenyomására megjelenik egy oldalsó menü, ahol a felhasználó választhat a kiadások kezelése, bevételek kezelése, összesítés, sablonok kezelése, és adatok mozgatása menüpontok közül. A kiadások kezelése menüpont kiválasztása után a felhasználó választhat a kiadás rögzítése, kiadás módosítása, kiadás törlése, kiadás csoport rögzítése, kiadás csoport módosítása, és Kiadás csoport törlése menüpontok közül. A bevételek kezelése menüpont kiválasztása után a felhasználó választhat a bevétel rögzítése, bevétel módosítása, és bevétel törlése menüpontok közül. Az összesítés menüpont kiválasztása után a felhasználó választhat az egyenleg megtekintése, bevételek listázása idő szerinti szűrésekkel, kiadások listázása idő szerinti szűrésekkel, kiadások listázása csoportok szerinti szűrésekkel, valamit a kiadások és bevételek összesítése menüpontok közül. A sablonok kezelése menüpont kiválasztása után a felhasználónak lehetősége van választani a sablon kiadások létrehozása, sablon kiadások módosítása, sablon kiadások törlése, sablon bevételek létrehozása, sablon bevételek módosítása, valamint sablon bevételek törlése menüpontok közül. Az adatok mozgatása menüpont kiválasztása után a felhasználón választhat az adatok importálása .json fájlból, adatok exportálása .json fájlba, adatok importálása .csv fájlból, valamint adatok exportálása .csv fájlba.
+Az alkalmazás elindítása után a felhasználó a kezdőképernyőn az aktuális egyenlegét fogja látni. Az egyenleg alatt látható
+néhány egyenleg módosítás a közelmúltból. A bal felül lévő menü gomb megnyomására megjelenik egy oldalsó menü, amelyben a következő opciók jelennek meg:
 
+* **Bevételek kezelése**
+	* A bevételek kezelése menüpont kiválasztása után kilistázódnak a már meglévő bevételek, amely listához a felhasználónak lehetősége van 
+	új elemet hozzáadni, elemeket módosítani, vagy törölni egyes elemeket.
+	
+* **Kiadások kezelése**
+	* A kiadások kezelése menüpont kiválasztása után kilistázódnak a már meglévő kiadások, amely listához a felhasználónak lehetősége van 
+	új elemet hozzáadni, elemeket módosítani, vagy törölni egyes elemeket.
+	
+* **Kiadás csoportok kezelése**
+	* A kiadás csoportok kezelése menüpont kiválasztása után kilistázódnak a már meglévő kiadás csoportok, amely listához a felhasználónak lehetősége van 
+	új elemet hozzáadni, elemeket módosítani, vagy törölni egyes elemeket.
+	
+* **Sablonok kezelése**
+	A sablonok kezelése menüpont kiválasztása után kilistázódnak a már meglévő sablonok, amely listához a felhasználónak lehetősége van 
+	új elemet hozzáadni, elemeket módosítani, vagy törölni egyes elemeket.
+	
+* **Adatok mozgatása**
+	* Az adatok mozgatása menüpont kiválasztása után a felhasználónak lehetősége van importálni vagy exportálni .csv kiterjesztésű fájlokat.
+	
+* **Összesítés**
+	* Az összesítés menüpont kiválasztása után a felhasználó választhat a bevételek listázása idő szerinti szűrésekkel, kiadások listázása idő szerinti szűrésekkel, kiadások listázása csoportok szerinti szűrésekkel, a kiadások és bevételek időszerinti listázása valamit a kiadások és bevételek összesítése közül.
+	
+* **Előzmények törlése**
+	* Az előzmények törlése menüpont kiválasztása után a felhasználó választhat az alábbi műveletek közül:
+		* Összes kiadás előzmény törlése
+		* Összes bevétel előzmény törlése
+		* Összes sablon törlése
+		* Összes kiadás csoport törlése
+	
 ## Funkció - követelmény megfeleltetés
 
 ## Fogalomszótár
