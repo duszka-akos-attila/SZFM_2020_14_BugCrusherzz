@@ -150,15 +150,15 @@ megjelenő ablakban a bevétel mennyiségének a megadása. Végül pedig a ment
 
 		- Sablon bevételek törlése: Az aktoroknak lehetősége van törölni a sablon bevételeket.
 
-	 - **Adatok mozgatása**, azon belül:
+	 - **Adatok tárolása**, azon belül:
 
-		- Adatok importálása .json fájlból: Az aktoroknak lehetősége van tételeket tartalmazó .json fájlok importálására.
+		- Adatok megnyitása .json fájlból: Az aktoroknak lehetősége van tételeket tartalmazó .json fájlok importálására.
 
-		- Adatok exportálása .json fájlba: Az aktoroknak lehetősége van tételeket tartalmazó .json fájlok exportálására.
+		- Adatok mentése .json fájlba: Az aktoroknak lehetősége van tételeket tartalmazó .json fájlok exportálására.
 
-		- Adatok importálása .csv fájlból: Az aktoroknak lehetősége van tételeket tartalmazó .csv fájlok importálására.
+		- Adatok megnyitása .csv fájlból: Az aktoroknak lehetősége van tételeket tartalmazó .csv fájlok importálására.
 
-		- Adatok exportálása .csv fájlba: Az aktoroknak lehetősége van tételeket tartalmazó .csv fájlok exportálására.
+		- Adatok mentése .csv fájlba: Az aktoroknak lehetősége van tételeket tartalmazó .csv fájlok exportálására.
 		 
 
 ## Képernyő tervek
