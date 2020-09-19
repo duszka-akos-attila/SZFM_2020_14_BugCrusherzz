@@ -178,7 +178,7 @@ néhány egyenleg módosítás a közelmúltból. A bal felül lévő menü gomb
 	új elemet hozzáadni, elemeket módosítani, vagy törölni egyes elemeket.
 	
 * **Sablonok kezelése**
-	A sablonok kezelése menüpont kiválasztása után kilistázódnak a már meglévő sablonok, amely listához a felhasználónak lehetősége van 
+	* A sablonok kezelése menüpont kiválasztása után kilistázódnak a már meglévő sablonok, amely listához a felhasználónak lehetősége van 
 	új elemet hozzáadni, elemeket módosítani, vagy törölni egyes elemeket.
 	
 * **Adatok mozgatása**
