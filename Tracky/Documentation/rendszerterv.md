@@ -78,6 +78,74 @@ a rendszer már ki is számítja a meglévő adatok alapján a költségvetést 
 * Összesítés: 1 aktor, 3-5 perc akár több mint ötezer tétel esetén is.
 
 ## Követelmények
+**Funkcionális követelmények:**
+
+* Adat tárolási modul (Data Storage module): 
+	Feladata az adatok mentése a lokális eszközre, valamint az adatok programba való betöltése a
+	rendszer indulásakor. Ezen felül lehetőséget nyújt a külső programokkal való közös használatra
+	az importálási, valamint exportálási funkciók segítségével.
+	
+* Adat kezelői modul (Data Handler module):
+	Az adat kezelői modul feladatául szolgál a különböző tételek rögzítése, mint például a bevételek
+	vagy a kiadások. A már létező tételek módosítása valamint eltávolítása is ennek a modulnak
+	a segítségével történhet meg. Ezen felül pedig fontos feladata még a kiadás csoportok menedzsmentje is,
+	amely egyéb funkciókat biztosít, például a kiadások csoportosításában.
+	
+* Adat elemző modul (Data Analytic module):
+	Az adat elemző modul, lehetővé teszi, hogy a kiadásokon és bevételeken statisztikát végezzünk,
+	ezáltal figyelemmel követhetjük, egyes kiadás csoportjainkat, pontosan számon tarthatjuk a
+	pénzügyi változások történéseinek idejét, valamint elemzéseket kaphatunk az általunk megadott
+	időszakokra.
+	
+* Sablon kezelő modul (Template Handler module):
+	A sablon kezelő modul lehetőséget nyújt sablonok használatára, amely segítségével
+	könnyen és gyorsan létre lehet hozni sablonokat, a villám gyors tétel kiíráshoz.
+
+**Nem funkcionális követelmények:**
+* Hatékonyság:
+	Fontos, hogy a program képes legyen minimális költségű eszközökön is működni,
+	valamint legalább olyan sebességet nyújtani, hogy a tétel kiírás a lehető legkevesebb idő
+	alatt megtörténjen. Ez maximálisan öt másodperc lehet nem sablonból történő tétel kiírás
+	alkalmával.
+	
+* Megbízhatóság:
+	Az Adat tárolási rendszer belső mentési szolgáltatásában nem fordulhat elő olyan hiba,
+	amely adatvesztéssel járna. A felhasználói felületen maximum olyan hiba üzenet jelenhet 
+	meg, amely a felhasználó hibájából keletkező hiba létét jelzi, minden egyéb belső rendszer
+	hibát a programnak rejtett módon, magának kell kijavítania.
+	
+* Biztonság:
+	Mivel a program nem kapcsolódik internethez, így a biztonságot a felhasználónak kell
+	megteremtenie, megfelelő eszköz biztonsági óvintézkedéssel.
+
+* Hordozhatóság:
+	A rendszernek az Android operációs rendszerek lehető legnagyobb halmazán működjön,
+	alkalmazkodva többféle képernyő felbontáshoz és mérethez, azonban nem elvárás, hogy
+	döntött nézetben is működő képes legyen.
+	
+	Fontos a kompatibilitás egyéb irodai szoftverekkel, mint például a Microsoft Office Excel
+	programja, valamint egyéb külső programok, így a programnak képesnek kell lennie az adatok
+	univerzálisan felhasználható módon történő kimentése is.
+
+* Felhasználhatóság:
+	A program felhasználói felületét olyan módon kell elkészíteni, hogy informatikai és pénzügyi
+	szakmabeli tudás nélkül is könnyedén lehessen használni, minimális vagy elhanyagolható 
+	mennyiségű betanulási idővel. Ne tartalmazzon a felhasználót nem érintő információkat,
+	valamint kétes értelmezhetőségű adatokat.
+	
+**Törvényi előírások:**
+
+A program nem szándékozik hivatalos dokumentumokat előállítani, valamint nem csatlakozik
+internetes hálózathoz, ezért törvényi előírások, a jelen dokumentum megírásakor erre a programra
+nem vonatkoznak.
+
+**Informatikai szabványok a programban:**
+
+A program a szabványos Java programozási nyelv elemeit tartalmazza, minimális külső szoftver
+igénybevételével. A program által készített exportálható fájl szabványos `.csv` kiterjesztésűek legyenek
+és pontosvessző karakter (`;`) szeparátorokat használjon. Fontos, hogy támogassa az európai nyelveket,
+ezért a programban minden adatnál az *UTF-8* karakter kódolási szabványt kell használni.
+
 ## Funkcionális terv
 ## Fizikai környezet
 - Az alkalmazás androidos mobiltelefonokra, java nyelven kell, hogy elkészüljön, mivel ez a nyelv a legkedveltebb a mobil alkalmazások készítéséhez.
