@@ -147,6 +147,40 @@ igénybevételével. A program által készített exportálható fájl szabvány
 ezért a programban minden adatnál az *UTF-8* karakter kódolási szabványt kell használni.
 
 ## Funkcionális terv
+|Funkció azonosító|Funkció metódus neve|Metódus rövid leírása|
+|--|--|--|
+|DS-01|`save()`|A `save()` metódus a *Java* nyelv beépített fájl kezelő rendszerének segítségével elmenti az adattárolóra a memóriában lévő összes adatot (bevételek, kiadások, sablonok, ...).|
+|DS-02|`open()`|Az `open()` metódus a *Java* nyelv beépített fájl kezelő rendszerének segítségével beolvassa a memóriába a fizikai tárolón lévő összes adatot (bevételek, kiadások, sablonok, ...).|
+|DS-03|`export()`|Az `export()` metódus a *Java* nyelv beépített fájl kezelő rendszerének segítségével elmenti a felhasználó által kiválasztott fájlba az eddig elmentett bevételeket és kiadásokat pontosvesszővel elválasztott formátumban.|
+|DS-04|`import()`|Az `import()` metódus a *Java* nyelv beépített fájl kezelő rendszerének segítségével beolvassa a memóriába a fizikai tárolón lévő pontosvesszővel elválasztott formátumú fájlt és a rendszer által használt formátumba alakítja.|
+|DH-01|`addIncome()`|Az `addIncome()` metódus létrehoz egy új `Income` egyedet a memóriában.|
+|DH-02|`editIncome()`|Az `editIncome()` metódus a megadott adatokkal átírja a memóriában lévő módosítandó `Income` egyedet.|
+|DH-03|`deleteIncome()`|A `deleteIncome()` metódus a kitörli a memóriában lévő megadott `Income` egyedet. (Ez később kitörli a fájlban lévő azonos elemet, amikor a felhasználó menteni fog.)|
+|DH-04|`addExpense()`|Az `addExpense()` metódus létrehoz egy új `Expense` egyedet a memóriában.|
+|DH-05|`editExpense()`|Az `editExpense()` metódus a megadott adatokkal átírja a memóriában lévő módosítandó `Expense` egyedet.|
+|DH-06|`deleteExpense()`|A `deleteExpense()` metódus a kitörli a memóriában lévő megadott `Expense` egyedet. (Ez később kitörli a fájlban lévő azonos elemet, amikor a felhasználó menteni fog.)|
+|DH-07|`addGroup()`|Az `addGroup()` metódus létrehoz egy új `Group` egyedet a memóriában.|
+|DH-08|`editGroup()`|Az `editGroup()` metódus a megadott adatokkal átírja a memóriában lévő módosítandó `Group` egyedet.|
+|DH-09|`deleteGroup()`|A `deleteGroup()` metódus a kitörli a memóriában lévő megadott `Group` egyedet. (Ez később kitörli a fájlban lévő azonos elemet, amikor a felhasználó menteni fog.)|
+|DA-01|`balance()`|A `balance()` metódus összegzi az összes memóriában lévő bevételt és kiadást és megadja az aktuális egyenleget.|
+|DA-02|`listIncomesByTime()`|A `listIncomesByTime()` metódus idő szerint rendezi az összes memóriában lévő bevételt majd átadja a program megjelenítő részének.|
+|DA-03|`listExpensesByTime()`|A `listExpensesByTime()` metódus idő szerint rendezi az összes memóriában lévő kiadást majd átadja a program megjelenítő részének.|
+|DA-04|`listExpensesByGroup()`|A `listExpensesByGroup()` metódus idő majd csoportok szerint rendezi az összes memóriában lévő kiadást majd átadja a program megjelenítő részének.|
+|DA-05|`summarizeAll()`|A `summarizeAll()` metódus idő szerint rendezi az összes memóriában lévő bevételt és kiadást kielemzi azokat matematikai statisztika segítségével majd átadja a program megjelenítő részének.|
+|TH-01|`addExpenseTemplate()`|Az `addExpenseTemplate()` metódus létrehoz egy új `Template` egyedet a memóriában.|
+|TH-02|`editExpenseTemplate()`|Az `editExpenseTemplate()` metódus a megadott adatokkal átírja a memóriában lévő módosítandó `Template` egyedet.|
+|TH-03|`deleteExpenseTemplate()`|A `deleteExpenseTemplate()` metódus a kitörli a memóriában lévő megadott `Template` egyedet. (Ez később kitörli a fájlban lévő azonos elemet, amikor a felhasználó menteni fog.)|
+|TH-04|`addIncomeTemplate()`|Az `addIncomeTemplate()` metódus létrehoz egy új `Template` egyedet a memóriában.|
+|TH-05|`editIncomeTemplate()`|Az `editIncomeTemplate()` metódus a megadott adatokkal átírja a memóriában lévő módosítandó `Template` egyedet.|
+|TH-06|`deleteIncomeTemplate()`|A `deleteIncomeTemplate()` metódus a kitörli a memóriában lévő megadott `Template` egyedet. (Ez később kitörli a fájlban lévő azonos elemet, amikor a felhasználó menteni fog.)|
+
+**Menü felépítés**
+
+A menü felépítése az alábbi képen látható, ahol a téglalapok a tényleges menüpontokat reprezentálják, míg az ovális elemek az adott oldal funkcióit
+mutatják meg.
+
+![A Főmenü felépítésének ábrája](images/menu_diagram.png)
+
 ## Fizikai környezet
 - Az alkalmazás androidos mobiltelefonokra, java nyelven kell, hogy elkészüljön, mivel ez a nyelv a legkedveltebb a mobil alkalmazások készítéséhez.
 
