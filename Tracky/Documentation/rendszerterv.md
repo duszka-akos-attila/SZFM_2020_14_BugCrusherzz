@@ -30,8 +30,9 @@ A rendszernek továbbá nem célja sem egy akadálymentes mód biztosítása, se
 - Az adatok lokális fájlba mentéséhez, valamint a lokális fájlból az adatok megnyitásához a felhasználónak engedélyezni kellesz azt, hogy az alkalmazás hozzáférjen a mobiltelefon tárhelyéhez, és módosítsa azt.
 
 ## Absztrakt domain modell
-![absztrakt domain modell ábra](images/absztrakt_domain.png)
+![Absztrakt domain modell ábra](images/absztrakt_domain.png)
 ## Architekturális terv
+![Architekturális terv ábra](images/architekt.png)
 ## Implementációs terv
 ## Tesztterv
 ## Telepítési terv
