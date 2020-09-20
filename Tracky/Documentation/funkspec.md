@@ -196,6 +196,13 @@ néhány egyenleg módosítás a közelmúltból. A bal felül lévő menü gomb
 	
 ## Funkció - követelmény megfeleltetés
 
+* Könnyen üzelmetethető lesz mivel nem fog sok helyet / erőforrást felhasználni a programunk futáskor. Külső adatbázisra sincs szükség mivel helyben fog futni az egész.
+* Könnyen és akadálymentesen lehet majd használni az appot a grafikus felület álltal, egyértelmű és gördülékeny. 
+* A dizájn reszponzív lesz mivel, alkalmazkodik majd a kijelző méretéhez. 
+* A program adattárolása helyileg az eszközön fog történni, és nem a felhőbe. Ezzel biztonságosabbá téve a lopástól, és a nemkívánt személyek beletekitésétől. 
+* Az alkalmazás tartalmazzon egy grafikus költségkimutatást is például egy kiadás diagrammot, hogy az elmúlt hónapban milyen kategóriára mennyit költöttünk. 
+* Az data könnyen mozgatható lesz, mivel helyileg tárolt fájl lesz amit könnyü, exportálni és importálni más eszközökre is akár ha úgyszeretnénk.
+
 ## Fogalomszótár
 >*Erőforrás:* Olyan szellemi, anyagi, gazdasági, társadalmi tényező,
 amely lehetőséget ad vagy alkalmas Eszköz lehet adott cél megvalósításához.
