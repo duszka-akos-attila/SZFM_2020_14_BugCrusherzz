@@ -110,7 +110,29 @@ Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán leh
 ![Absztrakt domain modell ábra](images/absztrakt_domain.png)
 
 ## Architekturális terv
+- A rendszer megvalósítása a modell nézet vezérlő, azaz MVC architekturális minta alapján fog történni. Azaz szét lesz választva az alkalmazás három egymástól jól ekülönülő részre.
+
+- Az alkalmazás fő részei a modell, vagyis az adatok, a view, ami a felhasználói felület, és a controller, ami a vezérlő szerkezet.
+
+- A program Architekturális tervét az alábbi ábra szemlélteti:
+
 ![Architekturális terv ábra](images/architekt.png)
+
+- Ahogyan az az ábrán is látható, minden fő komponensnek, a kiadások kezelésének, a bevételek kezelésének, a sablonok kezelésének, az adatok tárolásának, és az összesítésnek is lesz egy controller és egy manager osztálya is.
+
+- A controller osztályok fogják frissíteni a grafikus felhasználói felület komponenseit, valamint meghívni a manager osztályok metódusait.
+
+- A manager osztályok hatáskörébe tartoznak az adatok létrehozásáért, módosításáér, és törléséért felelős metódusok.
+
+- A modell nézet vezérlő achitekturális mintára esett a csapat választása egyrészt a bővíthetőség miatt, mivel ha például új funkciót, vagy funkciókat hozzá kellesz adni az alkalmazáshoz, akkor azt gond nélkül meg lehetlesz oldani.
+
+- Szintén előnyős választás a modell nézet vezérlő minta az átláthatóság szempontjából is, hiszen ha egy adott metódust keresünk, akkor egyből be lehetlesz határolni a helyzetét a projekten belül.
+
+- És végül de nem utolsó sorban fontos előnye a modell nézet vezérlő architekturális mintának a módosíthatóság. Hiszen ha születik például egy olyan döntés, hogy át kellene írni a rendszert egy konzolos alkalmazássá, akkor ehhez a manager osztályok és metódusaik egy az egyben felhasználhatóak lesznek.
+
+- A rendszernek nem lesznek különleges biztonsági funkciói. Mivel az alkalmazásnak nincs olyan része, amely az internethez kapcsolódik, sem pedig olyan eleme, amely személyes adatokkal dolgozna, így nincs szükség semmilyen biztonsági mechanizmusra.
+
+## Adattárolási terv
 ## Implementációs terv
 ## Tesztterv
 ## Telepítési terv
