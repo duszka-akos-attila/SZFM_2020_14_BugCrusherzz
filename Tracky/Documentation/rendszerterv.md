@@ -206,44 +206,44 @@ A program által használt adatok .json kiterjesztésű fájlokban lesznek eltá
 A tételek, ami lehet bevétel vagy kiadás típusú a records.json fájlban kerülnek eltárolásra.
 Amelynek a szerkezete a következőképpen néz ki:
 
-		{
-			"records": [
-					{
-						"isIncome": boolean,
-						"id": integer,
-						"amount": integer,
-						"date": LocalDate,
-						"group": Group
-					}
-			]
+	{
+	    "records": [
+	        {
+		    "isIncome": boolean,
+	            "id": integer,
+		    "amount": integer,
+		    "date": LocalDate,
+		    "group": Group
 		}
+	    ]
+	}
 
 A felhasználó által létrehozható tétel sablonokat a rendszer egy másik templates.json nevű fájlba menti ki, amelynek szerkezete alább látható:
 
+	{
+	    "templates": [
 		{
-			"templates": [
-					{
-						"id": integer,
-						"name": String,
-						"isIncome": boolean,
-						"amount": integer,
-						"date": LocalDate,
-						"group": Group
-					}
-			]
+		    "id": integer,
+		    "name": String,
+		    "isIncome": boolean,
+		    "amount": integer,
+		    "date": LocalDate,
+		    "group": Group
 		}
+	    ]
+	}
 
 Végül pedig a tételcsoportok is egy *JSON* kiterjesztésű fájlba fognak mentésre kerülni, melynek neve groups.json lesz, amelynek a felépítése a következő:
 
-		{
-			"groups": [
-					{
-						"id": integer,
-						"name": String,
-						"color": String
-					}
-			]
+	{
+	    "groups": [
+	        {
+		    "id": integer,
+		    "name": String,
+		    "color": String
 		}
+	    ]
+	}
 
 ## Implementációs terv
 ## Tesztterv
