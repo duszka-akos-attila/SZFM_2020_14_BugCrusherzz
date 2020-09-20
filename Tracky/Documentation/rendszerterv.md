@@ -201,6 +201,50 @@ Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán leh
 - A rendszernek nem lesznek különleges biztonsági funkciói. Mivel az alkalmazásnak nincs olyan része, amely az internethez kapcsolódik, sem pedig olyan eleme, amely személyes adatokkal dolgozna, így nincs szükség semmilyen biztonsági mechanizmusra.
 
 ## Adattárolási terv
+A program nem használ adatbázist adattárolásra, helyette lokális fájlokba menti ki a felhasználói és rendszeradatokat.
+A program által használt adatok .json kiterjesztésű fájlokban lesznek eltárolva.
+A tételek, ami lehet bevétel vagy kiadás típusú a records.json fájlban kerülnek eltárolásra.
+Amelynek a szerkezete a következőképpen néz ki:
+
+		{
+			"records": [
+					{
+						"isIncome": boolean,
+						"id": integer,
+						"amount": integer,
+						"date": LocalDate,
+						"group": Group
+					}
+			]
+		}
+
+A felhasználó által létrehozható tétel sablonokat a rendszer egy másik templates.json nevű fájlba menti ki, amelynek szerkezete alább látható:
+
+		{
+			"templates": [
+					{
+						"id": integer,
+						"name": String,
+						"isIncome": boolean,
+						"amount": integer,
+						"date": LocalDate,
+						"group": Group
+					}
+			]
+		}
+
+Végül pedig a tételcsoportok is egy *JSON* kiterjesztésű fájlba fognak mentésre kerülni, melynek neve groups.json lesz, amelynek a felépítése a következő:
+
+		{
+			"groups": [
+					{
+						"id": integer,
+						"name": String,
+						"color": String
+					}
+			]
+		}
+
 ## Implementációs terv
 ## Tesztterv
 ## Telepítési terv
