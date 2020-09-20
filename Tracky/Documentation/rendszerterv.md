@@ -25,6 +25,19 @@
 	- A rendszernek továbbá nem célja sem egy akadálymentes mód biztosítása, sem pedig különböző nyelvek támogatása.
 
 ## Projekt terv
+
+ 1. A program alap UI-át megcsinálni, ebbe beleértve a táblázatunkat és a főoldalon lévő gombokat. 
+ 2. Megcsinálni a programunkhoz tartózó fájlrendszert ebbe:
+      * Tudjunk írni a hozzáadás gomb segítségével
+      * Beolvasni a fájlban lévő adatokat és beilleszteni a táblázatunkba
+      * Szerkeszteni a fájlban / táblázatban lévő adatokat
+      * Törölni adatokat
+3. Az adattípusok elkülönítése.
+4. Az oldalról kijövő menüt, és a menüpontjait. 
+5. Statisztika menüpontot, ahol akár hónapos statisztikákat tudunk megnézni a költekezéseinkról, vagy bevételünkről. 
+6. Rendezés, ezzel együtt típus alapú rendezés, amikor csak egy bizonyos típusú elemeket fog megjeleníteni. Például, csak a office kellékek csoportját, és ezen belül tollak, papír stb.
+7. Tudjuk az adatainkat impotálni és exportálni ezzel biztosítva a mozgathatóságot.
+
 ## Üzleti folyamatok modellje
 **Üzleti szereplők:** Az üzleti szereplők, mostantól *aktorok*: olyan személyek, akik a megrendelő
 cég alkalmazottai és a jövőben az elkészült programot fogják használni az üzleti folyamatok
@@ -280,6 +293,29 @@ Végül pedig a tételcsoportok is egy *JSON* kiterjesztésű fájlba fognak men
 	}
 
 ## Implementációs terv
+
+Az implementáció Android Studioba fog történni, Java nyelven. A program cross platform lesz de elsődlegesen androidra lesz a kifejlesztés. Az előbb specifikált funkcionális tervből és képernyőtervből fogunk főleg dolgozni minden más mellett. Elsősorban megtervezzük a programunk alap kinézetét, vagyis a fő ablakunkat, majd erre pakoljuk fel az táblánkat és az első gombokat. Programkódba létrehozzuk ezek gombok működését, és a táblázathoz való metódusokat a funkcionális tervben leírtak alapján. Ha ez megvan tudjuk tesztelni az alapot, és ezt a ciklust folytatva implementálni a többi hiányos elemet is, mindpéldául az oldalsó menü, vagy a keresés gomb / funkció.
+
 ## Tesztterv
+
+A projectunket az elejétől kezdve tesztelgetni fogjuk, mint ahogy ezt az implementációs tervben is közölve lett. 
+* Először is amint megvan a programunk legalapja, vagyis a legminimálisabb interfacet fogjuk tesztelni. Ez az elején csak azt fogja jelenteni, hogy a fő ablakban a tábla rendesen megjelenik-e, és a többi gomb ami implementálva lett. 
+* Majd ezután megcsináljuk az oldalsó menüt, amit a főképen egy gomb megnyomásával fogunk előhozni.
+* Az egyenlegünket is teszteljük majd, hozzáadunk és kivonunk belőle, nézve hogy jól működik-e.
+* Az oldalsó menü megjelenítése után, az adatbázist fogjuk tesztelni a táblázathoz, és annak megjelenését. Azt szeretnénk hogy:
+    * Hozzá tudjunk adni egy adatot a fájlunkba
+        * Ez az adat formázva legyen, hogy megkönnyítse a későbbiekben a felolvasását. Például, hogy a hozzáadott adat az egy kiadás vagy bevétel, mennyi az adatunk értéke stb.
+        * Ezeken az adatokon változtatni, szerkeszteni abban az esetben ha a felhasználó hibázott volna a bevitele alatt.
+        * Adatok törlése a táblázatból
+    * Ha a fájlrendszerünk jól működik és sikeresen tudunk írni, szerkeszteni bele, akkor a fájlból való olvasást, vagyis, hogy a programunknak sikerül-e ezt a fájlt értelmezni-e. 
+        * Ha a beolvasásunk sikeres és a programunknak sikerül értelmeznie és beolvasnia a fájlból akkor ezt eltárolni egy váltózóba. 
+        * Ha megvan a váltózónk ami tartalmazza az adatainkat akkor beillesztjük őket a táblázatunkba, és leteszteljük, hogy a táblázatunk normális jeleníti-e meg az általunk belerakott adatokat.
+* Az oldalsó menüsávunkat is tesztelni szeretnénk majd, ezt úgy fogjuk megtenni, hogy a menüpont elemeit megnézzük, hogy működnek-e és előhozzák-e a dolgokat amiket kell nekik.
+* A statisztikánkat tesztelni, az előbb táblába, változóba illesztett adatokkal fogjuk. Először is leteszteljük, hogy egy hónapos statisztikát meg tudunk-e jeleníteni, és rendesen mutatja-e a kiadási / bevételi csoportokat.
+* A táblázatba illesztett adatok alapján szűrűnk, hogy csak éppen egy csoport termékeit mutassa
+
 ## Telepítési terv
+
+A programunk telepítése nagyon egyszerű lesz, és nem lesz szükségünk semmilyen bővítményre, vagy akarmi másra a futtatáshoz.
+
 ## Karbantartási terv
