@@ -26,6 +26,57 @@
 
 ## Projekt terv
 ## Üzleti folyamatok modellje
+**Üzleti szereplők:** Az üzleti szereplők, mostantól *aktorok*: olyan személyek, akik a megrendelő
+cég alkalmazottai és a jövőben az elkészült programot fogják használni az üzleti folyamatok
+végrehajtásához.
+
+**Üzleti folyamatok:** 
+
+* **Kiadás felvitele lokális fájlba:** Ez a folyamat akkor következik be, amikor az aktorok új kiadással
+   szembesülnek. Ekkor az alkalmazás megnyitását követően lehetőségük van az aktoroknak a kiadást
+   a programban lejegyezni, amely a későbbiekben egyéb képességeket biztosít a régi üzleti folyamatokkal
+   szemben.
+   
+ * **Bevételek felvitele lokális fájlba:** Ez a folyamat akkor következik be, amikor az aktorok új bevétellel
+   szembesülnek. Ekkor az alkalmazás megnyitását követően lehetőségük van az aktoroknak a bevételt
+   a programban lejegyezni, amely a későbbiekben egyéb képességeket biztosít a régi üzleti folyamatokkal
+   szemben. 
+   
+* **Tételek csoportosítása:**  Ez a folyamat az összesítések alkalmával fontos, mivel amikor az aktoroknak
+csoportosítania kell bizonyos tétel csoportokat, az elkészülő program segítségével rengeteg erőforrást
+spórolhat meg a megrendelő. A folyamat működése azon alapszik, hogy a tételek felvitelekor minimális
+erőforrás befektetésével hosszú távon sokat meg lehet takarítani. A folyamat úgy zajlik, hogy amikor
+az aktor felviszi a tételt, megad egy tétel csoportot, ami még manuális munka, azonban a munka jelentős
+része automatizálható az által, hogy a csoportosítást a számítógép végzi el.
+
+* **Összesítés:** Ebben a folyamatban az aktorok számára legmegterhelőbb feladatot terheljük rá az
+informatikai berendezésre, amely a csoportosítás és statisztikai elemzés készítése. Mivel a számítógépek
+sokkal jobbak a matematikai számítások elvégzésében, ezért ez volt a legnagyobb oka a gépesített rendszer
+igényének felmerülésére. Az aktoroknak elég néhány gombot megnyomnia, specifikálni néhány beállítást és
+a rendszer már ki is számítja a meglévő adatok alapján a költségvetést a specifikált időintervallumra.
+
+**Erőforrás igények:**
+
+**Jelenlegi üzleti folyamatok:**
+* Kiadás rögzítése: 1 aktor, 3-5 perc.
+
+* Bevétel rögzítése: 1 aktor, 3-5 perc.
+
+* Tételek csoportosítása: 1-2 aktor, 1-2 óra, egy havi bevételek és kiadások esetében, 
+	amelyek összesített száma nem haladja meg az egyezer tételt.
+	
+* Összesítés: 2-3 aktor, 6-9 óra egy havi bevételek és kiadások esetében, amelyek
+	összesített száma nem haladja meg az ötezer tételt.
+
+**Igényelt üzleti folyamatok:**
+* Kiadás rögzítése: 1 aktor, 1-2 perc.
+
+* Bevétel rögzítése: 1 aktor, 1-2 perc.
+
+* Tételek csoportosítása: 1 aktor, 2-5 perc akár több mint ötezer tétel esetén is.
+	
+* Összesítés: 1 aktor, 3-5 perc akár több mint ötezer tétel esetén is.
+
 ## Követelmények
 ## Funkcionális terv
 ## Fizikai környezet
