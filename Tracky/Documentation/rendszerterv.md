@@ -57,25 +57,25 @@ a rendszer már ki is számítja a meglévő adatok alapján a költségvetést 
 
 **Erőforrás igények:**
 
-**Jelenlegi üzleti folyamatok:**
-* Kiadás rögzítése: 1 aktor, 3-5 perc.
+* **Jelenlegi üzleti folyamatok:**
+	* Kiadás rögzítése: 1 aktor, 3-5 perc.
 
-* Bevétel rögzítése: 1 aktor, 3-5 perc.
+	* Bevétel rögzítése: 1 aktor, 3-5 perc.
 
-* Tételek csoportosítása: 1-2 aktor, 1-2 óra, egy havi bevételek és kiadások esetében, 
-	amelyek összesített száma nem haladja meg az egyezer tételt.
+	* Tételek csoportosítása: 1-2 aktor, 1-2 óra, egy havi bevételek és kiadások esetében, 
+	  amelyek összesített száma nem haladja meg az egyezer tételt.
 	
-* Összesítés: 2-3 aktor, 6-9 óra egy havi bevételek és kiadások esetében, amelyek
-	összesített száma nem haladja meg az ötezer tételt.
+	* Összesítés: 2-3 aktor, 6-9 óra egy havi bevételek és kiadások esetében, amelyek
+	  összesített száma nem haladja meg az ötezer tételt.
 
-**Igényelt üzleti folyamatok:**
-* Kiadás rögzítése: 1 aktor, 1-2 perc.
+* **Igényelt üzleti folyamatok:**
+	* Kiadás rögzítése: 1 aktor, 1-2 perc.
 
-* Bevétel rögzítése: 1 aktor, 1-2 perc.
+	* Bevétel rögzítése: 1 aktor, 1-2 perc.
 
-* Tételek csoportosítása: 1 aktor, 2-5 perc akár több mint ötezer tétel esetén is.
+	* Tételek csoportosítása: 1 aktor, 2-5 perc akár több mint ötezer tétel esetén is.
 	
-* Összesítés: 1 aktor, 3-5 perc akár több mint ötezer tétel esetén is.
+	* Összesítés: 1 aktor, 3-5 perc akár több mint ötezer tétel esetén is.
 
 ## Követelmények
 **Funkcionális követelmények:**
