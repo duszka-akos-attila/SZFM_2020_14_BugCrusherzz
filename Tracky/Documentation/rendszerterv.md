@@ -93,7 +93,22 @@ a rendszer már ki is számítja a meglévő adatok alapján a költségvetést 
 - Az adatok lokális fájlba mentéséhez, valamint a lokális fájlból az adatok megnyitásához a felhasználónak engedélyezni kellesz azt, hogy az alkalmazás hozzáférjen a mobiltelefon tárhelyéhez, és módosítsa azt.
 
 ## Absztrakt domain modell
+	A rendszernek öt különböző fő komponense van, amikkel az aktor interaktálni tud.
+
+	Az első ilyen komponens a kiadások kezelése, amely minden a kiadással kapcsolatos dolgot magába foglal, amik a következőek: Kiadás rögzítése, Kiadás módosítása, Kiadás törlése, Kiadás csoport rögzítése, Kiadás csoport módosítása, illetve Kiadás csoport törlése.
+
+	A második fő komponens a bevételek kezelése, ami minden a bevételekkel kapcsolatos dolgot kezel. Ezek a következőek: Bevétel rögzítése, Bevétel módosítása, illetve Bevétel törlése.
+
+	A Harmadik nagy komponense a rendszernek a Sablonok kezelése. Ezen komponens részei a Sablon kiadások módosítása, a Sablon kiadások törlése, a Sablon bevételek létrehozása, valamint a Sablon bevételek törlése.
+
+	A negyedik  nagy komponens az adatok tárolása, ami ahogy azt a neve is sugallja minden olyan dologra vonatkozik, aminek köze van az adatok tárolásához. Ezek a következőek: Adatok megnyitása .json fájlból, Adatok mentése .json fájlba, Adatok megnyitása .csv fájlból, valamint Adatok mentése .csv fájlba.
+
+	Az ötödik, és egyben utolsó nagy komponense a rendszernek az Összesítés, amely magában tartalmazza a különböző kimutatásokat, amik a következőek: Egyenleg megtekintése, Bevételek listázása idő szerint, Kiadások listázása idő szerint, Kiadások listázása csoport szerint, Kiadások listázása csoport szerint, valamint Kiadások és bevételek összesítése.
+
+	Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán lehet látni:
+
 ![Absztrakt domain modell ábra](images/absztrakt_domain.png)
+
 ## Architekturális terv
 ![Architekturális terv ábra](images/architekt.png)
 ## Implementációs terv
