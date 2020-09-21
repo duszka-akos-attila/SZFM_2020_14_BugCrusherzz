@@ -200,14 +200,14 @@ mutatják meg.
 
 Lent látható a főképernyő terve. A főképernyőn látható a felhasználó aktuális egyenlege, valamint néhány a legutolsó egyenleg változások közül.
 
-![A Főképernyő látvány terve](images/main_screen.png){width: 500px;}
+![A Főképernyő látvány terve](images/main_screen.png)
 
 *  **Főmenü:**
 
 Alább a főmenü terve látható. A fenti képen látható menü gomb (3 vonal) megnyomása után megjelenik a képernyő bal oldalán
 egy lap, amelyen az egyes menüpontok között navigálhatunk.
 
-![A Főmenü látvány terve](images/main_menu.png){width: 500px;}
+![A Főmenü látvány terve](images/main_menu.png)
 
 ## Fizikai környezet
 - Az alkalmazás androidos mobiltelefonokra, java nyelven kell, hogy elkészüljön, mivel ez a nyelv a legkedveltebb a mobil alkalmazások készítéséhez.
