@@ -1,4 +1,4 @@
-package com.e.tracky;
+package com.tracky;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.e.tracky", appContext.getPackageName());
+        assertEquals("com.tracky", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.e.tracky;
+package com.tracky;
 
 import org.junit.Test;
 
