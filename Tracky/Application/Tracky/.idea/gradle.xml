@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -9,8 +10,8 @@
         <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
-            <option value="/media/tillman/HDD_DATA_DRIVE/Documents/egyetem/5_otodik_felev/SWM/SZFM_2020_14_BugCrusherzz/Tracky/app/Tracky" />
-            <option value="/media/tillman/HDD_DATA_DRIVE/Documents/egyetem/5_otodik_felev/SWM/SZFM_2020_14_BugCrusherzz/Tracky/app/Tracky/app" />
+            <option value="/media/tillman/HDD_DATA_DRIVE/Documents/egyetem/5_otodik_felev/SWM/SZFM_2020_14_BugCrusherzz/Tracky/Application/Tracky" />
+            <option value="/media/tillman/HDD_DATA_DRIVE/Documents/egyetem/5_otodik_felev/SWM/SZFM_2020_14_BugCrusherzz/Tracky/Application/Tracky/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
