@@ -1,1 +1,1 @@
-Tracky követelményspecifikáció
+# Tracky
