@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class Expense {
@@ -15,9 +15,9 @@ public class Expense {
     @ColumnInfo(name = "groupId")
     private int groupId;
     @ColumnInfo(name = "date")
-    private LocalDate date;
+    private Date date;
 
-    public Expense(int id, int amount, int groupId, LocalDate date){
+    public Expense(int id, int amount, int groupId, Date date){
         this.id = id;
         this.amount = amount;
         this.groupId = groupId;
@@ -48,11 +48,11 @@ public class Expense {
         this.groupId = group.getId();
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 }

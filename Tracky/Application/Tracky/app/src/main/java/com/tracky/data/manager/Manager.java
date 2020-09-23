@@ -5,7 +5,7 @@ import com.tracky.data.Expense;
 import com.tracky.data.Group;
 import com.tracky.data.Income;
 
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.ArrayList;
 
 public class Manager {
@@ -18,7 +18,7 @@ public class Manager {
     //------------------------------------INCOMES----------------------------
     public void addIncome(int amount){
         int id = incomes.size();
-        incomes.add(new Income(id, amount, LocalDate.now() ));
+        incomes.add(new Income(id, amount, Calendar.getInstance().getTime() ));
     }
 
     public void deleteIncome(int id){
@@ -36,7 +36,7 @@ public class Manager {
         }
     }
 
-    public void editIncome(int id, int amount, LocalDate date){
+    public void editIncome(int id, int amount, Date date){
         for (Income income : incomes) {
             if (income.getId() == id) {
                 income.setAmount(amount);
@@ -48,7 +48,7 @@ public class Manager {
     //--------------------------------EXPANSE-------------------------------
     public void addExpense(int amount, int groupId){
         int id = expenses.size();
-        expenses.add(new Expense(id, amount, groupId, LocalDate.now() ));
+        expenses.add(new Expense(id, amount, groupId, Calendar.getInstance().getTime() ));
     }
 
     public void deleteExpense(int id){
@@ -65,7 +65,7 @@ public class Manager {
         }
     }
 
-    public void editExpense(int id, int amount, Group group, LocalDate date){
+    public void editExpense(int id, int amount, Group group, Date date){
         for (Expense expense : expenses) {
             if (expense.getId() == id) {
                 expense.setAmount(amount);

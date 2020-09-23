@@ -1,7 +1,8 @@
 package adag;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Manager {
 
@@ -13,7 +14,8 @@ public class Manager {
     //------------------------------------BEVÉTELEK----------------------------
     public void addIncome(int amount){
         int id = incomes.size();
-        incomes.add(new Income(id, amount, LocalDate.now() ));
+        incomes.add(new Income(id, amount, Calendar.getInstance().getTime() ));
+        Log.i("Creation","Berakta");
     }
 
     public void deleteIncome(int id){
@@ -31,7 +33,7 @@ public class Manager {
         }
     }
 
-    public void editIncome(int id, int amount, LocalDate date){
+    public void editIncome(int id, int amount, Date date){
         for (Income income : incomes) {
             if (income.getId() == id) {
                 income.setAmount(amount);
@@ -43,7 +45,7 @@ public class Manager {
     //--------------------------------KIADÁSOK-------------------------------
     public void addExpense(int amount, int groupId){
         int id = expenses.size();
-        expenses.add(new Expense(id, amount, groupId, LocalDate.now() ));
+        expenses.add(new Expense(id, amount, groupId, Calendar.getInstance().getTime() ));
     }
 
     public void deleteExpense(int id){
@@ -60,7 +62,7 @@ public class Manager {
         }
     }
 
-    public void editExpense(int id, int amount, int groupId, LocalDate date){
+    public void editExpense(int id, int amount, int groupId, Date date){
         for (Expense expense : expenses) {
             if (expense.getId() == id) {
                 expense.setAmount(amount);
@@ -131,3 +133,4 @@ public class Manager {
         }
     }
 }
+

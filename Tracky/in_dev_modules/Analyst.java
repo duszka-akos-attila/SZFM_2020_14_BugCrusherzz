@@ -1,13 +1,11 @@
-package elemzo;
-
-import adag.Expense;
-import adag.Income;
+import Expense;
+import Income;
 
 import java.util.ArrayList;
 
 public class Analyst {
 
-//---------------------------------Balance----------------------------------
+    //---------------------------------Balance----------------------------------
     public int getBalance(ArrayList<Income> incomes, ArrayList<Expense> expenses){
         int balance = 0;
 
@@ -23,12 +21,12 @@ public class Analyst {
     }
 
 
-//-----------------------------INCOMES---------------------------------
+    //-----------------------------INCOMES---------------------------------
     public ArrayList<Income> getIncomeByDay(ArrayList<Income> incomes, int day){
         ArrayList<Income> results = new ArrayList<>();
 
         for( Income i : incomes ){
-            if( i.getDate().getDayOfMonth() == day ){
+            if( i.getDate().getDate() == day ){
                 results.add(i);
             }
         }
@@ -39,7 +37,7 @@ public class Analyst {
         ArrayList<Income> results = new ArrayList<>();
 
         for( Income i : incomes ){
-            if( i.getDate().getMonthValue() == month ){
+            if( i.getDate().getMonth() == month ){
                 results.add(i);
             }
         }
@@ -50,7 +48,7 @@ public class Analyst {
         ArrayList<Income> results = new ArrayList<>();
 
         for( Income i : incomes ){
-            if( i.getDate().getMonthValue() == month && i.getDate().getDayOfMonth() == day ){
+            if( i.getDate().getMonth() == month && i.getDate().getDate() == day ){
                 results.add(i);
             }
         }
@@ -58,12 +56,12 @@ public class Analyst {
     }
 
 
-//--------------------------------EXPENSES---------------------------------------
+    //--------------------------------EXPENSES---------------------------------------
     public ArrayList<Expense> getExpenseByDay(ArrayList<Expense> expenses, int day){
         ArrayList<Expense> results = new ArrayList<>();
 
         for( Expense e : expenses ){
-            if( e.getDate().getDayOfMonth() == day ){
+            if( e.getDate().getDate() == day ){
                 results.add(e);
             }
         }
@@ -74,7 +72,7 @@ public class Analyst {
         ArrayList<Expense> results = new ArrayList<>();
 
         for( Expense e : expenses ){
-            if( e.getDate().getMonthValue() == month ){
+            if( e.getDate().getMonth() == month ){
                 results.add(e);
             }
         }
@@ -85,7 +83,7 @@ public class Analyst {
         ArrayList<Expense> results = new ArrayList<>();
 
         for( Expense e : expenses ){
-            if( e.getDate().getMonthValue() == month && e.getDate().getDayOfMonth() == day ){
+            if( e.getDate().getMonth() == month && e.getDate().getDate() == day ){
                 results.add(e);
             }
         }

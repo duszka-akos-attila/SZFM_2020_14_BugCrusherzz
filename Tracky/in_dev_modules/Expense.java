@@ -1,15 +1,15 @@
 package adag;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Expense {
 
     private int id;
     private int amount;
     private int groupId;
-    private LocalDate date;
+    private Date date;
 
-    public Expense(int id, int amount, int groupId, LocalDate date){
+    public Expense(int id, int amount, int groupId, Date date){
         this.id = id;
         this.amount = amount;
         this.groupId = groupId;
@@ -40,11 +40,11 @@ public class Expense {
         this.groupId = groupId;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

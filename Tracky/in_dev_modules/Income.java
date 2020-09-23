@@ -1,14 +1,14 @@
 package adag;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Income {
 
     private int id;
     private int amount;
-    private LocalDate date;
+    private Date date;
 
-    public Income(int id, int amount, LocalDate date){
+    public Income(int id, int amount, Date date){
         this.id = id;
         this.amount = amount;
         this.date = date;
@@ -22,7 +22,7 @@ public class Income {
         this.amount = amount;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -34,7 +34,7 @@ public class Income {
         return amount;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 
