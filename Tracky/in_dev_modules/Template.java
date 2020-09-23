@@ -42,8 +42,8 @@ public class Template {
         return groupId;
     }
 
-    public void setGroupId(int groupId) {
-        this.groupId = groupId;
+    public void setGroupId(Group group) {
+        this.groupId = group.getId();
     }
 
     @Override
