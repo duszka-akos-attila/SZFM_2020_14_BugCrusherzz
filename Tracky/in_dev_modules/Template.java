@@ -1,5 +1,3 @@
-package adag;
-
 public class Template {
 
     private boolean isIncome;

@@ -1,5 +1,3 @@
-package adag;
-
 public class Group {
 
     private int id;

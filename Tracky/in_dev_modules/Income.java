@@ -1,5 +1,3 @@
-package adag;
-
 import java.time.LocalDateTime;
 
 public class Income {
