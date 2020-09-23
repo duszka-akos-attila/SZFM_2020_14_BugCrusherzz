@@ -1,4 +1,4 @@
-qpackage com.tracky;
+package com.tracky;
 
 import androidx.appcompat.app.AppCompatActivity;
 
