@@ -1,16 +1,18 @@
-import java.time.LocalDateTime;
+package adag;
+
+import java.time.LocalDate;
 
 public class Expense {
 
     private int id;
     private int amount;
-    private Group group;
-    private LocalDateTime date;
+    private int groupId;
+    private LocalDate date;
 
-    public Expense(int id, int amount, Group group, LocalDateTime date){
+    public Expense(int id, int amount, int groupId, LocalDate date){
         this.id = id;
         this.amount = amount;
-        this.group = group;
+        this.groupId = groupId;
         this.date = date;
     }
 
@@ -30,19 +32,29 @@ public class Expense {
         this.amount = amount;
     }
 
-    public Group getGroup() {
-        return group;
+    public int getGroupId() {
+        return groupId;
     }
 
-    public void setGroup(Group group) {
-        this.group = group;
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Expense{" +
+                "id=" + id +
+                ", amount=" + amount +
+                ", groupId=" + groupId +
+                ", date=" + date +
+                '}';
     }
 }

@@ -1,4 +1,6 @@
-import java.time.LocalDateTime;
+package adag;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Manager {
@@ -11,7 +13,7 @@ public class Manager {
     //------------------------------------BEVÉTELEK----------------------------
     public void addIncome(int amount){
         int id = incomes.size();
-        incomes.add(new Income(id, amount, LocalDateTime.now() ));
+        incomes.add(new Income(id, amount, LocalDate.now() ));
     }
 
     public void deleteIncome(int id){
@@ -29,7 +31,7 @@ public class Manager {
         }
     }
 
-    public void editIncome(int id, int amount, LocalDateTime date){
+    public void editIncome(int id, int amount, LocalDate date){
         for (Income income : incomes) {
             if (income.getId() == id) {
                 income.setAmount(amount);
@@ -39,9 +41,9 @@ public class Manager {
     }
 
     //--------------------------------KIADÁSOK-------------------------------
-    public void addExpense(int amount, Group group){
+    public void addExpense(int amount, int groupId){
         int id = expenses.size();
-        expenses.add(new Expense(id, amount, group, LocalDateTime.now() ));
+        expenses.add(new Expense(id, amount, groupId, LocalDate.now() ));
     }
 
     public void deleteExpense(int id){
@@ -58,11 +60,11 @@ public class Manager {
         }
     }
 
-    public void editExpense(int id, int amount, Group group, LocalDateTime date){
+    public void editExpense(int id, int amount, int groupId, LocalDate date){
         for (Expense expense : expenses) {
             if (expense.getId() == id) {
                 expense.setAmount(amount);
-                expense.setGroup(group);
+                expense.setGroupId(groupId);
                 expense.setDate(date);
             }
         }
@@ -99,9 +101,9 @@ public class Manager {
     }
 
     //--------------------------------------SABLONOK------------------------
-    public void addTemplate(boolean isIncome, int amount, Group group){
+    public void addTemplate(boolean isIncome, int amount, int groupId){
         int id = templates.size();
-        templates.add(new Template(isIncome, id, amount, group));
+        templates.add(new Template(isIncome, id, amount, groupId));
     }
 
     public void deleteTemplate(int id){
@@ -119,12 +121,12 @@ public class Manager {
         }
     }
 
-    public void editTemplate(int id, boolean isIncome, int amount, Group group){
+    public void editTemplate(int id, boolean isIncome, int amount, int groupId){
         for (Template template : templates) {
             if (template.getId() == id) {
                 template.setIncome(isIncome);
                 template.setAmount(amount);
-                template.setGroup(group);
+                template.setGroupId(groupId);
             }
         }
     }

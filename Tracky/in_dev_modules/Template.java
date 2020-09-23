@@ -1,15 +1,17 @@
+package adag;
+
 public class Template {
 
     private boolean isIncome;
     private int id;
     private int amount;
-    private Group group;
+    private int groupId;
 
-    public Template(boolean isIncome, int id, int amount, Group group) {
+    public Template(boolean isIncome, int id, int amount, int groupId ) {
         this.isIncome = isIncome;
         this.id = id;
         this.amount = amount;
-        this.group = group;
+        this.groupId = groupId;
     }
 
     public boolean isIncome() {
@@ -36,11 +38,21 @@ public class Template {
         this.amount = amount;
     }
 
-    public Group getGroup() {
-        return group;
+    public int getGroupId() {
+        return groupId;
     }
 
-    public void setGroup(Group group) {
-        this.group = group;
+    public void setGroupId(int groupId) {
+        this.groupId = groupId;
+    }
+
+    @Override
+    public String toString() {
+        return "Template{" +
+                "isIncome=" + isIncome +
+                ", id=" + id +
+                ", amount=" + amount +
+                ", groupId=" + groupId +
+                '}';
     }
 }
