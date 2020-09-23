@@ -1,6 +1,6 @@
 package com.tracky.data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Income {
 
@@ -15,9 +15,9 @@ public class Income {
 
     private int id;
     private int amount;
-    private LocalDateTime date;
+    private LocalDate date;
 
-    public Income(int id, int amount, LocalDateTime date){
+    public Income(int id, int amount, LocalDate date){
         this.id = id;
         this.amount = amount;
         this.date = date;
@@ -31,7 +31,7 @@ public class Income {
         this.amount = amount;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
@@ -43,7 +43,7 @@ public class Income {
         return amount;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 }

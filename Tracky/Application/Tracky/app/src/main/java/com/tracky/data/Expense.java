@@ -1,18 +1,26 @@
 package com.tracky.data;
 
-import java.time.LocalDateTime;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+import java.time.LocalDate;
+
+@Entity
 public class Expense {
-
+    @PrimaryKey
     private int id;
+    @ColumnInfo(name = "amount")
     private int amount;
-    private Group group;
-    private LocalDateTime date;
+    @ColumnInfo(name = "groupId")
+    private int groupId;
+    @ColumnInfo(name = "date")
+    private LocalDate date;
 
-    public Expense(int id, int amount, Group group, LocalDateTime date){
+    public Expense(int id, int amount, int groupId, LocalDate date){
         this.id = id;
         this.amount = amount;
-        this.group = group;
+        this.groupId = groupId;
         this.date = date;
     }
 
@@ -32,19 +40,19 @@ public class Expense {
         this.amount = amount;
     }
 
-    public Group getGroup() {
-        return group;
+    public int getGroup() {
+        return groupId;
     }
 
     public void setGroup(Group group) {
-        this.group = group;
+        this.groupId = group.getId();
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
