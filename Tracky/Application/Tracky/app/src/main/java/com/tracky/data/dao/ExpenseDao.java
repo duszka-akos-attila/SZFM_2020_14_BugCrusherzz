@@ -6,11 +6,12 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.tracky.data.Expense;
-import java.util.List;
+
+import java.util.ArrayList;
 
 public interface ExpenseDao {
     @Query("SELECT * FROM expense")
-    List<Expense> selectAllExpense();
+    ArrayList<Expense> selectAllExpense();
 
     @Insert
     void insertExpense(Expense expense);
