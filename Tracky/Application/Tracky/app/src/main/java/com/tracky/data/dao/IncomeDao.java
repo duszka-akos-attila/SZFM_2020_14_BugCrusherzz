@@ -7,11 +7,11 @@ import androidx.room.Update;
 
 import com.tracky.data.Income;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface IncomeDao {
     @Query("SELECT * FROM income")
-    List<Income> selectAllIncome();
+    ArrayList<Income> selectAllIncome();
 
     @Insert
     void insertIncome(Income income);
