@@ -1,18 +1,28 @@
 package com.tracky.TemplateHandler;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+
 import com.tracky.data.Group;
 
+@Entity
 public class Template {
-
+    @ColumnInfo(name = "isIncome")
     private boolean isIncome;
+    @ColumnInfo(name = "id")
     private int id;
+    @ColumnInfo(name = "amount")
     private int amount;
+    @ColumnInfo(name = "description")
+    private String description;
+    @ColumnInfo(name = "groupId")
     private int groupId;
 
-    public Template(boolean isIncome, int id, int amount, int groupId ) {
+    public Template(boolean isIncome, int id, int amount, String description, int groupId ) {
         this.isIncome = isIncome;
         this.id = id;
         this.amount = amount;
+        this.description = description;
         this.groupId = groupId;
     }
 
@@ -40,6 +50,14 @@ public class Template {
         this.amount = amount;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public int getGroupId() {
         return groupId;
     }
@@ -51,10 +69,11 @@ public class Template {
     @Override
     public String toString() {
         return "Template{" +
-                "isIncome=" + isIncome +
-                ", id=" + id +
-                ", amount=" + amount +
-                ", groupId=" + groupId +
+                "isIncome= " + isIncome +
+                ", id= " + id +
+                ", amount= " + amount +
+                ", description= " + description +
+                ", groupId= " + groupId +
                 '}';
     }
 }

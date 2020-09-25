@@ -12,14 +12,17 @@ public class Expense {
     private int id;
     @ColumnInfo(name = "amount")
     private int amount;
+    @ColumnInfo(name = "description")
+    private String description;
     @ColumnInfo(name = "groupId")
     private int groupId;
     @ColumnInfo(name = "date")
     private Date date;
 
-    public Expense(int id, int amount, int groupId, Date date){
+    public Expense(int id, int amount, String description, int groupId, Date date){
         this.id = id;
         this.amount = amount;
+        this.description = description;
         this.groupId = groupId;
         this.date = date;
     }
@@ -38,6 +41,14 @@ public class Expense {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getGroup() {

@@ -1,25 +1,35 @@
 package com.tracky.data;
 
-import java.util.Date;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+import java.util.Date;
+@Entity
 public class Income {
 
     @Override
     public String toString() {
         return "Income{" +
-                "id=" + id +
-                ", amount=" + amount +
-                ", date=" + date +
+                "id= " + id +
+                ", amount= " + amount +
+                ", description= " + description +
+                ", date= " + date +
                 '}';
     }
-
+    @PrimaryKey
     private int id;
+    @ColumnInfo(name = "amount")
     private int amount;
+    @ColumnInfo(name = "description")
+    private String description;
+    @ColumnInfo(name = "date")
     private Date date;
 
-    public Income(int id, int amount, Date date){
+    public Income(int id, int amount, String description, Date date){
         this.id = id;
         this.amount = amount;
+        this.description = description;
         this.date = date;
     }
 
@@ -29,6 +39,10 @@ public class Income {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setDate(Date date) {
@@ -41,6 +55,10 @@ public class Income {
 
     public int getAmount() {
         return amount;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
     public Date getDate() {

@@ -17,9 +17,9 @@ public class Manager {
     ArrayList<Group> groups=new ArrayList<>();
 
     //------------------------------------INCOMES----------------------------
-    public void addIncome(int amount){
+    public void addIncome(int amount, String description){
         int id = incomes.size();
-        incomes.add(new Income(id, amount, Calendar.getInstance().getTime() ));
+        incomes.add(new Income(id, amount, description, Calendar.getInstance().getTime() ));
     }
 
     public void deleteIncome(int id){
@@ -37,19 +37,20 @@ public class Manager {
         }
     }
 
-    public void editIncome(int id, int amount, Date date){
+    public void editIncome(int id, int amount, String description, Date date){
         for (Income income : incomes) {
             if (income.getId() == id) {
                 income.setAmount(amount);
+                income.setDescription(description);
                 income.setDate(date);
             }
         }
     }
 
     //--------------------------------EXPANSE-------------------------------
-    public void addExpense(int amount, int groupId){
+    public void addExpense(int amount, String description, int groupId){
         int id = expenses.size();
-        expenses.add(new Expense(id, amount, groupId, Calendar.getInstance().getTime() ));
+        expenses.add(new Expense(id, amount, description, groupId, Calendar.getInstance().getTime() ));
     }
 
     public void deleteExpense(int id){
@@ -66,10 +67,11 @@ public class Manager {
         }
     }
 
-    public void editExpense(int id, int amount, Group group, Date date){
+    public void editExpense(int id, int amount, String description, Group group, Date date){
         for (Expense expense : expenses) {
             if (expense.getId() == id) {
                 expense.setAmount(amount);
+                expense.setDescription(description);
                 expense.setGroup(group);
                 expense.setDate(date);
             }
@@ -77,9 +79,9 @@ public class Manager {
     }
 
     //--------------------------------------GROUPS------------------------
-    public void addGroup(String name){
+    public void addGroup(String name, int color){
         int id = groups.size();
-        groups.add(new Group(id, name));
+        groups.add(new Group(id, name, color));
     }
 
     public void deleteGroup(int id){
@@ -98,18 +100,19 @@ public class Manager {
         }
     }
 
-    public void editGroup(int id, String name){
+    public void editGroup(int id, String name, int color){
         for (Group group : groups) {
             if (group.getId() == id) {
                 group.setName(name);
+                group.setColor(color);
             }
         }
     }
 
-    //--------------------------------------SABLONOK------------------------
-    public void addTemplate(boolean isIncome, int amount, int groupId){
+    //--------------------------------------Templates------------------------
+    public void addTemplate(boolean isIncome, int amount, String description, int groupId){
         int id = templates.size();
-        templates.add(new Template(isIncome, id, amount, groupId));
+        templates.add(new Template(isIncome, id, amount, description, groupId));
     }
 
     public void deleteTemplate(int id){
@@ -127,12 +130,13 @@ public class Manager {
         }
     }
 
-    public void editTemplate(int id, boolean isIncome, int amount, Group group){
+    public void editTemplate(int id, boolean isIncome, int amount, String description, Group group){
         for (Template template : templates) {
             if (template.getId() == id) {
                 template.setIncome(isIncome);
                 template.setAmount(amount);
                 template.setGroup(group);
+                template.setDescription(description);
             }
         }
     }
