@@ -4,10 +4,12 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.Date;
+import com.tracky.data.Group;
 
 @Entity
-public class Expense {
+public class Template {
+    @ColumnInfo(name = "isIncome")
+    private boolean isIncome;
     @PrimaryKey
     private int id;
     @ColumnInfo(name = "amount")
@@ -16,15 +18,21 @@ public class Expense {
     private String description;
     @ColumnInfo(name = "groupId")
     private int groupId;
-    @ColumnInfo(name = "date")
-    private Date date;
 
-    public Expense(int id, int amount, String description, int groupId, Date date){
+    public Template(boolean isIncome, int id, int amount, String description, int groupId ) {
+        this.isIncome = isIncome;
         this.id = id;
         this.amount = amount;
         this.description = description;
         this.groupId = groupId;
-        this.date = date;
+    }
+
+    public boolean isIncome() {
+        return isIncome;
+    }
+
+    public void setIncome(boolean income) {
+        isIncome = income;
     }
 
     public int getId() {
@@ -51,7 +59,7 @@ public class Expense {
         this.description = description;
     }
 
-    public int getGroup() {
+    public int getGroupId() {
         return groupId;
     }
 
@@ -59,11 +67,14 @@ public class Expense {
         this.groupId = group.getId();
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    @Override
+    public String toString() {
+        return "Template{" +
+                "isIncome= " + isIncome +
+                ", id= " + id +
+                ", amount= " + amount +
+                ", description= " + description +
+                ", groupId= " + groupId +
+                '}';
     }
 }
