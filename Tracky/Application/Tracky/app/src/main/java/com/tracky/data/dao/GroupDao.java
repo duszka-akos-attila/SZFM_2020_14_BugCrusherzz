@@ -7,12 +7,12 @@ import androidx.room.Update;
 
 import com.tracky.data.Group;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface GroupDao {
 
     @Query("SELECT * FROM  `group`")
-    List<Group> selectAllGroup();
+    ArrayList<Group> selectAllGroup();
 
     @Insert
     void insertGroup(Group group);
