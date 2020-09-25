@@ -13,7 +13,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.ArrayList;
 
-public abstract class Manager{
+public class Manager{
 
     AppDatabase db = Room.databaseBuilder(MainActivity.context,
             AppDatabase.class, "TrackyDB").build();
