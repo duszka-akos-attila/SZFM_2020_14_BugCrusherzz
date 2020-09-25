@@ -7,12 +7,12 @@ import androidx.room.Update;
 
 import com.tracky.data.Template;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface TemplateDao {
 
     @Query("SELECT * FROM template")
-    List<Template> selectAllTemplate();
+    ArrayList<Template> selectAllTemplate();
 
     @Insert
     void insertTemplate(Template template);
