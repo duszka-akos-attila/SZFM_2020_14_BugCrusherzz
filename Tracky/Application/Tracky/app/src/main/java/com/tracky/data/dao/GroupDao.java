@@ -1,5 +1,6 @@
 package com.tracky.data.dao;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -7,12 +8,12 @@ import androidx.room.Update;
 
 import com.tracky.data.Group;
 
-import java.util.ArrayList;
-
+import java.util.List;
+@Dao
 public interface GroupDao {
 
     @Query("SELECT * FROM  `group`")
-    ArrayList<Group> selectAllGroup();
+    List<Group> selectAllGroup();
 
     @Insert
     void insertGroup(Group group);

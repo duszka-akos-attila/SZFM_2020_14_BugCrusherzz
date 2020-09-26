@@ -1,5 +1,6 @@
 package com.tracky.data.dao;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -7,12 +8,12 @@ import androidx.room.Update;
 
 import com.tracky.data.Template;
 
-import java.util.ArrayList;
-
+import java.util.List;
+@Dao
 public interface TemplateDao {
 
     @Query("SELECT * FROM template")
-    ArrayList<Template> selectAllTemplate();
+    List<Template> selectAllTemplate();
 
     @Insert
     void insertTemplate(Template template);

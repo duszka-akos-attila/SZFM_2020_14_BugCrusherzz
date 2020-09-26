@@ -1,5 +1,6 @@
 package com.tracky.data.dao;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -7,11 +8,11 @@ import androidx.room.Update;
 
 import com.tracky.data.Income;
 
-import java.util.ArrayList;
-
+import java.util.List;
+@Dao
 public interface IncomeDao {
     @Query("SELECT * FROM income")
-    ArrayList<Income> selectAllIncome();
+    List<Income> selectAllIncome();
 
     @Insert
     void insertIncome(Income income);
