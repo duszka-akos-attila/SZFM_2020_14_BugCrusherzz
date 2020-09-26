@@ -3,6 +3,7 @@ package com.tracky.data;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
 
 import java.util.Date;
 
@@ -51,7 +52,7 @@ public class Expense {
         this.description = description;
     }
 
-    public int getGroup() {
+    public int getGroupId() {
         return groupId;
     }
 
