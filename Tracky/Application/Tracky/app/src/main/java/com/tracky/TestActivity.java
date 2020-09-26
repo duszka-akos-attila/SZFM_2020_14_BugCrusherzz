@@ -15,13 +15,11 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-        test();
+        init();
     }
 
-    protected void test()
-
-    {
-        TableLayout stk = (TableLayout) findViewById(R.id.main_table);
+    protected void init(){
+        TableLayout stk = (TableLayout) findViewById(R.id.table_main);
         TableRow tbrow0 = new TableRow(this);
         TextView tv0 = new TextView(this);
         tv0.setText(" Sl.No ");
@@ -64,6 +62,8 @@ public class TestActivity extends AppCompatActivity {
             tbrow.addView(t4v);
             stk.addView(tbrow);
         }
+
     }
+    
 
 }
