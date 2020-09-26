@@ -6,33 +6,128 @@
     android:layout_height="match_parent"
     tools:context=".TestActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"/>
+
+    <Button
+        android:id="@+id/createIncomes"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:onClick="createIncomesPressed"
+        android:text="Create Incomes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/createExpenses"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:onClick="createExpansesPressed"
+        android:text="Create Expenses"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/deleteIncomes"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:onClick="deleteIncomesPressed"
+        android:text="Delete  Incomes"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Button
+        android:id="@+id/deleteExpenses"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:onClick="deleteExpansesPressed"
+        android:text="Delete Expenses"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Button
+        android:id="@+id/deleteAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteAllPressed"
+        android:text="Delete ALL"
+        android:textColor="#FF0000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#3d455b"
         android:layout_alignParentLeft="true"
+        android:layout_marginTop="164dp"
+        android:background="#3d455b"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <HorizontalScrollView
             android:id="@+id/hscrll1"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:id="@+id/RelativeLayout1"
                 android:layout_width="fill_parent"
-                android:layout_gravity="center"
                 android:layout_height="fill_parent"
-                android:orientation="vertical" >
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
                 <TableLayout
                     android:id="@+id/table_main"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true" >
-                </TableLayout>
+                    android:layout_centerHorizontal="true"></TableLayout>
             </RelativeLayout>
         </HorizontalScrollView>
     </ScrollView>
+
+    <EditText
+        android:id="@+id/amountField"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.037" />
 </androidx.constraintlayout.widget.ConstraintLayout>
