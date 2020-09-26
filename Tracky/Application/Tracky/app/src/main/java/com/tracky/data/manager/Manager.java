@@ -16,12 +16,20 @@ import java.util.List;
 
 public class Manager{
 
-    AppDatabase db = Room.databaseBuilder(MainActivity.context, AppDatabase.class, "TrackyDB").build();
+    AppDatabase db = Room.databaseBuilder(MainActivity.context, AppDatabase.class, "TrackyDB").allowMainThreadQueries().build();
 
-    List<Income> dbIncomes= db.incomeDao().selectAllIncome();
-    List<Expense> dbExpanses = db.expenseDao().selectAllExpense();
-    List<Template> dbTemplates = db.templateDao().selectAllTemplate();
-    List<Group> dbGroups = db.groupDao().selectAllGroup();
+    List<Income> dbIncomes= new ArrayList<Income>();
+    List<Expense> dbExpanses = new ArrayList<Expense>();
+    List<Template> dbTemplates = new ArrayList<Template>();
+    List<Group> dbGroups = new ArrayList<Group>();
+
+
+    public void importDB() {
+        dbIncomes = db.incomeDao().selectAllIncome();
+        dbExpanses = db.expenseDao().selectAllExpense();
+        dbTemplates = db.templateDao().selectAllTemplate();
+        dbGroups = db.groupDao().selectAllGroup();
+    }
 
     public List<Income> getDbIncomes() {
         return dbIncomes;
@@ -39,30 +47,24 @@ public class Manager{
         return dbGroups;
     }
 
-    ArrayList<Income> incomes= new ArrayList<>(getDbIncomes());
-    ArrayList<Expense> expenses= new ArrayList<>(getDbExpanses());
-    ArrayList<Template> templates= new ArrayList<>(getDbTemplates());
-    ArrayList<Group> groups= new ArrayList<>(getDbGroups());
-
-
     //------------------------------------INCOMES----------------------------
 
 
     public void addIncome(int amount, String description){
-        int id = incomes.size();
-        incomes.add(new Income(id, amount, description, Calendar.getInstance().getTime() ));
+        int id = dbIncomes.size();
+        dbIncomes.add(new Income(id, amount, description, Calendar.getInstance().getTime() ));
         db.incomeDao().insertIncome(new Income(id, amount, description, Calendar.getInstance().getTime()));
     }
 
     public void deleteIncome(int id){
 
-        db.incomeDao().deleteIncome(incomes.get(id));
-        incomes.remove(id);
+        db.incomeDao().deleteIncome(dbIncomes.get(id));
+        dbIncomes.remove(id);
 
 
-        for(int i = id; i < incomes.size(); i++){
-            incomes.get(i).setId(incomes.get(i).getId() - 1);
-            db.incomeDao().updateIncome(incomes.get(i));
+        for(int i = id; i < dbIncomes.size(); i++){
+            dbIncomes.get(i).setId(dbIncomes.get(i).getId() - 1);
+            db.incomeDao().updateIncome(dbIncomes.get(i));
         }
     }
 
@@ -77,18 +79,18 @@ public class Manager{
 
 
     public void addExpense(int amount, String description, int groupId){
-        int id = expenses.size();
-        expenses.add(new Expense(id, amount, description, groupId, Calendar.getInstance().getTime() ));
+        int id = dbExpanses.size();
+        dbExpanses.add(new Expense(id, amount, description, groupId, Calendar.getInstance().getTime() ));
         db.expenseDao().insertExpense(new Expense(id, amount, description, groupId, Calendar.getInstance().getTime()));;
     }
 
     public void deleteExpense(int id){
-        db.expenseDao().deleteExpense(expenses.get(id));
-        expenses.remove(id);
+        db.expenseDao().deleteExpense(dbExpanses.get(id));
+        dbExpanses.remove(id);
 
-        for(int i = id; i < expenses.size(); i++){
-            expenses.get(i).setId(expenses.get(i).getId() - 1);
-            db.expenseDao().updateExpense(expenses.get(i));
+        for(int i = id; i < dbExpanses.size(); i++){
+            dbExpanses.get(i).setId(dbExpanses.get(i).getId() - 1);
+            db.expenseDao().updateExpense(dbExpanses.get(i));
         }
     }
 
@@ -105,19 +107,19 @@ public class Manager{
 
 
     public void addGroup(String name, int color){
-        int id = groups.size();
-        groups.add(new Group(id, name, color));
+        int id = dbGroups.size();
+        dbGroups.add(new Group(id, name, color));
         db.groupDao().insertGroup(new Group(id, name, color));
     }
 
     public void deleteGroup(int id){
-        db.groupDao().deleteGroup(groups.get(id));
-        groups.remove(id);
+        db.groupDao().deleteGroup(dbGroups.get(id));
+        dbGroups.remove(id);
 
 
-        for(int i = id; i < groups.size(); i++){
-            groups.get(i).setId(groups.get(i).getId() - 1);
-            db.groupDao().updateGroup(groups.get(i));
+        for(int i = id; i < dbGroups.size(); i++){
+            dbGroups.get(i).setId(dbGroups.get(i).getId() - 1);
+            db.groupDao().updateGroup(dbGroups.get(i));
         }
     }
 
@@ -132,18 +134,18 @@ public class Manager{
 
 
     public void addTemplate(boolean isIncome, int amount, String description, int groupId){
-        int id = templates.size();
-        templates.add(new Template(isIncome, id, amount, description, groupId));
+        int id = dbTemplates.size();
+        dbTemplates.add(new Template(isIncome, id, amount, description, groupId));
         db.templateDao().insertTemplate(new Template(isIncome, id, amount, description, groupId));
     }
 
     public void deleteTemplate(int id){
-        db.templateDao().deleteTemplate(templates.get(id));
-        templates.remove(id);
+        db.templateDao().deleteTemplate(dbTemplates.get(id));
+        dbTemplates.remove(id);
 
-        for(int i = id; i < templates.size(); i++){
-            templates.get(i).setId(templates.get(i).getId() - 1);
-            db.templateDao().updateTemplate(templates.get(i));
+        for(int i = id; i < dbTemplates.size(); i++){
+            dbTemplates.get(i).setId(dbTemplates.get(i).getId() - 1);
+            db.templateDao().updateTemplate(dbTemplates.get(i));
         }
     }
 
@@ -162,5 +164,21 @@ public class Manager{
         else{
             addExpense(template.getAmount(), template.getDescription(), template.getGroupId());
         }
+    }
+
+    public List<Income> getIncomes() {
+        return dbIncomes;
+    }
+
+    public List<Expense> getExpenses() {
+        return dbExpanses;
+    }
+
+    public List<Template> getTemplates() {
+        return dbTemplates;
+    }
+
+    public List<Group> getGroups() {
+        return dbGroups;
     }
 }
