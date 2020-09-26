@@ -12,16 +12,37 @@ import com.tracky.data.base.AppDatabase;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Manager{
 
-    AppDatabase db = Room.databaseBuilder(MainActivity.context,
-            AppDatabase.class, "TrackyDB").build();
+    AppDatabase db = Room.databaseBuilder(MainActivity.context, AppDatabase.class, "TrackyDB").build();
 
-    ArrayList<Income> incomes= db.incomeDao().selectAllIncome();
-    ArrayList<Expense> expenses= db.expenseDao().selectAllExpense();
-    ArrayList<Template> templates= db.templateDao().selectAllTemplate();
-    ArrayList<Group> groups= db.groupDao().selectAllGroup();
+    List<Income> dbIncomes= db.incomeDao().selectAllIncome();
+    List<Expense> dbExpanses = db.expenseDao().selectAllExpense();
+    List<Template> dbTemplates = db.templateDao().selectAllTemplate();
+    List<Group> dbGroups = db.groupDao().selectAllGroup();
+
+    public List<Income> getDbIncomes() {
+        return dbIncomes;
+    }
+
+    public List<Expense> getDbExpanses() {
+        return dbExpanses;
+    }
+
+    public List<Template> getDbTemplates() {
+        return dbTemplates;
+    }
+
+    public List<Group> getDbGroups() {
+        return dbGroups;
+    }
+
+    ArrayList<Income> incomes= new ArrayList<>(getDbIncomes());
+    ArrayList<Expense> expenses= new ArrayList<>(getDbExpanses());
+    ArrayList<Template> templates= new ArrayList<>(getDbTemplates());
+    ArrayList<Group> groups= new ArrayList<>(getDbGroups());
 
 
     //------------------------------------INCOMES----------------------------
