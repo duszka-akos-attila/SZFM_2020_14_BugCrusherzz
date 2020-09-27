@@ -9,6 +9,7 @@ import com.tracky.data.Group;
 import com.tracky.data.Template;
 import com.tracky.data.base.AppDatabase;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -537,5 +538,45 @@ public class Manager{
         return results;
     }
 
+    public static List<String[]> lastBalanceModificaitons(int amount,String noGroupSing, String dateFormat){
+        List<String[]> result = new ArrayList<>();
+
+        int incomeIndex = getIncomes().size()-1;
+        int expenseIndex = getExpenses().size()-1;
+        String dateFormatUsed = dateFormat;
+
+        if(dateFormatUsed.equals("auto")){
+            dateFormatUsed = "yyyy.MM.dd hh:mm";
+        }
+
+        for (int i=0; i<amount; i++){
+
+            if(incomeIndex > -1 && expenseIndex > -1) {
+
+                if (getIncomes().get(incomeIndex).getDate().after(getExpenses().get(expenseIndex).getDate())) {
+                    result.add(getIncomes().get(incomeIndex).toStringArray(noGroupSing, dateFormatUsed));
+                    incomeIndex--;
+                }
+
+                else {
+                    result.add(getExpenses().get(expenseIndex).toStringArray(dateFormatUsed));
+                    expenseIndex--;
+                }
+            }
+
+            else if(incomeIndex > -1){
+                result.add(getIncomes().get(incomeIndex).toStringArray(noGroupSing, dateFormatUsed));
+                incomeIndex--;
+            }
+
+            else if(expenseIndex > -1){
+                result.add(getExpenses().get(expenseIndex).toStringArray(dateFormatUsed));
+                expenseIndex--;
+            }
+
+            break;
+        }
+        return result;
+    }
 
 }

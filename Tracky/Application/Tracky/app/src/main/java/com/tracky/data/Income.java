@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 @Entity
 public class Income {
@@ -63,5 +64,16 @@ public class Income {
 
     public Date getDate() {
         return date;
+    }
+
+    public String[] toStringArray(String noGroupSing, String dateFormat){
+        return new String[]{
+                String.valueOf(id),
+                description,
+                new SimpleDateFormat(dateFormat).format(date),
+                noGroupSing,
+                String.valueOf(amount),
+                "t"
+        };
     }
 }

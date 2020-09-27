@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -52,6 +53,12 @@ public class HomeFragment extends Fragment {
         });
 
         balanceList = new ArrayList<>();
+        balanceList = Manager.lastBalanceModificaitons(5,"-","auto");
+        for(int i = 0; i < balanceList.size(); i++){
+            Toast.makeText(getContext(),
+                    balanceList.get(i)[0]+" "+ balanceList.get(i)[1]+" "+ balanceList.get(i)[2]+" "+
+                            balanceList.get(i)[3]+" "+balanceList.get(i)[4]+" "+balanceList.get(i)[5]+" "+ i, Toast.LENGTH_SHORT).show();
+        }
         Text number;
         MainTabla = root.findViewById(R.id.mainTabla2);
         MainTablaAdapter = new mainTablaAdapter(balanceList);

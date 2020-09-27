@@ -5,6 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverter;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -66,5 +67,16 @@ public class Expense {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String[] toStringArray(String dateFormat){
+        return new String[]{
+                String.valueOf(id),
+                description,
+                new SimpleDateFormat(dateFormat).format(date),
+                String.valueOf(groupId),
+                String.valueOf(amount),
+                "f"
+        };
     }
 }
