@@ -16,9 +16,9 @@
         <item
             android:id="@+id/nav_group"
             android:title="Csoportok" />
-        <item
+       <!-- <item
             android:id="@+id/nav_template"
-            android:title="Sablonok" />
+            android:title="Sablonok" /> -->
         <item
             android:id="@+id/nav_summary"
             android:title="Összesítés" />

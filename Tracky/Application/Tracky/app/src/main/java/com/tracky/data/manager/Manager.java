@@ -163,6 +163,68 @@ public class Manager{
         }
     }
 
+    public static void deleteAll(){
+
+        if(dbIncomes.size()!=0) {
+            for (int i = dbIncomes.size()-1; i>=0 ;i--) {
+                deleteIncome(dbIncomes.get(i).getId());
+            }
+        }
+
+        if(dbExpenses.size()!=0) {
+            for (int i = dbExpenses.size()-1; i>=0 ;i--) {
+                deleteExpense(dbExpenses.get(i).getId());
+            }
+        }
+
+        if(dbGroups.size()!=0) {
+            for (int i = dbGroups.size()-1; i>=0 ;i--) {
+                deleteGroup(dbGroups.get(i).getId());
+            }
+        }
+
+        if(dbTemplates.size()!=0) {
+            for (int i = dbTemplates.size()-1; i>=0 ;i--) {
+                deleteTemplate(dbTemplates.get(i).getId());
+            }
+        }
+
+    }
+
+    public static void deleteAllIncomes(){
+        if(dbIncomes.size()!=0) {
+            for (int i = dbIncomes.size()-1; i>=0 ;i--) {
+                deleteIncome(dbIncomes.get(i).getId());
+            }
+        }
+
+    }
+
+    public static void deleteAllExpenses(){
+        if(dbExpenses.size()!=0) {
+            for (int i = dbExpenses.size()-1; i>=0 ;i--) {
+                deleteExpense(dbExpenses.get(i).getId());
+            }
+        }
+    }
+
+    public static void deleteAllGroups(){
+        if(dbGroups.size()!=0) {
+            for (int i = dbGroups.size()-1; i>=0 ;i--) {
+                deleteGroup(dbGroups.get(i).getId());
+            }
+        }
+    }
+
+    public static void deleteAllTemplates(){
+        if(dbTemplates.size()!=0) {
+            for (int i = dbTemplates.size()-1; i>=0 ;i--) {
+                deleteTemplate(dbTemplates.get(i).getId());
+            }
+        }
+
+    }
+
     //------------------------------------INCOMES----------------------------
 
 
@@ -175,7 +237,22 @@ public class Manager{
 
     public static void deleteIncome(int id){
         db.incomeDao().deleteIncome(dbIncomes.get(id));
-        dbIncomes.remove(id);
+        if(id>=dbIncomes.size()/2){
+            for(int i = dbIncomes.size()-1;i>-1;i--){
+                if(dbIncomes.get(i).getId()==id){
+                    dbIncomes.remove(i);
+                    break;
+                }
+            }
+        }
+        else{
+            for (int i =0;i<dbIncomes.size();i++){
+                if(dbIncomes.get(i).getId()==id){
+                    dbIncomes.remove(i);
+                    break;
+                }
+            }
+        }
     }
 
     public static void editIncome( Income income, int amount, String description, Date date){
@@ -197,7 +274,22 @@ public class Manager{
 
     public static void deleteExpense(int id){
         db.expenseDao().deleteExpense(dbExpenses.get(id));
-        dbExpenses.remove(id);
+        if(id>=dbExpenses.size()/2){
+            for(int i = dbExpenses.size()-1;i>-1;i--){
+                if(dbExpenses.get(i).getId()==id){
+                    dbExpenses.remove(i);
+                    break;
+                }
+            }
+        }
+        else{
+            for (int i =0;i<dbExpenses.size();i++){
+                if(dbExpenses.get(i).getId()==id){
+                    dbExpenses.remove(i);
+                    break;
+                }
+            }
+        }
     }
 
     public static void editExpense( Expense expense, int amount, String description, Group group, Date date){
@@ -221,7 +313,22 @@ public class Manager{
 
     public static void deleteGroup(int id){
         db.groupDao().deleteGroup(dbGroups.get(id));
-        dbGroups.remove(id);
+        if(id>=dbGroups.size()/2){
+            for(int i = dbGroups.size()-1;i>-1;i--){
+                if(dbGroups.get(i).getId()==id){
+                    dbGroups.remove(i);
+                    break;
+                }
+            }
+        }
+        else{
+            for (int i =0;i<dbGroups.size();i++){
+                if(dbGroups.get(i).getId()==id){
+                    dbGroups.remove(i);
+                    break;
+                }
+            }
+        }
     }
 
     public static void editGroup(Group group, String name, int color){
@@ -243,7 +350,22 @@ public class Manager{
 
     public static void deleteTemplate(int id){
         db.templateDao().deleteTemplate(dbTemplates.get(id));
-        dbTemplates.remove(id);
+        if(id>=dbTemplates.size()/2){
+            for(int i = dbTemplates.size()-1;i>-1;i--){
+                if(dbTemplates.get(i).getId()==id){
+                    dbTemplates.remove(i);
+                    break;
+                }
+            }
+        }
+        else{
+            for (int i =0;i<dbTemplates.size();i++){
+                if(dbTemplates.get(i).getId()==id){
+                    dbTemplates.remove(i);
+                    break;
+                }
+            }
+        }
     }
 
     public static void editTemplate(Template template, boolean isIncome, int amount, String description, Group group){

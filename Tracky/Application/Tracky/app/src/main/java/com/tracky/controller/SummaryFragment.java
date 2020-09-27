@@ -57,10 +57,10 @@ public class SummaryFragment extends Fragment {
 
         stk = (TableLayout) root.findViewById(R.id.table_summary);
         TableRow tbrow0 = new TableRow(getContext());
-        TextView tv0 = new TextView(getContext());
+       /* TextView tv0 = new TextView(getContext());
         tv0.setText(" Id ");
         tv0.setTextColor(Color.WHITE);
-        tbrow0.addView(tv0);
+        tbrow0.addView(tv0);*/
         TextView tv1 = new TextView(getContext());
         tv1.setText(" Amount ");
         tv1.setTextColor(Color.WHITE);
@@ -83,11 +83,11 @@ public class SummaryFragment extends Fragment {
 
             for (int i = 0; i < Manager.getExpenses().size(); i++) {
                 TableRow tbrow = new TableRow(getContext());
-                TextView t0v = new TextView(getContext());
+                /*TextView t0v = new TextView(getContext());
                 t0v.setText(String.valueOf(Manager.getExpenses().get(i).getId()));
                 t0v.setTextColor(Color.WHITE);
                 t0v.setGravity(Gravity.CENTER);
-                tbrow.addView(t0v);
+                tbrow.addView(t0v);*/
                 TextView t1v = new TextView(getContext());
                 t1v.setText(String.valueOf(Manager.getExpenses().get(i).getAmount()));
                 t1v.setTextColor(Color.WHITE);
@@ -116,11 +116,11 @@ public class SummaryFragment extends Fragment {
         if(Manager.getIncomes().size()>0) {
             for (int i = 0; i < Manager.getIncomes().size(); i++) {
                 TableRow tbrow = new TableRow(getContext());
-                TextView t0v = new TextView(getContext());
+               /* TextView t0v = new TextView(getContext());
                 t0v.setText(String.valueOf(Manager.getIncomes().get(i).getId()));
                 t0v.setTextColor(Color.WHITE);
                 t0v.setGravity(Gravity.CENTER);
-                tbrow.addView(t0v);
+                tbrow.addView(t0v);*/
                 TextView t1v = new TextView(getContext());
                 t1v.setText(String.valueOf(Manager.getIncomes().get(i).getAmount()));
                 t1v.setTextColor(Color.WHITE);
@@ -203,10 +203,10 @@ public class SummaryFragment extends Fragment {
 
         stk = (TableLayout) getView().findViewById(R.id.table_summary);
         TableRow tbrow0 = new TableRow(getContext());
-        TextView tv0 = new TextView(getContext());
+       /* TextView tv0 = new TextView(getContext());
         tv0.setText(" Id ");
         tv0.setTextColor(Color.WHITE);
-        tbrow0.addView(tv0);
+        tbrow0.addView(tv0);*/
         TextView tv1 = new TextView(getContext());
         tv1.setText(" Amount ");
         tv1.setTextColor(Color.WHITE);
@@ -229,11 +229,11 @@ public class SummaryFragment extends Fragment {
 
             for (int i = 0; i < expenseResults.size(); i++) {
                 TableRow tbrow = new TableRow(getContext());
-                TextView t0v = new TextView(getContext());
+               /* TextView t0v = new TextView(getContext());
                 t0v.setText(String.valueOf(expenseResults.get(i).getId()));
                 t0v.setTextColor(Color.WHITE);
                 t0v.setGravity(Gravity.CENTER);
-                tbrow.addView(t0v);
+                tbrow.addView(t0v);*/
                 TextView t1v = new TextView(getContext());
                 t1v.setText(String.valueOf(expenseResults.get(i).getAmount()));
                 t1v.setTextColor(Color.WHITE);
@@ -262,11 +262,11 @@ public class SummaryFragment extends Fragment {
         if(incomeResults.size()>0) {
             for (int i = 0; i < incomeResults.size(); i++) {
                 TableRow tbrow = new TableRow(getContext());
-                TextView t0v = new TextView(getContext());
+               /* TextView t0v = new TextView(getContext());
                 t0v.setText(String.valueOf(incomeResults.get(i).getId()));
                 t0v.setTextColor(Color.WHITE);
                 t0v.setGravity(Gravity.CENTER);
-                tbrow.addView(t0v);
+                tbrow.addView(t0v);*/
                 TextView t1v = new TextView(getContext());
                 t1v.setText(String.valueOf(incomeResults.get(i).getAmount()));
                 t1v.setTextColor(Color.WHITE);
@@ -325,10 +325,10 @@ public class SummaryFragment extends Fragment {
 
         stk = (TableLayout) getView().findViewById(R.id.table_summary);
         TableRow tbrow0 = new TableRow(getContext());
-        TextView tv0 = new TextView(getContext());
+        /*TextView tv0 = new TextView(getContext());
         tv0.setText(" Id ");
         tv0.setTextColor(Color.WHITE);
-        tbrow0.addView(tv0);
+        tbrow0.addView(tv0);*/
         TextView tv1 = new TextView(getContext());
         tv1.setText(" Amount ");
         tv1.setTextColor(Color.WHITE);
@@ -346,11 +346,11 @@ public class SummaryFragment extends Fragment {
         if(incomeResults.size()>0) {
             for (int i = 0; i < incomeResults.size(); i++) {
                 TableRow tbrow = new TableRow(getContext());
-                TextView t0v = new TextView(getContext());
+                /*TextView t0v = new TextView(getContext());
                 t0v.setText(String.valueOf(incomeResults.get(i).getId()));
                 t0v.setTextColor(Color.WHITE);
                 t0v.setGravity(Gravity.CENTER);
-                tbrow.addView(t0v);
+                tbrow.addView(t0v);*/
                 TextView t1v = new TextView(getContext());
                 t1v.setText(String.valueOf(incomeResults.get(i).getAmount()));
                 t1v.setTextColor(Color.WHITE);
@@ -404,10 +404,10 @@ public class SummaryFragment extends Fragment {
 
         stk = (TableLayout) getView().findViewById(R.id.table_summary);
         TableRow tbrow0 = new TableRow(getContext());
-        TextView tv0 = new TextView(getContext());
+       /* TextView tv0 = new TextView(getContext());
         tv0.setText(" Id ");
         tv0.setTextColor(Color.WHITE);
-        tbrow0.addView(tv0);
+        tbrow0.addView(tv0);*/
         TextView tv1 = new TextView(getContext());
         tv1.setText(" Amount ");
         tv1.setTextColor(Color.WHITE);
@@ -430,11 +430,11 @@ public class SummaryFragment extends Fragment {
 
             for (int i = 0; i < expenseResults.size(); i++) {
                 TableRow tbrow = new TableRow(getContext());
-                TextView t0v = new TextView(getContext());
+               /* TextView t0v = new TextView(getContext());
                 t0v.setText(String.valueOf(expenseResults.get(i).getId()));
                 t0v.setTextColor(Color.WHITE);
                 t0v.setGravity(Gravity.CENTER);
-                tbrow.addView(t0v);
+                tbrow.addView(t0v);*/
                 TextView t1v = new TextView(getContext());
                 t1v.setText(String.valueOf(expenseResults.get(i).getAmount()));
                 t1v.setTextColor(Color.WHITE);
