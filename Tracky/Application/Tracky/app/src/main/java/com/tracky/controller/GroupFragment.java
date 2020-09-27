@@ -6,14 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import com.tracky.data.manager.Manager;
 import com.tracky.R;
 
@@ -33,7 +28,7 @@ public class GroupFragment extends Fragment {
 
         addGroup = (Button) root.findViewById(R.id.add_group);
         groupName = (EditText) root.findViewById(R.id.group_name);
-        groupColor= (EditText) root.findViewById(R.id.group_color);
+        //groupColor= (EditText) root.findViewById(R.id.group_color);
         deleteGroup = (Button) root.findViewById(R.id.delete_group);
         groupId = (EditText) root.findViewById(R.id.group_id);
         deleteAll = (Button) root.findViewById(R.id.delete_allgroups);
@@ -41,13 +36,13 @@ public class GroupFragment extends Fragment {
         addGroup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if( groupName.getText().length() == 0){
-                    Toast.makeText(getContext(), "Textfield is empty! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Üres a csoport neve mező!", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     Manager.addGroup(groupName.getText().toString(), 0);
                     groupName.setText("");
                     groupColor.setText("");
-                    Toast.makeText(getContext(), groupName.getText().toString() + " Added to groups.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), groupName.getText().toString() + " hozzáadva a csoportokhoz!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -55,13 +50,19 @@ public class GroupFragment extends Fragment {
         deleteGroup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(groupId.getText().length() == 0){
-                    Toast.makeText(getContext(), "Textfield is empty! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), " Üres a csoport neve szövegmező!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    int id = Integer.parseInt(String.valueOf(groupId.getText()));
-                    Manager.deleteGroup(id);
-                    Toast.makeText(getContext(), "Group deleted!", Toast.LENGTH_SHORT).show();
-                    groupId.setText("");
+
+                    String name = groupName.getText().toString();
+                    for( int i = 0; i < Manager.getGroups().size(); i++){
+                        if(Manager.getGroups().get(i).getName().equals(name) ){
+                            Manager.deleteGroup(Manager.getGroups().get(i).getId());
+                            Toast.makeText(getContext(), groupId.getText().toString() + " nevű csoport törölve", Toast.LENGTH_SHORT).show();
+                            groupId.setText("");
+                        }
+                    }
+
                 }
             }
         });
@@ -69,6 +70,7 @@ public class GroupFragment extends Fragment {
         deleteAll.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Manager.deleteAllGroups();
+                Toast.makeText(getContext(), "Minden csoport törölve!", Toast.LENGTH_SHORT).show();
             }
         });
 

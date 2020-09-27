@@ -40,34 +40,24 @@ public class TemplateFragment extends Fragment {
         addTemplate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if( templateAmount.getText().length() == 0){
-                    Toast.makeText(getContext(), "Textfield is empty! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), " Összeg mező üres!", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     try {
                         int amount = Integer.parseInt(String.valueOf(templateAmount.getText()));
                         if( amount < 0){
-                            Toast.makeText(getContext(), amount + " is less than 0. Try again!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), amount + " kevesebb mint nulla!", Toast.LENGTH_SHORT).show();
                         }
                         else {
-                           // if( isIncome.isChecked()) {
                                 Manager.addTemplate(isIncome.isChecked(), amount, templateDesc.getText().toString(), 0);
                                 templateAmount.setText("");
                                 templateDesc.setText("");
                                 templateGroup.setText("");
                                 isIncome.setChecked(false);
-                                Toast.makeText(getContext(), "Added to templates.", Toast.LENGTH_SHORT).show();
-                            //}
-                            /*else{
-                                Manager.addTemplate(isIncome.isChecked(), amount, templateDesc.getText().toString(), Integer.parseInt(String.valueOf(templateGroup.getText())));
-                                templateAmount.setText("");
-                                templateDesc.setText("");
-                                templateGroup.setText("");
-                                isIncome.setChecked(false);
-                                Toast.makeText(getContext(), "Added to templates.", Toast.LENGTH_SHORT).show();
-                            }*/
+                                Toast.makeText(getContext(), " hozzáadva a sablonokhoz", Toast.LENGTH_SHORT).show();
                         }
                     } catch (java.lang.NumberFormatException e) {
-                        Toast.makeText(getContext(), "Amount is not a number! Try again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), templateAmount.getText().toString() + " nem egy szám!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -75,7 +65,32 @@ public class TemplateFragment extends Fragment {
 
         deleteTemplate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if(templateId.getText().length() == 0){
+                    Toast.makeText(getContext(), " Üres az összeg szövegmező!", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    try{
+                        int amount = Integer.parseInt(String.valueOf(templateId.getText()));
+                        for( int i = 0; i < Manager.getTemplates().size(); i++){
+                            if(Manager.getTemplates().get(i).getAmount() == amount ){
+                                Manager.deleteTemplate(Manager.getTemplates().get(i).getId());
+                                Toast.makeText(getContext(), templateId.getText().toString() + " összegű sablon törölve", Toast.LENGTH_SHORT).show();
+                                templateId.setText("");
+                            }
+                        }
+
+                    }catch (java.lang.NumberFormatException e) {
+                        Toast.makeText(getContext(), templateId.getText().toString() +" nem egy szám!", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            }
+        });
+
+        deleteAll.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 Manager.deleteAllTemplates();
+                Toast.makeText(getContext(), "Minden sablon törölve!", Toast.LENGTH_SHORT).show();
             }
         });
 

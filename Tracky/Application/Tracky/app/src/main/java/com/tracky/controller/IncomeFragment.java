@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 import com.tracky.data.manager.Manager;
 import com.tracky.R;
 
@@ -31,27 +30,27 @@ public class IncomeFragment extends Fragment {
         incomeDesc = (EditText) root.findViewById(R.id.income_desc);
         deleteIncome = (Button) root.findViewById(R.id.delete_income);
         incomeId = (EditText) root.findViewById(R.id.income_id);
-        deleteIncome = (Button) root.findViewById(R.id.delete_allincomes);
+        deleteAll = (Button) root.findViewById(R.id.delete_allincomes);
 
         addincome.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if( incomeAmount.getText().length() == 0){
-                    Toast.makeText(getContext(), "Textfield is empty! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Üres a bevétel mennyisége szövegmező!", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     try {
                         int amount = Integer.parseInt(String.valueOf(incomeAmount.getText()));
                         if( amount < 0){
-                            Toast.makeText(getContext(), amount + " is less than 0. Try again!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), amount + " kevesebb mint nulla", Toast.LENGTH_SHORT).show();
                         }
                         else {
                             Manager.addIncome(amount, incomeDesc.getText().toString());
-                            Toast.makeText(getContext(), amount + " Added to incomes.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), amount + " Hozzáadva a bevételekhez.", Toast.LENGTH_SHORT).show();
                             incomeAmount.setText("");
                             incomeDesc.setText("");
                         }
                     } catch (java.lang.NumberFormatException e) {
-                        Toast.makeText(getContext(), "Not a number! Try again", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), incomeAmount.getText().toString() +" nem egy szám!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -60,13 +59,24 @@ public class IncomeFragment extends Fragment {
         deleteIncome.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(incomeId.getText().length() == 0){
-                    Toast.makeText(getContext(), "Textfield is empty! Try again!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Üres az összeg szövegmező!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    int id = Integer.parseInt(String.valueOf(incomeId.getText()));
-                    Manager.deleteIncome(id);
-                    Toast.makeText(getContext(), "Income deleted!", Toast.LENGTH_SHORT).show();
-                    incomeId.setText("");
+                    try {
+                        int osszeg = Integer.parseInt(String.valueOf(incomeId.getText()));
+                        for( int i = 0; i < Manager.getIncomes().size(); i++){
+                            if(Manager.getIncomes().get(i).getAmount() == osszeg ){
+                                Manager.deleteIncome(Manager.getIncomes().get(i).getId());
+                                Toast.makeText(getContext(), incomeId.getText().toString() + " összegű bevétel törölve", Toast.LENGTH_SHORT).show();
+                                incomeId.setText("");
+                            }
+                        }
+
+                    }
+                    catch (java.lang.NumberFormatException e) {
+                        Toast.makeText(getContext(), incomeId.getText().toString() +" nem egy szám!", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
         });
@@ -74,6 +84,7 @@ public class IncomeFragment extends Fragment {
         deleteAll.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Manager.deleteAllIncomes();
+                Toast.makeText(getContext(), "Minden bevétel törölve!", Toast.LENGTH_SHORT).show();
             }
         });
 

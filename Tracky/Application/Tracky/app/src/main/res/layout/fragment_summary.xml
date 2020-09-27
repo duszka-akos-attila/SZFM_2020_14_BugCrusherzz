@@ -66,7 +66,7 @@
 
                 <TableLayout
                     android:id="@+id/table_summary"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"></TableLayout>
             </RelativeLayout>
@@ -103,7 +103,7 @@
 
     <Button
         android:id="@+id/summary_list"
-        android:layout_width="120dp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginTop="80dp"
         android:text="Kilistáz"
