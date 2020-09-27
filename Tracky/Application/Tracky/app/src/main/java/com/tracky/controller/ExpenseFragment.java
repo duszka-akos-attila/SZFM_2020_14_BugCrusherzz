@@ -26,6 +26,7 @@ public class ExpenseFragment extends Fragment {
     Button addexpense;
     Button deleteExpense;
     EditText expenseId;
+    Button deleteAll;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -37,6 +38,7 @@ public class ExpenseFragment extends Fragment {
         expenseGroup = (EditText) root.findViewById(R.id.expense_group);
         deleteExpense = (Button) root.findViewById(R.id.delete_expense);
         expenseId = (EditText) root.findViewById(R.id.expense_id);
+        deleteAll = (Button) root.findViewById(R.id.delete_allexpenses);
 
         addexpense.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -74,6 +76,12 @@ public class ExpenseFragment extends Fragment {
                     expenseId.setText("");
                     Toast.makeText(getContext(), "Expense deleted!", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        deleteAll.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Manager.deleteAllExpenses();
             }
         });
 

@@ -22,6 +22,7 @@ public class TemplateFragment extends Fragment {
     CheckBox isIncome;
     Button deleteTemplate;
     EditText templateId;
+    Button deleteAll;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -34,6 +35,7 @@ public class TemplateFragment extends Fragment {
         isIncome = (CheckBox) root.findViewById(R.id.check_isincome);
         deleteTemplate = (Button) root.findViewById(R.id.delete_template);
         templateId = (EditText) root.findViewById(R.id.template_id);
+        deleteAll = (Button) root.findViewById(R.id.delete_alltemplates);
 
         addTemplate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -73,15 +75,7 @@ public class TemplateFragment extends Fragment {
 
         deleteTemplate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(templateId.getText().length() == 0){
-                    Toast.makeText(getContext(), "Textfield is empty! Try again!", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    int id = Integer.parseInt(String.valueOf(templateId.getText()));
-                    Manager.deleteTemplate(id);
-                    Toast.makeText(getContext(), "Template deleted!", Toast.LENGTH_SHORT).show();
-                    templateId.setText("");
-                }
+                Manager.deleteAllTemplates();
             }
         });
 

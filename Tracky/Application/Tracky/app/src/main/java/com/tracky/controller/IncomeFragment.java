@@ -20,6 +20,7 @@ public class IncomeFragment extends Fragment {
     Button addincome;
     Button deleteIncome;
     EditText incomeId;
+    Button deleteAll;
 
 
     public View onCreateView(@NonNull final LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class IncomeFragment extends Fragment {
         incomeDesc = (EditText) root.findViewById(R.id.income_desc);
         deleteIncome = (Button) root.findViewById(R.id.delete_income);
         incomeId = (EditText) root.findViewById(R.id.income_id);
+        deleteIncome = (Button) root.findViewById(R.id.delete_allincomes);
 
         addincome.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -66,6 +68,12 @@ public class IncomeFragment extends Fragment {
                     Toast.makeText(getContext(), "Income deleted!", Toast.LENGTH_SHORT).show();
                     incomeId.setText("");
                 }
+            }
+        });
+
+        deleteAll.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Manager.deleteAllIncomes();
             }
         });
 
