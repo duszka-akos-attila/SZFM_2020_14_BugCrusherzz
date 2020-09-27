@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.tracky.controller.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_income"
+        android:name="com.tracky.controller.IncomeFragment"
+        android:label="Incomes"
+        tools:layout="@layout/fragment_income" />
+
+    <fragment
+        android:id="@+id/nav_expense"
+        android:name="com.tracky.controller.ExpenseFragment"
+        android:label="Expenses"
+        tools:layout="@layout/fragment_expense" />
+
+    <fragment
+        android:id="@+id/nav_group"
+        android:name="com.tracky.controller.GroupFragment"
+        android:label="Groups"
+        tools:layout="@layout/fragment_group" />
+
+    <fragment
+        android:id="@+id/nav_template"
+        android:name="com.tracky.controller.TemplateFragment"
+        android:label="Templates"
+        tools:layout="@layout/fragment_template" />
+
+    <fragment
+        android:id="@+id/nav_summary"
+        android:name="com.tracky.controller.SummaryFragment"
+        android:label="Summary"
+        tools:layout="@layout/fragment_template" />
+
+</navigation>

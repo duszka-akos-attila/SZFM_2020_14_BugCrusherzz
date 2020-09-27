@@ -56,7 +56,7 @@ public class DevModule {
     }
 
     public void deleteIncomes(int amount){
-        if(manager.getDbIncomes().size()>amount){
+        if(manager.getIncomes().size()>amount){
             for(int i= manager.getIncomes().size()-1; i > manager.getIncomes().size()-amount-1;i--){
                 manager.deleteIncome(manager.getIncomes().get(i).getId());
             }

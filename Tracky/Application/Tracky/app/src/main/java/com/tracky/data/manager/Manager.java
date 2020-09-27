@@ -4,12 +4,12 @@ import android.util.Log;
 
 import androidx.room.Room;
 
-import com.example.tracky.data.Expense;
-import com.example.tracky.data.Income;
-import com.example.tracky.MainActivity;
-import com.example.tracky.data.Group;
-import com.example.tracky.data.Template;
-import com.example.tracky.data.base.AppDatabase;
+import com.tracky.data.Expense;
+import com.tracky.data.Income;
+import com.tracky.MainActivity;
+import com.tracky.data.Group;
+import com.tracky.data.Template;
+import com.tracky.data.base.AppDatabase;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -32,19 +32,19 @@ public class Manager{
         dbGroups = db.groupDao().selectAllGroup();
     }
 
-    public static List<Income> getDbIncomes() {
+    public static List<Income> getIncomes() {
         return dbIncomes;
     }
 
-    public static List<Expense> getDbExpenses() {
+    public static List<Expense> getExpenses() {
         return dbExpenses;
     }
 
-    public static List<Template> getDbTemplates() {
+    public static List<Template> getTemplates() {
         return dbTemplates;
     }
 
-    public static List<Group> getDbGroups() {
+    public static List<Group> getGroups() {
         return dbGroups;
     }
 
