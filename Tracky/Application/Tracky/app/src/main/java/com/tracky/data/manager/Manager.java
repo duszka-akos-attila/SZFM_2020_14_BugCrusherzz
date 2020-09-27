@@ -574,7 +574,9 @@ public class Manager{
                 expenseIndex--;
             }
 
-            break;
+            else {
+                break;
+            }
         }
         return result;
     }
