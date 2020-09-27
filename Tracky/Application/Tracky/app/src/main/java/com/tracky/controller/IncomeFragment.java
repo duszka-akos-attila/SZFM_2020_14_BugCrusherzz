@@ -64,7 +64,7 @@ public class IncomeFragment extends Fragment {
                 else{
                     try {
                         int osszeg = Integer.parseInt(String.valueOf(incomeId.getText()));
-                        for( int i = 0; i < Manager.getIncomes().size(); i++){
+                        for( int i = Manager.getIncomes().size()-1; i >= 0 ; i--){
                             if(Manager.getIncomes().get(i).getAmount() == osszeg ){
                                 Manager.deleteIncome(Manager.getIncomes().get(i).getId());
                                 Toast.makeText(getContext(), incomeId.getText().toString() + " összegű bevétel törölve", Toast.LENGTH_SHORT).show();

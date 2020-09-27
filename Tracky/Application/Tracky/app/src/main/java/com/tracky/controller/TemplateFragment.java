@@ -71,7 +71,7 @@ public class TemplateFragment extends Fragment {
                 else{
                     try{
                         int amount = Integer.parseInt(String.valueOf(templateId.getText()));
-                        for( int i = 0; i < Manager.getTemplates().size(); i++){
+                        for( int i = Manager.getTemplates().size()-1 ; i >= 0 ; i--){
                             if(Manager.getTemplates().get(i).getAmount() == amount ){
                                 Manager.deleteTemplate(Manager.getTemplates().get(i).getId());
                                 Toast.makeText(getContext(), templateId.getText().toString() + " összegű sablon törölve", Toast.LENGTH_SHORT).show();

@@ -55,7 +55,7 @@ public class GroupFragment extends Fragment {
                 else{
 
                     String name = groupName.getText().toString();
-                    for( int i = 0; i < Manager.getGroups().size(); i++){
+                    for( int i = Manager.getGroups().size() -1; i >= 0; i--){
                         if(Manager.getGroups().get(i).getName().equals(name) ){
                             Manager.deleteGroup(Manager.getGroups().get(i).getId());
                             Toast.makeText(getContext(), groupId.getText().toString() + " nevű csoport törölve", Toast.LENGTH_SHORT).show();

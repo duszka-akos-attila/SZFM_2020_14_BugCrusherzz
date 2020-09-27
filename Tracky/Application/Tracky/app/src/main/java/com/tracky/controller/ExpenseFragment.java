@@ -67,7 +67,7 @@ public class ExpenseFragment extends Fragment {
                 else{
                     try{
                         int osszeg = Integer.parseInt(String.valueOf(expenseId.getText()));
-                        for( int i = 0; i < Manager.getExpenses().size(); i++){
+                        for( int i = Manager.getExpenses().size()-1 ; i >= 0 ; i--){
                             if(Manager.getExpenses().get(i).getAmount() == osszeg ){
                                 Manager.deleteExpense(Manager.getExpenses().get(i).getId());
                                 Toast.makeText(getContext(), expenseId.getText().toString() + " összegű kiadás törölve", Toast.LENGTH_SHORT).show();
