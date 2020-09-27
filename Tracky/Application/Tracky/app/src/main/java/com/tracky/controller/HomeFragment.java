@@ -6,27 +6,33 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.tracky.MainActivity;
+import com.tracky.R;
 import com.tracky.TestActivity;
 import com.tracky.data.manager.Manager;
-import com.tracky.R;
+import com.tracky.mainTablaAdapter;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
     TextView homeBalance;
     Button devMode;
 
+    RecyclerView MainTabla;
+    mainTablaAdapter MainTablaAdapter;
+
+    List<String> movieList;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -45,10 +51,50 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        movieList = new ArrayList<>();
         Text number;
+        MainTabla = root.findViewById(R.id.mainTabla2);
+        MainTablaAdapter = new mainTablaAdapter();
+        //MainTabla.setLayoutManager(new LinearLayoutManager(context));
+
+        MainTabla.setAdapter(MainTablaAdapter);
 
 
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(MainTabla);
         return root;
 
     }
+    String deletedAdat = null;
+
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+            final int position = viewHolder.getAdapterPosition();
+
+                    switch( direction) {
+                        case ItemTouchHelper.LEFT:
+                            deletedAdat = movieList.get(position);
+                            movieList.remove(position);
+                            MainTablaAdapter.notifyItemRemoved(position);
+                            Snackbar.make(MainTabla, deletedAdat, Snackbar.LENGTH_LONG)
+                                    .setAction("Undo", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            movieList.add(position, deletedAdat);
+                                            MainTablaAdapter.notifyItemRemoved(position);
+                                        }
+                                    }).show();
+                            break;
+
+                    }
+        }
+    };
 }
