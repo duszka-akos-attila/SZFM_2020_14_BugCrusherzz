@@ -11,8 +11,14 @@
             android:id="@+id/nav_income"
             android:title="Bevételek" />
         <item
+            android:id="@+id/nav_income2"
+            android:title="Bevételektest" />
+        <item
             android:id="@+id/nav_expense"
             android:title="Kiadások" />
+        <item
+            android:id="@+id/nav_expense2"
+            android:title="Kiadásoktest" />
         <item
             android:id="@+id/nav_group"
             android:title="Csoportok" />

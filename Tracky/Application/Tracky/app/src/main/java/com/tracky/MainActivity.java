@@ -1,20 +1,18 @@
 package com.tracky;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import com.google.android.material.navigation.NavigationView;
-import com.tracky.data.manager.Manager;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.navigation.NavigationView;
+import com.tracky.data.manager.Manager;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_income, R.id.nav_expense, R.id.nav_group, /*R.id.nav_template,*/ R.id.nav_summary)
+                R.id.nav_home, R.id.nav_income, R.id.nav_income2, R.id.nav_expense, R.id.nav_expense2, R.id.nav_group, /*R.id.nav_template,*/ R.id.nav_summary)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

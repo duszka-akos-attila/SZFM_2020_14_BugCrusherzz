@@ -7,14 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.tracky.MainActivity;
 import com.tracky.R;
 import com.tracky.TestActivity;
@@ -68,7 +66,7 @@ public class HomeFragment extends Fragment {
         return root;
 
     }
-    String deletedAdat = null;
+    String[] deletedAdat = null;
 
     ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
         @Override
@@ -83,17 +81,18 @@ public class HomeFragment extends Fragment {
 
                     switch( direction) {
                         case ItemTouchHelper.LEFT:
-                            //deletedAdat = balanceList.get(position);
-                            //balanceList.remove(position);
+                            deletedAdat = balanceList.get(position);
+                            balanceList.remove(position);
                             MainTablaAdapter.notifyItemRemoved(position);
-                            Snackbar.make(MainTabla, deletedAdat, Snackbar.LENGTH_LONG)
+                            balanceList = Manager.lastBalanceModificaitons(5,"-","auto");
+                            /*Snackbar.make(MainTabla, deletedAdat, Snackbar.LENGTH_LONG)
                                     .setAction("Undo", new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
                                             //balanceList.add(position, deletedAdat);
                                             MainTablaAdapter.notifyItemRemoved(position);
                                         }
-                                    }).show();
+                                    }).show();*/
                             break;
 
                     }
