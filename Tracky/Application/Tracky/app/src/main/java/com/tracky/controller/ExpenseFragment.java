@@ -36,8 +36,8 @@ public class ExpenseFragment extends Fragment {
 
         addexpense.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if( expenseAmount.getText().length() == 0){
-                    Toast.makeText(getContext(), "Üres a kiadás összege szövegmező!", Toast.LENGTH_SHORT).show();
+                if( expenseAmount.getText().length() == 0 || expenseGroup.getText().length() == 0){
+                    Toast.makeText(getContext(), "Üres az egyik kötelező mező!", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     try {
