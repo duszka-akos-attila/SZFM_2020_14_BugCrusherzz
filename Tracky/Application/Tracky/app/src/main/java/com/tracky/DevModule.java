@@ -66,24 +66,25 @@ public class DevModule {
     public void deleteAll(){
 
         if(manager.getIncomes().size()!=0) {
-            for (int i = 0; manager.getIncomes().size() != 0; ) {
+            for (int i = manager.getIncomes().size()-1; i>=0 ;i--) {
                 manager.deleteIncome(manager.getIncomes().get(i).getId());
             }
         }
 
         if(manager.getExpenses().size()!=0) {
-            for (int i = 0; manager.getExpenses().size() != 0; ) {
+            for (int i = manager.getExpenses().size()-1; i>=0 ;i--) {
                 manager.deleteExpense(manager.getExpenses().get(i).getId());
             }
         }
 
         if(manager.getGroups().size()!=0) {
-            for (int i = 0; manager.getGroups().size() != 0; ) {
+            for (int i = manager.getGroups().size()-1; i>=0 ;i--) {
                 manager.deleteGroup(manager.getGroups().get(i).getId());
             }
         }
 
     }
+
 
     public List<Income> getIncomes(){
         return manager.getIncomes();
