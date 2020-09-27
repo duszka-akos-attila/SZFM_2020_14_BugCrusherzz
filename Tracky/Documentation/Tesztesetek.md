@@ -1,7 +1,7 @@
 
-#Tesztesetek##
+# Tesztesetek
 
-##Név: Rácz András#
+## Név: Rácz András
 
 - Tesztjeim: 
 	- [x] A Bevételek menüpontban, ha a felhasználó a hozzáadásnál az összeg helyére szöveget ír be, akkor a program leállás helyett figyelmeztesse a felhasználót, hogy abba a mezőbe számokat kell beírni.
@@ -20,7 +20,7 @@
 
 	- [x] A Összesítés menüpontban, ha a felhasználó az összeg helyére szöveget ír be, akkor a program leállás helyett figyelmeztesse a felhasználót, hogy abba a mezőbe számokat kell beírni.
 
-##Név: Halász Ádám##
+## Név: Halász Ádám
 - Tesztjeim:
 	- [x] Ha az Összesítés menüpontban a felhasználó nem ad meg se hónapot, se napot, se összeget, akkor a program ne álljon le, hanem vegye úgy, hogy minden tranzakciót ki kell listáznia.
 	
@@ -36,7 +36,7 @@
 
 	- [x] Ha az Összesítés menüpontban a felhasználó megad hónapot, illetve napot is, akkor a program úgy kezelje, hogy a keresés hónap és nap alapján történik.
 
-##Név: Duszka Ákos Attila##
+## Név: Duszka Ákos Attila
 - Tesztjeim:
 	- [x] Ha az Összesítés menüpontban a felhasználó megad napot, összeget, illetve hónapot is, akkor a program ezt úgy kezelje, hogy a keresés mint a három mező alapján történik.
 
