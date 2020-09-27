@@ -62,7 +62,7 @@
         android:id="@+id/deleteExpenses"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:onClick="deleteExpansesPressed"
+        android:onClick="deleteExpensesPressed"
         android:text="Delete Expenses"
         android:textColor="#FF0000"
         android:textStyle="bold"

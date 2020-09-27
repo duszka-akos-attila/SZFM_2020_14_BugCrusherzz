@@ -47,9 +47,9 @@ public class TestActivity extends AppCompatActivity {
         init();
     }
 
-    public void deleteExpansesPressed(View view){
+    public void deleteExpensesPressed(View view){
         updateAmount();
-        dev.createExpenses(amount);
+        dev.deleteExpenses(amount);
         init();
     }
 
