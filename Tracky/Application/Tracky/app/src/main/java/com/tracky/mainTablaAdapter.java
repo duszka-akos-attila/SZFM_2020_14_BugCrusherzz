@@ -8,11 +8,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class mainTablaAdapter extends RecyclerView.Adapter<mainTablaAdapter.ViewHolder> {
 
     //private static final String TAG = "mainTablaAdapter";
     int count = 0;
 
+    List<String[]> balanceList;
+
+    public mainTablaAdapter(List<String[]> balanceList) {
+        this.balanceList = balanceList;
+    }
 
     @NonNull
     @Override
@@ -31,12 +38,15 @@ public class mainTablaAdapter extends RecyclerView.Adapter<mainTablaAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-       // holder.rowCountTextView.setText(String.valueOf(position));
+        holder.datum_textView.setText(balanceList.get(position)[2]);
+         holder.data_textView.setText(balanceList.get(position)[4]);
+         holder.osztaly_textView.setText(balanceList.get(position)[3]);
+         holder.nev_textView.setText(balanceList.get(position)[1]);
     }
 
     @Override
     public int getItemCount() {
-        return 15;
+        return balanceList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

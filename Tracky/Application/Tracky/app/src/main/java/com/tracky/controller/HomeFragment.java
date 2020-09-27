@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
     RecyclerView MainTabla;
     mainTablaAdapter MainTablaAdapter;
 
-    List<String> movieList;
+    List<String[]> balanceList;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,10 +51,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        movieList = new ArrayList<>();
+        balanceList = new ArrayList<>();
         Text number;
         MainTabla = root.findViewById(R.id.mainTabla2);
-        MainTablaAdapter = new mainTablaAdapter();
+        MainTablaAdapter = new mainTablaAdapter(balanceList);
         //MainTabla.setLayoutManager(new LinearLayoutManager(context));
 
         MainTabla.setAdapter(MainTablaAdapter);
@@ -81,14 +81,14 @@ public class HomeFragment extends Fragment {
 
                     switch( direction) {
                         case ItemTouchHelper.LEFT:
-                            deletedAdat = movieList.get(position);
-                            movieList.remove(position);
+                            //deletedAdat = balanceList.get(position);
+                            //balanceList.remove(position);
                             MainTablaAdapter.notifyItemRemoved(position);
                             Snackbar.make(MainTabla, deletedAdat, Snackbar.LENGTH_LONG)
                                     .setAction("Undo", new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            movieList.add(position, deletedAdat);
+                                            //balanceList.add(position, deletedAdat);
                                             MainTablaAdapter.notifyItemRemoved(position);
                                         }
                                     }).show();
