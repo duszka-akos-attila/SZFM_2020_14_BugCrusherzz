@@ -24,6 +24,7 @@ public class GroupFragment extends Fragment {
     Button addGroup;
     Button deleteGroup;
     EditText groupId;
+    Button deleteAll;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class GroupFragment extends Fragment {
         groupColor= (EditText) root.findViewById(R.id.group_color);
         deleteGroup = (Button) root.findViewById(R.id.delete_group);
         groupId = (EditText) root.findViewById(R.id.group_id);
+        deleteAll = (Button) root.findViewById(R.id.delete_allgroups);
 
         addGroup.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -61,6 +63,12 @@ public class GroupFragment extends Fragment {
                     Toast.makeText(getContext(), "Group deleted!", Toast.LENGTH_SHORT).show();
                     groupId.setText("");
                 }
+            }
+        });
+
+        deleteAll.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Manager.deleteAllGroups();
             }
         });
 
