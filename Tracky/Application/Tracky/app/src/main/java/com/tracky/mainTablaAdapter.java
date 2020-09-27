@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tracky.data.manager.Manager;
+
 import java.util.List;
 
 public class mainTablaAdapter extends RecyclerView.Adapter<mainTablaAdapter.ViewHolder> {
@@ -40,7 +42,7 @@ public class mainTablaAdapter extends RecyclerView.Adapter<mainTablaAdapter.View
 
         holder.datum_textView.setText(balanceList.get(position)[2]);
          holder.data_textView.setText(balanceList.get(position)[4]);
-         holder.osztaly_textView.setText(balanceList.get(position)[3]);
+         holder.osztaly_textView.setText(Manager.getGroupNameByID(Integer.parseInt(balanceList.get(position)[3])));
          holder.nev_textView.setText(balanceList.get(position)[1]);
     }
 

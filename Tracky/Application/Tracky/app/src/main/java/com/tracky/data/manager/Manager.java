@@ -581,4 +581,13 @@ public class Manager{
         return result;
     }
 
+    public static String getGroupNameByID(int id){
+        for(Group group: getGroups()){
+            if(group.getId()==id){
+                return group.getName();
+            }
+        }
+        return "-";
+    }
+
 }
