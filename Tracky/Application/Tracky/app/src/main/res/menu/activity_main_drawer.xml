@@ -6,21 +6,21 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:title="Home" />
+            android:title="Kezdőkép" />
         <item
             android:id="@+id/nav_income"
-            android:title="Incomes" />
+            android:title="Bevételek" />
         <item
             android:id="@+id/nav_expense"
-            android:title="Expenses" />
+            android:title="Kiadások" />
         <item
             android:id="@+id/nav_group"
-            android:title="Groups" />
+            android:title="Csoportok" />
         <item
             android:id="@+id/nav_template"
-            android:title="Templates" />
+            android:title="Sablonok" />
         <item
             android:id="@+id/nav_summary"
-            android:title="Summary" />
+            android:title="Összesítés" />
     </group>
 </menu>

@@ -8,37 +8,37 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="com.tracky.controller.HomeFragment"
-        android:label="Home"
+        android:label="Kezdőkép"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_income"
         android:name="com.tracky.controller.IncomeFragment"
-        android:label="Incomes"
+        android:label="Bevételek"
         tools:layout="@layout/fragment_income" />
 
     <fragment
         android:id="@+id/nav_expense"
         android:name="com.tracky.controller.ExpenseFragment"
-        android:label="Expenses"
+        android:label="Kiadások"
         tools:layout="@layout/fragment_expense" />
 
     <fragment
         android:id="@+id/nav_group"
         android:name="com.tracky.controller.GroupFragment"
-        android:label="Groups"
+        android:label="Csoportok"
         tools:layout="@layout/fragment_group" />
 
     <fragment
         android:id="@+id/nav_template"
         android:name="com.tracky.controller.TemplateFragment"
-        android:label="Templates"
+        android:label="Sablonok"
         tools:layout="@layout/fragment_template" />
 
     <fragment
         android:id="@+id/nav_summary"
         android:name="com.tracky.controller.SummaryFragment"
-        android:label="Summary"
+        android:label="Összesítés"
         tools:layout="@layout/fragment_template" />
 
 </navigation>
