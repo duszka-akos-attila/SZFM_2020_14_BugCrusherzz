@@ -34,7 +34,7 @@ public class Manager{
         dbExpenses = db.expenseDao().selectAllExpense();
         dbTemplates = db.templateDao().selectAllTemplate();
         dbGroups = db.groupDao().selectAllGroup();
-        
+
         refactorAllIDs();
 
         LAST_INCOME_ID = maxIncomeID();
