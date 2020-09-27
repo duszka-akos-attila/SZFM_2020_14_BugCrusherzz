@@ -1,7 +1,5 @@
 package com.tracky.data.manager;
 
-import android.util.Log;
-
 import androidx.room.Room;
 
 import com.tracky.data.Expense;
@@ -18,6 +16,11 @@ import java.util.List;
 
 public class Manager{
 
+    private static int LAST_INCOME_ID;
+    private static int LAST_EXPENSE_ID;
+    private static int LAST_TEMPLATE_ID;
+    private static int LAST_GROUP_ID;
+
     static AppDatabase db = Room.databaseBuilder(MainActivity.context , AppDatabase.class, "TrackyDB").allowMainThreadQueries().build();
 
     public static List<Income> dbIncomes = new ArrayList<Income>();
@@ -26,11 +29,22 @@ public class Manager{
     public static List<Group> dbGroups = new ArrayList<Group>();
 
     public static void importDB(){
+
         dbIncomes = db.incomeDao().selectAllIncome();
         dbExpenses = db.expenseDao().selectAllExpense();
         dbTemplates = db.templateDao().selectAllTemplate();
         dbGroups = db.groupDao().selectAllGroup();
+        
+        refactorAllIDs();
+
+        LAST_INCOME_ID = maxIncomeID();
+        LAST_EXPENSE_ID = maxExpenseID();
+        LAST_TEMPLATE_ID = maxTemplateID();
+        LAST_GROUP_ID = maxGroupID();
     }
+
+
+    //---------------------------LIST MANAGEMENT----------------------------
 
     public static List<Income> getIncomes() {
         return dbIncomes;
@@ -48,28 +62,120 @@ public class Manager{
         return dbGroups;
     }
 
+    private static int maxIncomeID(){
+        if(getIncomes().size()==0){
+            return -1;
+        }
+
+        List<Income> incomes = getIncomes();
+        int maxID = 0;
+        for (Income income : incomes) {
+            if(income.getId()>maxID){
+                maxID = income.getId();
+            }
+        }
+        return maxID;
+    }
+
+    private static int maxExpenseID(){
+        if(getExpenses().size()==0){
+            return -1;
+        }
+
+        List<Expense> expenses = getExpenses();
+        int maxID = 0;
+        for (Expense expense : expenses) {
+            if(expense.getId()>maxID){
+                maxID = expense.getId();
+            }
+        }
+        return maxID;
+    }
+
+    private static int maxTemplateID(){
+        if(getTemplates().size()==0){
+            return -1;
+        }
+
+        List<Template> templates = getTemplates();
+        int maxID = 0;
+        for (Template template : templates) {
+            if(template.getId()>maxID){
+                maxID = template.getId();
+            }
+        }
+        return maxID;
+    }
+
+    private static int maxGroupID(){
+        if(getGroups().size()==0){
+            return -1;
+        }
+
+        List<Group> groups = getGroups();
+        int maxID = 0;
+        for (Group group : groups) {
+            if(group.getId()>maxID){
+                maxID = group.getId();
+            }
+        }
+        return maxID;
+    }
+
+    private static void refactorAllIDs(){
+
+        List<Income> incomes = getIncomes();
+        List<Expense> expenses = getExpenses();
+        List<Group> groups = getGroups();
+        List<Template> templates = getTemplates();
+
+        int maxSize = incomes.size();
+
+        if (expenses.size()> maxSize){
+            maxSize = expenses.size();
+        }
+
+        if (groups.size()> maxSize){
+            maxSize = groups.size();
+        }
+
+        if (templates.size()> maxSize){
+            maxSize = templates.size();
+        }
+
+        for(int i =0; i<maxSize; i++){
+
+            if(incomes.size()!=0 && i < incomes.size()){
+                incomes.get(i).setId(i);
+            }
+
+            if(expenses.size()!=0 && i < expenses.size()){
+                expenses.get(i).setId(i);
+            }
+
+            if(groups.size()!=0 && i < groups.size()){
+                groups.get(i).setId(i);
+            }
+
+            if(templates.size()!=0 && i < templates.size()){
+                templates.get(i).setId(i);
+            }
+        }
+    }
 
     //------------------------------------INCOMES----------------------------
 
 
     public static void addIncome(int amount, String description){
-        int id = dbIncomes.size();
+        LAST_INCOME_ID++;
+        int id = LAST_INCOME_ID;
         dbIncomes.add(new Income(id, amount, description, Calendar.getInstance().getTime() ));
         db.incomeDao().insertIncome(new Income(id, amount, description, Calendar.getInstance().getTime()));
-        for( Income i : dbIncomes){
-            Log.i("adatb",i.toString());
-        }
     }
 
     public static void deleteIncome(int id){
         db.incomeDao().deleteIncome(dbIncomes.get(id));
         dbIncomes.remove(id);
-
-
-        for(int i = id; i < dbIncomes.size(); i++){
-            dbIncomes.get(i).setId(dbIncomes.get(i).getId() - 1);
-            db.incomeDao().updateIncome(dbIncomes.get(i));
-        }
     }
 
     public static void editIncome( Income income, int amount, String description, Date date){
@@ -83,7 +189,8 @@ public class Manager{
 
 
     public static void addExpense(int amount, String description, int groupId){
-        int id = dbExpenses.size();
+        LAST_EXPENSE_ID++;
+        int id = LAST_EXPENSE_ID;
         dbExpenses.add(new Expense(id, amount, description, groupId, Calendar.getInstance().getTime() ));
         db.expenseDao().insertExpense(new Expense(id, amount, description, groupId, Calendar.getInstance().getTime()));;
     }
@@ -91,11 +198,6 @@ public class Manager{
     public static void deleteExpense(int id){
         db.expenseDao().deleteExpense(dbExpenses.get(id));
         dbExpenses.remove(id);
-
-        for(int i = id; i < dbExpenses.size(); i++){
-            dbExpenses.get(i).setId(dbExpenses.get(i).getId() - 1);
-            db.expenseDao().updateExpense(dbExpenses.get(i));
-        }
     }
 
     public static void editExpense( Expense expense, int amount, String description, Group group, Date date){
@@ -111,7 +213,8 @@ public class Manager{
 
 
     public static void addGroup(String name, int color){
-        int id = dbGroups.size();
+        LAST_GROUP_ID++;
+        int id = LAST_GROUP_ID;
         dbGroups.add(new Group(id, name, color));
         db.groupDao().insertGroup(new Group(id, name, color));
     }
@@ -119,12 +222,6 @@ public class Manager{
     public static void deleteGroup(int id){
         db.groupDao().deleteGroup(dbGroups.get(id));
         dbGroups.remove(id);
-
-
-        for(int i = id; i < dbGroups.size(); i++){
-            dbGroups.get(i).setId(dbGroups.get(i).getId() - 1);
-            db.groupDao().updateGroup(dbGroups.get(i));
-        }
     }
 
     public static void editGroup(Group group, String name, int color){
@@ -138,7 +235,8 @@ public class Manager{
 
 
     public static void addTemplate(boolean isIncome, int amount, String description, int groupId){
-        int id = dbTemplates.size();
+        LAST_TEMPLATE_ID++;
+        int id = LAST_TEMPLATE_ID;
         dbTemplates.add(new Template(isIncome, id, amount, description, groupId));
         db.templateDao().insertTemplate(new Template(isIncome, id, amount, description, groupId));
     }
@@ -146,11 +244,6 @@ public class Manager{
     public static void deleteTemplate(int id){
         db.templateDao().deleteTemplate(dbTemplates.get(id));
         dbTemplates.remove(id);
-
-        for(int i = id; i < dbTemplates.size(); i++){
-            dbTemplates.get(i).setId(dbTemplates.get(i).getId() - 1);
-            db.templateDao().updateTemplate(dbTemplates.get(i));
-        }
     }
 
     public static void editTemplate(Template template, boolean isIncome, int amount, String description, Group group){
