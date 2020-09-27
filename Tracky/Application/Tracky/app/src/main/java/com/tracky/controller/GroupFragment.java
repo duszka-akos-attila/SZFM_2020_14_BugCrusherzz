@@ -1,6 +1,7 @@
 package com.tracky.controller;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +41,9 @@ public class GroupFragment extends Fragment {
                 }
                 else {
                     Manager.addGroup(groupName.getText().toString(), 0);
-                    groupName.setText("");
-                    groupColor.setText("");
+                    //groupColor.setText("");
                     Toast.makeText(getContext(), groupName.getText().toString() + " hozzáadva a csoportokhoz!", Toast.LENGTH_SHORT).show();
+                    groupName.setText("");
                 }
             }
         });
@@ -53,10 +54,9 @@ public class GroupFragment extends Fragment {
                     Toast.makeText(getContext(), " Üres a csoport neve szövegmező!", Toast.LENGTH_SHORT).show();
                 }
                 else{
-
-                    String name = groupName.getText().toString();
+                    String name = groupId.getText().toString();
                     for( int i = Manager.getGroups().size() -1; i >= 0; i--){
-                        if(Manager.getGroups().get(i).getName().equals(name) ){
+                        if(Manager.getGroups().get(i).getName().equals(name)){
                             Manager.deleteGroup(Manager.getGroups().get(i).getId());
                             Toast.makeText(getContext(), groupId.getText().toString() + " nevű csoport törölve", Toast.LENGTH_SHORT).show();
                             groupId.setText("");
