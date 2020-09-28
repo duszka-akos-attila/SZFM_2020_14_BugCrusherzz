@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4e8f81a7-9c82-4cd5-a9ee-3b17bfade3aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Tracky/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Tracky/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Tracky/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Tracky/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1i1CZwbc6ac0AVWc4iX5sFSjJie" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
+  </component>
+  <component name="RunManager">
+    <configuration name="mobil" type="AndroidRunConfigurationType" factoryName="Android App">
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4e8f81a7-9c82-4cd5-a9ee-3b17bfade3aa" name="Default Changelist" comment="" />
+      <created>1601065771587</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601065771587</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1256" y="191" key="#Unnamed" timestamp="1601206745623">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1256" y="191" key="#Unnamed/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601206745623" />
+    <state x="-1496" y="213" width="1071" height="703" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601206518568">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1496" y="213" width="1071" height="703" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601206518568" />
+    <state x="-1268" y="361" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601206719485">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1268" y="361" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601206719485" />
+    <state x="-1256" y="191" key="#mobil" timestamp="1601207743201">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1256" y="191" key="#mobil/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601207743201" />
+    <state x="738" y="263" width="424" height="513" key="FileChooserDialogImpl" timestamp="1601065873658">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="738" y="263" width="424" height="513" key="FileChooserDialogImpl/0.27.1920.988@0.27.1920.988" timestamp="1601065873658" />
+    <state x="-1459" y="190" key="SettingsEditor" timestamp="1601207789766">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1459" y="190" key="SettingsEditor/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601207789766" />
+    <state x="-1073" y="498" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog" timestamp="1601207261585">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1073" y="498" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601207261585" />
+    <state x="-1290" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1601207349127">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1290" y="384" key="com.intellij.ide.util.TipDialog/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601207349127" />
+    <state x="269" y="224" width="1372" height="592" key="new project wizard" timestamp="1601065883670">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="269" y="224" width="1372" height="592" key="new project wizard/0.27.1920.988@0.27.1920.988" timestamp="1601065883670" />
+    <state x="-1295" y="256" key="run.anything.popup" timestamp="1601207204911">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1295" y="256" key="run.anything.popup/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601207204911" />
+    <state x="-1295" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1601207610424">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1295" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1440.797/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1601207610424" />
+  </component>
+</project>

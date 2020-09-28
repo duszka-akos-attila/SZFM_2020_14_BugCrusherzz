@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.tracky.controller.HomeFragment"
+        android:label="Kezdőkép"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_income"
+        android:name="com.tracky.controller.IncomeFragment"
+        android:label="Bevételek"
+        tools:layout="@layout/fragment_income" />
+
+    <fragment
+        android:id="@+id/nav_income2"
+        android:name="com.tracky.controller.IncomeFragment2"
+        android:label="Bevétellista"
+        tools:layout="@layout/fragment_income2" />
+
+    <fragment
+        android:id="@+id/nav_expense"
+        android:name="com.tracky.controller.ExpenseFragment"
+        android:label="Kiadások"
+        tools:layout="@layout/fragment_expense" />
+    <fragment
+        android:id="@+id/nav_expense2"
+        android:name="com.tracky.controller.ExpenseFragment2"
+        android:label="Kiadáslista"
+        tools:layout="@layout/fragment_expense2" />
+
+    <fragment
+        android:id="@+id/nav_group"
+        android:name="com.tracky.controller.GroupFragment"
+        android:label="Csoportok"
+        tools:layout="@layout/fragment_group" />
+
+   <!-- <fragment
+        android:id="@+id/nav_template"
+        android:name="com.tracky.controller.TemplateFragment"
+        android:label="Sablonok"
+        tools:layout="@layout/fragment_template" /> -->
+
+    <fragment
+        android:id="@+id/nav_summary"
+        android:name="com.tracky.controller.SummaryFragment"
+        android:label="Összesítés"
+        tools:layout="@layout/fragment_template" />
+
+</navigation>
