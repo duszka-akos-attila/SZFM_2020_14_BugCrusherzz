@@ -590,4 +590,24 @@ public class Manager{
         return "-";
     }
 
+    public static int findByID(int id, String objectType){
+        if(objectType.equals("Income")){
+            if(id>=dbIncomes.size()/2){
+                for(int i = dbIncomes.size()-1;i>-1;i--){
+                    if(dbIncomes.get(i).getId()==id){
+                        return i;
+                    }
+                }
+            }
+            else{
+                for (int i =0;i<dbIncomes.size();i++){
+                    if(dbIncomes.get(i).getId()==id){
+                        return i;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+
 }
