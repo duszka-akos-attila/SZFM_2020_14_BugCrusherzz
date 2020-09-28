@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_income, R.id.nav_income2, R.id.nav_expense, R.id.nav_expense2, R.id.nav_group, /*R.id.nav_template,*/ R.id.nav_summary)
                 .setDrawerLayout(drawer)
@@ -47,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+
+    public static void changeFragment(int id){
+        if( id == 1) {
+
+        }
     }
 
 }

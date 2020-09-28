@@ -8,9 +8,12 @@
 
     <Button
         android:id="@+id/devMode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+
         android:text="devMode"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,7 +31,7 @@
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainTabla2"
@@ -79,6 +82,16 @@
         app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/home_balance" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/home_balance"
+        app:layout_constraintEnd_toEndOf="@+id/home_balance"
+        app:layout_constraintStart_toStartOf="@+id/home_balance" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
