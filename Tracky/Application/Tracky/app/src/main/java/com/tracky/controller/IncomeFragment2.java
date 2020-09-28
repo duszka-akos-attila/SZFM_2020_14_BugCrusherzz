@@ -34,9 +34,22 @@ public class IncomeFragment2 extends Fragment {
         MainTabla = root.findViewById(R.id.mainTabla22);
         MainTablaAdapter = new mainTablaAdapter(balanceList);
 
+/*
+        FloatingActionButton fab = root.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+        */
+
         MainTabla.setAdapter(MainTablaAdapter);
         return root;
 
     }
+
+
 
 }
