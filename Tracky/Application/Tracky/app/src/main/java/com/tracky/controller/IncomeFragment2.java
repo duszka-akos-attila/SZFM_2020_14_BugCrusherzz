@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tracky.R;
 import com.tracky.data.manager.Manager;
 import com.tracky.mainTablaAdapter;
@@ -36,7 +34,7 @@ public class IncomeFragment2 extends Fragment {
         MainTabla = root.findViewById(R.id.mainTabla22);
         MainTablaAdapter = new mainTablaAdapter(balanceList);
 
-
+/*
         FloatingActionButton fab = root.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +43,7 @@ public class IncomeFragment2 extends Fragment {
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.income_frag, fragment);
             }
-        });
+        });*/
 
 
         MainTabla.setAdapter(MainTablaAdapter);

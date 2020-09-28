@@ -8,6 +8,7 @@
     android:id="@+id/income_frag"
     >
 
+    <!--
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         android:onClick="secondscreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+    -->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainTabla22"
