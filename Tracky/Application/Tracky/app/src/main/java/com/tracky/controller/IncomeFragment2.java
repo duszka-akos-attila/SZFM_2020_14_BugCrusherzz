@@ -32,7 +32,7 @@ public class IncomeFragment2 extends Fragment {
         View root = inflater.inflate(R.layout.fragment_income2, container, false);
 
         balanceList = new ArrayList<>();
-        balanceList = Manager.lastBalanceModificaitons(10,"-","auto");
+        balanceList = Manager.lastBalanceModificaitons(20,"-","auto");
         MainTabla = root.findViewById(R.id.mainTabla22);
         MainTablaAdapter = new mainTablaAdapter(balanceList);
 
