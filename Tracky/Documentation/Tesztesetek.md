@@ -4,7 +4,7 @@
 ## Név: Rácz András
 
 - Tesztjeim: 
-	- [x] A Bevételek menüpontban, ha a felhasználó a hozzáadásnál az összeg helyére szöveget ír be, akkor a program leállás helyett figyelmeztesse a felhasználót, hogy abba a mezőbe számokat kell beírni.
+	- [x] A Bevételek menüpontban,amennyiben a felhasználó a hozzáadásnál az összeg helyére szöveget ír be, akkor a program leállás helyett figyelmeztesse a felhasználót, hogy abba a mezőbe számokat kell beírni.
 
 	- [x] A Bevételek menüpontban, ha a felhasználó a hozzáadásnál az összeg mezőt üresen hagyva kattint a hozzáad gombra, akkor a program figyelmeztesse a felhasználót arra a tényre, hogy az összeg mező üres.
 
