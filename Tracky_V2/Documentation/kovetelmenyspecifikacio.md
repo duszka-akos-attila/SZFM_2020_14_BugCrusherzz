@@ -113,3 +113,14 @@ ezeket kapcsolhassa ki.
 ## Követelménylista
 
 ## Fogalomszótár
+>*Erőforrás:* Olyan szellemi, anyagi, gazdasági, társadalmi tényező,
+amely lehetőséget ad vagy alkalmas Eszköz lehet adott cél megvalósításához.
+
+>*Optimalizálás:* Legjobb állapot illetve cselekvés kiválasztására alkalmas eljárás, valamely előre meghatározott kritérium alapján.
+
+>*Karakterkészlet:* A számítógép számára, az emberi írásjeleket definiáló, és csoportosító szabvány.
+
+>*Reszponzív dizájn:* A reszponzív design az alkalmazásnak egy olyan kialakítása,
+ami rugalmasan alkalmazkodik a különböző eszközök képernyőjének méretéhez.
+
+>*Lokális adattárolás:* Az adatok tárolása az adatkezelő rendszerrel azonos helyen történik.
