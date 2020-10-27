@@ -160,13 +160,13 @@ megnyomására megjelenik egy oldalsó menü, amelyben a következő opciók jel
 	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz Bevételt hozzáadni,
 	Bevételt törölni, és Bevételt módosítani.
 	
-* **Kiadások kezelése**
+* **Kiadáslista**
 	* A kiadáslista menüpont kiválasztása után kilistázódnak a már meglévő kiadások, amennyiben
 	a felhasználó elhúzza az ujját, a kiadás törlődik. Ezen felül a képernyő jobb alsó részén
 	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz Kiadást hozzáadni,
 	Kiadást törölni, és Kiadást módosítani.
 	
-* **Csoportok kezelése**
+* **Csoportlista**
 	* A csoportista menüpont kiválasztása után kilistázódnak a már meglévő csoportok, amennyiben
 	a felhasználó elhúzza az ujját, a csoport törlődik. Ezen felül a képernyő jobb alsó részén
 	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz csoportot hozzáadni,
