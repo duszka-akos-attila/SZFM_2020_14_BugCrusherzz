@@ -13,7 +13,19 @@
 
 5.1.1. Kiadás jegyzése: Minden új kiadást egy füzetbe jegyzik le a cég alkalmazottai.
 
-5.1.2. Bevétel jegyzése: Minden új bevételt egy füzetbe jegyzik le a cég alkalmazottai.
+5.1.2. Kiadás törlése: A törölni kívánt kiadás áthúzása a füzetben, hamar bonyolulttá
+váló művelet.
+
+5.1.3. Kiadás szerkesztése: Alapvetően nem megvalósítható, csak úgy, ha a kiadást töröljük
+majd pedig hozzáadunk egy újat.
+
+5.1.4. Bevétel jegyzése: Minden új bevételt egy füzetbe jegyzik le a cég alkalmazottai.
+
+5.1.5. Bevétel törlése: A törölni kívánt bevétel áthúzása a füzetben, hamar bonyolulttá
+váló művelet.
+
+5.1.6. Bevétel szerkesztése: Alapvetően nem megvalósítható, csak úgy, ha a bevételt töröljük
+majd pedig hozzáadunk egy újat.
 
 5.2. **Összesítés: Kézzel történő összesítés papír füzetben, fejben vagy számológép általi számítás, tételek manuális szortírozása**
 
@@ -25,17 +37,17 @@
 ## Igényelt üzleti folyamatok modellje
 6.1 **Bevételek Kezelése**
 
-6.1.1 Kiadás felvitele az adatbázisba => Bal felső menü -> Bevétellista -> Jobb alsó
+6.1.1 Bevétel felvitele az adatbázisba => Bal felső menü -> Bevétellista -> Jobb alsó
 lebegő gomb -> Összeg és leírás megadása -> Hozzáad gomb megnyomása
 
-6.1.2 Kiadás törlése az adatbázisból => Bal felső menü -> Bevétellista ->
+6.1.2 Bevétel törlése az adatbázisból => Bal felső menü -> Bevétellista ->
 A törölni kívánt tétel elhúzása ujjal
 
-6.1.3 Minden Kiadás törlése az adatbázisból => Bal felső menü -> Bevétellista ->
+6.1.3 Minden Bevétel törlése az adatbázisból => Bal felső menü -> Bevétellista ->
 Jobb alsó lebegő gomb -> Összes Törlése gomb megnyomása
 
-6.1.4 Kiadás szerkesztése => Bal felső menü -> Bevétellista -> Szerkeszteni kívánt
--> Kiadás kiválasztása -> Az új adatok megadása -> Mentés
+6.1.4 Bevétel szerkesztése => Bal felső menü -> Bevétellista -> Szerkeszteni kívánt
+-> Bevétel kiválasztása -> Az új adatok megadása -> Mentés
 
 6.2 **Kiadások Kezelése**
 
