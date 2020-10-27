@@ -9,17 +9,17 @@
 ## Igényelt üzleti folyamatok
 4.1 **Bevételek Kezelése**
 
-4.1.1 Kiadás felvitele az adatbázisba => Bal felső menü -> Bevétellista -> Jobb alsó
+4.1.1 Bevétel felvitele az adatbázisba => Bal felső menü -> Bevétellista -> Jobb alsó
 lebegő gomb -> Összeg és leírás megadása -> Hozzáad gomb megnyomása
 
-4.1.2 Kiadás törlése az adatbázisból => Bal felső menü -> Bevétellista ->
+4.1.2 Bevétel törlése az adatbázisból => Bal felső menü -> Bevétellista ->
 A törölni kívánt tétel elhúzása ujjal
 
-4.1.3 Minden Kiadás törlése az adatbázisból => Bal felső menü -> Bevétellista ->
+4.1.3 Minden Bevétel törlése az adatbázisból => Bal felső menü -> Bevétellista ->
 Jobb alsó lebegő gomb -> Összes Törlése gomb megnyomása
 
-4.1.4 Kiadás szerkesztése => Bal felső menü -> Bevétellista -> Szerkeszteni kívánt
--> Kiadás kiválasztása -> Az új adatok megadása -> Mentés
+4.1.4 Bevétel szerkesztése => Bal felső menü -> Bevétellista -> Szerkeszteni kívánt
+-> Bevétel kiválasztása -> Az új adatok megadása -> Mentés
 
 4.2 **Kiadások Kezelése**
 
