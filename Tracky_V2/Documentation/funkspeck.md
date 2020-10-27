@@ -188,3 +188,13 @@ megnyomására megjelenik egy oldalsó menü, amelyben a következő opciók jel
 ## Funkció - követelmény megfeleltetés
 
 ## Fogalomszótár
+>*Erőforrás:* Olyan szellemi, anyagi, gazdasági, társadalmi tényező,
+amely lehetőséget ad vagy alkalmas Eszköz lehet adott cél megvalósításához.
+
+>*Optimalizálás:* Legjobb állapot illetve cselekvés kiválasztására alkalmas eljárás, valamely előre meghatározott kritérium alapján.
+
+>*Lokális adattárolás:* Az adatok tárolása az adatkezelő rendszerrel azonos helyen történik.
+
+>*Aktor:* Az a felhasználó, aki a rendszert használja.
+
+>*Funkció:* A rendszer egy szolgáltatása, viselkedési mintája.
