@@ -7,6 +7,39 @@
 ## Jelenlegi üzleti folyamatok
 
 ## Igényelt üzleti folyamatok
+4.1 **Bevételek Kezelése**
+
+4.1.1 Kiadás felvitele az adatbázisba => Bal felső menü ->
+Bevétellista -> Jobb alsó lebegő gomb -> Összeg és leírás
+megadása -> Hozzáad gomb megnyomása
+
+4.1.2 Kiadás törlése az adatbázisból => Bal felső menü ->
+Bevétellista -> A törölni kívánt tétel elhúzása ujjal
+
+4.1.3 Minden Kiadás törlése az adatbázisból => Bal felső 
+menü -> Bevétellista -> Jobb alsó lebegő gomb -> Összes
+Törlése gomb megnyomása
+
+4.2 **Kiadások Kezelése**
+
+4.2.1 Kiadás felvitele az adatbázisba => Bal felső menü ->
+Kiadáslista -> Jobb alsó lebegő gomb -> Összeg és leírás
+és csoport megadása -> Hozzáad gomb megnyomása
+
+4.2.2 Kiadás törlése az adatbázisból => Bal felső menü ->
+Kiadáslista -> A törölni kívánt tétel elhúzása ujjal
+
+4.2.3 Minden Kiadás törlése az adatbázisból => Bal felső 
+menü -> Kiadáslista -> Jobb alsó lebegő gomb -> Összes
+Törlése gomb megnyomása
+
+4.3 **Csoportok Kezelése**
+
+4.3.1. Csoport felvitele az adatbázisba => Bal felső menü ->
+Csoportlista -> Jobb alsó lebegő gomb -> Összeg és leírás
+megadása -> Hozzáad gomb megnyomása
+
+4.2.2. Tételek csoportosítása: Összesítéskor az alkalmazás automatikusan csoportosítja a tételeket.
 
 ## A rendszerre vonatkozó szabályok
 * Az alkalmazás java nyelven készüljön.
