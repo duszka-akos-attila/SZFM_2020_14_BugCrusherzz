@@ -27,11 +27,14 @@ váló művelet.
 5.1.6. Bevétel szerkesztése: Alapvetően nem megvalósítható, csak úgy, ha a bevételt töröljük
 majd pedig hozzáadunk egy újat.
 
-5.2. **Összesítés: Kézzel történő összesítés papír füzetben, fejben vagy számológép általi számítás, tételek manuális szortírozása**
+5.2. **Összesítés: Kézzel történő összesítés papír füzetben, fejben vagy számológép általi
+számítás, tételek manuális szortírozása**
 
-5.2.1. Tételcsoportok összegzése: Minden elszámolás alkalmával segédjegyzetbe gyűjteni az egyes csoportok tételeit, majd manuálisan szummázni
+5.2.1. Tételcsoportok összegzése: Minden elszámolás alkalmával segédjegyzetbe gyűjteni az
+egyes csoportok tételeit, majd manuálisan szummázni
 
-5.2.2. Tételek csoportosítása: Felvételkor idő alapú lineáris jegyzés, sor végi azonosító kulcsszó segítségével
+5.2.2. Tételek csoportosítása: Felvételkor idő alapú lineáris jegyzés, sor végi azonosító
+kulcsszó segítségével.
 
 
 ## Igényelt üzleti folyamatok modellje
@@ -93,8 +96,94 @@ a dátumot és/vagy összeget -> Kiaválasztani a Mindkettő rádiógombot -> Ki
 ## Követelménylista
 
 ## Használati esetek
+- **Aktorok:** A cég alkalmazottai
+ - **Funkciók:**
+	 - **Kiadások kezelése**, azon belül:
+
+		- Kiadás rögzítése: Az aktoroknak lehetősége van kiadást rögzíteni.
+
+		- Kiadás módosítása: Az aktoroknak lehetősége van kiadást módosítani.
+
+		- Kiadás törlése: Az aktoroknak lehetősége van kiadást törölni.
+
+		- Kiadás csoport rögzítése: Az aktoroknak lehetősége van kiadás csoportot
+		rögzíteni.
+
+		- Kiadás csoport módosítása: Az aktoroknak lehetősége van kiadás csoportot
+		módosítani.
+
+	 	- Kiadás csoport törlése: Az aktoroknak lehetősége van kiadás csoportot
+	 	törölni.
+		
+	 - **Bevételek kezelése**, azon belül:
+
+		- Bevétel rögzítése: Az aktoroknak lehetősége van bevételt rögzíteni.
+
+		- Bevétel módosítása: Az aktoroknak lehetősége van bevételt módosítani.
+
+		- Bevétel törlése: Az aktoroknak lehetősége van bevételt törölni.
+		 
+	 - **Összesítés**, azon belül:
+
+		- Egyenleg megtekintése: Az aktorok meg tudják nézni az egyenlegüket.
+
+		- Bevételek listázása idő szerinti szűrésekkel: Az aktoroknak lehetősége
+		van idő alapján kilistázni a bevételeket.
+
+		- Kiadások listázása idő szerinti szűrésekkel: Az aktoroknak lehetősége
+		van idő alapján kilistázni a kiadásokat.
+
+		- Kiadások listázása csoportok szerinti szűrésekkel: Az aktoroknak lehetősége
+		van csoportok alapján kilistázni a kiadásokat.
+
+		- Kiadások és bevételek összesítése: Az aktoroknak lehetősége van összesíteni
+		a kiadásokat és a bevételeket.
+
+	 - **Adatok tárolása**
+	 	- Minden adat a Room adatbáziskezelő segítségével lesz eltárolva, de az
+	 	aktoroknak lehetőségük van a következőkre:
+
+	 	- Minden Kiadás törlése: Az aktoroknak lehetősége van törölni minden kiadást.
+
+	 	- Minden bevétel törlése: Az aktoroknak lehetősége van törölni minden bevételt.
+
+	 	- Minden csoport törlése: Az aktoroknak lehetősége van törölni minden csoportot.
 
 ## Képernyő tervek
+Az alkalmazás elindítása után a felhasználó a kezdőképernyőn az aktuális egyenlegét fogja látni.
+Az egyenleg alatt látható néhány egyenleg módosítás a közelmúltból. A bal felül lévő menü gomb
+megnyomására megjelenik egy oldalsó menü, amelyben a következő opciók jelennek meg:
+
+* **Bevétellista**
+	* A bevétellista menüpont kiválasztása után kilistázódnak a már meglévő bevételek, amennyiben
+	a felhasználó elhúzza az ujját, a bevétel törlődik. Ezen felül a képernyő jobb alsó részén
+	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz Bevételt hozzáadni,
+	Bevételt törölni, és Bevételt módosítani.
+	
+* **Kiadások kezelése**
+	* A kiadáslista menüpont kiválasztása után kilistázódnak a már meglévő kiadások, amennyiben
+	a felhasználó elhúzza az ujját, a kiadás törlődik. Ezen felül a képernyő jobb alsó részén
+	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz Kiadást hozzáadni,
+	Kiadást törölni, és Kiadást módosítani.
+	
+* **Csoportok kezelése**
+	* A csoportista menüpont kiválasztása után kilistázódnak a már meglévő csoportok, amennyiben
+	a felhasználó elhúzza az ujját, a csoport törlődik. Ezen felül a képernyő jobb alsó részén
+	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz csoportot hozzáadni,
+	csoportot törölni, és csoportot módosítani.
+	
+* **Összesítés**
+	* Az összesítés menüpont kiválasztása után a felhasználó választhat a bevételek listázása idő szerinti szűrésekkel,
+	kiadások listázása idő szerinti szűrésekkel, kiadások listázása csoportok szerinti szűrésekkel, a kiadások és bevételek
+	időszerinti listázása valamit a kiadások és bevételek összesítése közül.
+	
+* **Előzmények törlése**
+	* Az előzmények törlése menüpont kiválasztása után a felhasználó választhat az alábbi műveletek közül:
+		* Összes kiadás előzmény törlése
+		* Összes bevétel előzmény törlése
+		* Összes sablon törlése
+		* Összes kiadás csoport törlése
+
 
 ## Funkció - követelmény megfeleltetés
 
