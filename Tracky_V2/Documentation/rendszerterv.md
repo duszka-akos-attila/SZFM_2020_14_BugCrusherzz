@@ -131,6 +131,74 @@ ezeket kapcsolhassa ki.
 - Minden esetleges függőség a program részét fogja képezni, és azzal eggyütt fog feltelepülni, éppen ezért nincs szükség semmilyen külső szoftverre az alkalmazás helyes működéséhez.
 
 ## Absztrakt domain modell
+A rendszernek öt különböző fő komponense van, amikkel az aktor interaktálni tud.
+
+Az első ilyen komponens a kiadások kezelése, amely minden a kiadással kapcsolatos dolgot magába foglal, amik a következőek: Kiadás rögzítése, Kiadás módosítása, Kiadás törlése, Kiadás csoport rögzítése, Kiadás csoport módosítása, illetve Kiadás csoport törlése.
+
+A második fő komponens a bevételek kezelése, ami minden a bevételekkel kapcsolatos dolgot kezel. Ezek a következőek: Bevétel rögzítése, Bevétel módosítása, illetve Bevétel törlése.
+
+A Harmadik nagy komponense a rendszernek a Sablonok kezelése. Ezen komponens részei a Sablon kiadások módosítása, a Sablon kiadások törlése, a Sablon bevételek létrehozása, valamint a Sablon bevételek törlése.
+
+A negyedik  nagy komponens az adatok tárolása, ami ahogy azt a neve is sugallja minden olyan dologra vonatkozik, aminek köze van az adatok tárolásához. Ezek a következőek: Adatok megnyitása .json fájlból, Adatok mentése .json fájlba, Adatok megnyitása .csv fájlból, valamint Adatok mentése .csv fájlba.
+
+Az ötödik, és egyben utolsó nagy komponense a rendszernek az Összesítés, amely magában tartalmazza a különböző kimutatásokat, amik a következőek: Egyenleg megtekintése, Bevételek listázása idő szerint, Kiadások listázása idő szerint, Kiadások listázása csoport szerint, Kiadások listázása csoport szerint, valamint Kiadások és bevételek összesítése.
+
+Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán, illetve leírásban lehet látni:
+
+- **Aktorok:** A cég alkalmazottai
+ - **Funkciók:**
+	 - **Kiadások kezelése**, azon belül:
+
+		- Kiadás rögzítése: Az aktoroknak lehetősége van kiadást rögzíteni.
+
+		- Kiadás módosítása: Az aktoroknak lehetősége van kiadást módosítani.
+
+		- Kiadás törlése: Az aktoroknak lehetősége van kiadást törölni.
+
+		- Kiadás csoport rögzítése: Az aktoroknak lehetősége van kiadás csoportot
+		rögzíteni.
+
+		- Kiadás csoport módosítása: Az aktoroknak lehetősége van kiadás csoportot
+		módosítani.
+
+	 	- Kiadás csoport törlése: Az aktoroknak lehetősége van kiadás csoportot
+	 	törölni.
+		
+	 - **Bevételek kezelése**, azon belül:
+
+		- Bevétel rögzítése: Az aktoroknak lehetősége van bevételt rögzíteni.
+
+		- Bevétel módosítása: Az aktoroknak lehetősége van bevételt módosítani.
+
+		- Bevétel törlése: Az aktoroknak lehetősége van bevételt törölni.
+		 
+	 - **Összesítés**, azon belül:
+
+		- Egyenleg megtekintése: Az aktorok meg tudják nézni az egyenlegüket.
+
+		- Bevételek listázása idő szerinti szűrésekkel: Az aktoroknak lehetősége
+		van idő alapján kilistázni a bevételeket.
+
+		- Kiadások listázása idő szerinti szűrésekkel: Az aktoroknak lehetősége
+		van idő alapján kilistázni a kiadásokat.
+
+		- Kiadások listázása csoportok szerinti szűrésekkel: Az aktoroknak lehetősége
+		van csoportok alapján kilistázni a kiadásokat.
+
+		- Kiadások és bevételek összesítése: Az aktoroknak lehetősége van összesíteni
+		a kiadásokat és a bevételeket.
+
+	 - **Adatok tárolása**
+	 	- Minden adat a Room adatbáziskezelő segítségével lesz eltárolva, de az
+	 	aktoroknak lehetőségük van a következőkre:
+
+	 	- Minden Kiadás törlése: Az aktoroknak lehetősége van törölni minden kiadást.
+
+	 	- Minden bevétel törlése: Az aktoroknak lehetősége van törölni minden bevételt.
+
+	 	- Minden csoport törlése: Az aktoroknak lehetősége van törölni minden csoportot.
+
+![Absztrakt domain modell ábra](images/absztrakt_domain.png)
 
 ## Architekturális terv
 
