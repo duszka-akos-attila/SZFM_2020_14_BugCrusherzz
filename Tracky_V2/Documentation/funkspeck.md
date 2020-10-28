@@ -7,6 +7,27 @@
 ## Vágyálom rendszer
 
 ## A rendszerre vonatkozó külső megszorítások
+A tizenharmadik életévüket be nem töltött személyek nem regisztrálhatnak az alkalmazás használatára,
+a gyermekek védelméről szóló törvények miatt. Az Európai parlament, személyes adatok védelméről szóló
+rendelete alapján (mostantól: adatvédelem) minden az alkalmazás használatára regisztráló felhasználónak
+el kell fogadnia, hogy a *Tracky* alkalmazást működtető fejlesztői csapat a -
+*BugCrusherzz* ( mostantól: fejlesztői csapat ), vezetői: *Duszka Ákos Attila*, *Rácz András* és *Halász Ádám*
+tárolhatja a személyes adatait, mint:
+
+email cím és jelszó - a felhasználó azonosításához, hogy az illetőnek lehetősége legyen az applikációban általa
+mentett adatok megtekintéséhez, törléséhez és módosításához;
+
+email cím - a felhasználó értesítése a szerződések módosulásáról, esetleges adatveszteség vagy adatlopás
+sikertelen megakadályozásáról, a fejlesztői csapat korábbi alkalmazásainak megszüntetéséről vagy módosulásáról,
+a fejlesztői csapat új alkalmazásainak elérhetőségéről valamint egyéb promócióiról;
+
+Az adatvédelem értelmében a felhasználónak joga van döntenie a személyes adatainak tárolásáról,
+felhasználásáról az alkalmazás javítása és a szolgáltatás fejlesztése érdekében, ezek: az eszköz típusa,
+az eszköz által futtatott operációs rendszer adatai valamint a tartózkodási ország.
+
+Az adatvédelem értelmében a felhasználónak joga van döntenie a személyes adatainak tárolásáról, publikálásáról
+valamint felhasználásáról az alkalmazás használatával kapcsolatos statisztikák készítéséhez, ezek: 
+az eszköz típusa, az eszköz által futtatott operációs rendszer adatai, a tartózkodási ország valamint életkor.
 
 ## Jelenlegi üzleti folyamatok modellje
 5.1.**Személyes költekezések vezetése: papír alapon kézzel vezetve**
