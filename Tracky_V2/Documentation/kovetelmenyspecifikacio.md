@@ -95,10 +95,10 @@ Feljegyezni az utolsó bejegyzés pontos helyét: Jegyzetfüzet száma, oldala, 
 
 3.4.4.2 Kiadások és Bevételek szűrése összeg szerint=> 1. lépés: Legelső jegyzetfüzet megkeresése ->
 2. lépés: Kikeresni a legnagyobb összeget az aktuális oldalon -> 3. lépés: Feljegyezni az aktuális bejegyzés 
-pontos helyét: Jegyzetfüzet száma, oldala, bejegyzés sorának száma -> 4. lépés: Végrehajtani a 2. és a 3.
-lépést ameddig el nem végeztük a jegyzetfüzet utolsó oldalán is -> 5. lépés: Megkeresni a soron következő
-jegyzetfüzetet -> 6. lépés: Végrehajtani a 2., 3., 4. és az 5. lépést ameddig el nem végeztük a legutolsó
-jegyzetfüzet legutolsó oldalán is
+pontos helyét: Jegyzetfüzet száma, oldala, bejegyzés sorának száma -> **4. lépés: Végrehajtani a 2. és a 3.
+lépést ameddig el nem végeztük a jegyzetfüzet utolsó oldalán is** -> 5. lépés: Megkeresni a soron következő
+jegyzetfüzetet -> **6. lépés: Végrehajtani a 2., 3., 4. és az 5. lépést ameddig el nem végeztük a legutolsó
+jegyzetfüzet legutolsó oldalán is**
 
 ## Igényelt üzleti folyamatok
 4.1 **Bevételek Kezelése**
