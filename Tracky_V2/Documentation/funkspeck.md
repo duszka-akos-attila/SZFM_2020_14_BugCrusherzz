@@ -135,8 +135,6 @@ a dátumot és/vagy összeget -> Kiaválasztani a Mindkettő rádiógombot -> Ki
 ## Követelménylista
 |Modul|ID|Név|Verzió|Kifejtés|
 |--|--|--|--|--|
-|Távoli adat tárolási modul|B-DS-S-01|Mentés|1.4|Adatok mentése egy távoli szerver adatbázisába|
-|Távoli adat tárolási modul|B-DS-S-02|Megnyitás|1.4|Adatok lekérése egy távoli szerver adatbázisából|
 |Lokális adat tárolási modul|F-DS-L-01|Mentés|0.2|Adatok mentése egy lokális adatbázisba|
 |Lokális adat tárolási modul|F-DS-L-02|Megnyitás|0.2|Adatok lekérése egy lokális adatbázisból|
 |Lokális adat tárolási modul|F-DS-L-03|Exportálás|1.1|Adatok mentése .csv fájlba|
@@ -167,6 +165,8 @@ a dátumot és/vagy összeget -> Kiaválasztani a Mindkettő rádiógombot -> Ki
 |Felhasználó kezelői modul|B-UH-04|Kijelentkezés|1.1|Kijelentkezés egy távoli szerverről|
 |Felhasználó kezelői modul|B-UH-05|Jelszó változtatása|1.3|Egy regisztrált felhasználói fiók jelszavának módosítása|
 |Felhasználó kezelői modul|B-UH-06|Email cím változtatása|1.3|Egy regisztrált felhasználói fiók email címének módosítása|
+|Távoli adat tárolási modul|B-DS-S-05|Mentés|1.4|Adatok mentése egy távoli szerver adatbázisába|
+|Távoli adat tárolási modul|B-DS-S-06|Megnyitás|1.4|Adatok lekérése egy távoli szerver adatbázisából|
 
 ## Használati esetek
 - **Aktorok:** A cég alkalmazottai
