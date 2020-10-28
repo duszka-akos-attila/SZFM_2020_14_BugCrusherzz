@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_income" />
 
     <fragment
-        android:id="@+id/nav_income2"
-        android:name="com.tracky2.controller.IncomeFragment2"
+        android:id="@+id/nav_incomelist"
+        android:name="com.tracky2.controller.IncomeFragmentList"
         android:label="Bevétellista"
         tools:layout="@layout/fragment_incomelist" />
 
@@ -29,8 +29,8 @@
         android:label="Kiadások"
         tools:layout="@layout/fragment_expense" />
     <fragment
-        android:id="@+id/nav_expense2"
-        android:name="com.tracky2.controller.ExpenseFragment2"
+        android:id="@+id/nav_expenselist"
+        android:name="com.tracky2.controller.ExpenseFragmentList"
         android:label="Kiadáslista"
         tools:layout="@layout/fragment_expenselist" />
 
