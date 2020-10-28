@@ -19,7 +19,86 @@ vagy akár a tétel csoportok használatának segítségével. Végezetül pedig
 feldolgozott információt a lehető legkönnyebben értelmezni tudják, a kimutatásokat valamilyen grafikus
 megjelenítéssel is ábrázolja a program, a nyers információkon felül.
 
+
 ## Jelenlegi üzleti folyamatok
+3.1 **Bevételek Kezelése**
+
+3.1.1 Bevétel felvitele a jegyzetfüzetbe => Az aktuális jegyzetfüzet megkeresése -> Az utolsó bejegyzés
+megkeresése -> Tollal, kézzel beírni a keletkezett kiadást
+
+3.1.2 Bevétel törlése a jegyzetfüzetből => Az aktuális jegyzetfüzet megkeresése -> A törölni kívánt bejegyzés
+megkeresése kézzel a teljes füzetből -> A bejegyzés áthúzása
+
+3.1.3 Minden Bevétel törlése a jegyzetfüzetből => Füzetborítóra jegyzőkönyvet írni a törölni kívánt oldalak
+számairól
+
+3.1.4 Bevétel szerkesztése => Az aktuális jegyzetfüzet megkeresése -> A szerkeszteni kívánt bejegyzés
+megkeresése kézzel a teljes füzetből -> A bejegyzés áthúzása -> Szerkesztési megjegyzést írni a margóra
+a javított bejegyzés aktuális füzet és oldalszámáról -> A megadott füzet megadott oldalán új bejegyzést
+létrehozni a javított értékekkel -> A margóra az eredet hivatkozását feljegyezni
+
+3.2 **Kiadások Kezelése**
+
+3.2.1 Kiadás felvitele a jegyzetfüzetbe => Az aktuális jegyzetfüzet megkeresése -> Az utolsó bejegyzés
+megkeresése -> Tollal, kézzel beírni a keletkezett kiadást
+
+3.2.2 Kiadás törlése a jegyzetfüzetből => Az aktuális jegyzetfüzet megkeresése -> A törölni kívánt bejegyzés
+megkeresése kézzel a teljes füzetből -> A bejegyzés áthúzása
+
+3.2.3 Minden Kiadás törlése a jegyzetfüzetből => Füzetborítóra jegyzőkönyvet írni a törölni kívánt oldalak
+számairól
+
+3.2.4 Kiadás szerkesztése => Az aktuális jegyzetfüzet megkeresése -> A szerkeszteni kívánt bejegyzés
+megkeresése kézzel a teljes füzetből -> A bejegyzés áthúzása -> Szerkesztési megjegyzést írni a margóra
+a javított bejegyzés aktuális füzet és oldalszámáról -> A megadott füzet megadott oldalán új bejegyzést
+létrehozni a javított értékekkel -> A margóra az eredet hivatkozását feljegyezni
+
+3.3 **Csoportok Kezelése**
+
+3.3.1. Csoport létrehozása => A jegyzetfüzet elülső borítójának belső oldalára tollal feljegyezni a létrehozni kívánt
+csoportot -> Megjegyzést létrehozni a csoporthoz -> Csoport azonosító kódot feljegyezni a sor legelejére
+
+3.3.2. Csoport törlése => A jegyzetfüzet elülső borítójának belső oldalán kikeresni a törölni kívánt
+csoportot -> A törölni kívánt csoport sorát tollal áthúzni -> Az adott füzetben az összes törölt csoportra
+hivatkozó csoport azonosító kódot megkeresni -> A nem létező csoportra hivatkozó azonosító áthúzása
+
+3.3.3. Minden csoport törlése =>  A jegyzetfüzet elülső borítójának belső oldalán a legutolsó csoport alatt
+vonalat húzni -> A vonal alatt jegyzőkönyvet írni a törlésről -> A jegyzőkönyvbe bejegyezni az összes csoport
+azonosító kód érvénytelenítéséről szóló emlékeztetőt
+
+3.3.4 Csoport szerkesztése => A jegyzetfüzet elülső borítójának belső oldalán kikeresni a javítani kívánt
+csoportot -> A javítani kívánt csoport sorát tollal áthúzni -> Szerkesztési megjegyzést írni a margóra
+a javított csoport aktuális sorszámáról -> A legutolsó csoport sor után új sor írása a javítani kívánt csoport
+javított adatokkal
+
+3.4 **Összesítés**
+
+3.4.1. Minden bevétel és kiadás listázása => Az aktuális összesítő jegyzetfüzet előkeresése vagy új készítése ->
+Az összes jegyzetfüzet kikeresése -> Sorba rendezni a jegyzetfüzeteket -> Kikeresni a legutoljára felvitt
+bejegyzéseket -> A legutoljára felvitt bejegyzést követő bejegyzéstől kezdődően kézzel felvinni minden azt
+követő bejegyzést az összesítő jegyzetfüzetbe
+
+3.4.2. Bevételek szűrése => Az aktuális összesítő jegyzetfüzet előkeresése -> Az aktuális bevétel összesítő
+ jegyzetfüzet előkeresése vagy új készítése -> Kézzel felvinni minden bevételi bejegyzést az összesítő
+jegyzetfüzetből a bevétel összesítő jegyzetfüzetbe
+
+3.4.3. Kiadások szűrése => Az aktuális összesítő jegyzetfüzet előkeresése -> Az aktuális kiadás összesítő
+jegyzetfüzet előkeresése vagy új készítése -> Kézzel felvinni minden kiadási bejegyzést az összesítő
+jegyzetfüzetből a kiadás összesítő jegyzetfüzetbe
+
+3.4.4.1 Kiadások és Bevételek szűrése dátum szerint=> Megkeresni a keresett dátum évéhez kapcsolódó
+összesítő jegyzetfüzetet -> Megkeresni az első lapot amely a megadott dátum hónapjához kapcsolódik ->
+Végig keresni az összes bejegyzést, amíg el nem jutunk a dátum által megadott nap első bejegyzéséhez ->
+Feljegyezni az első bejegyzés pontos helyét: Jegyzetfüzet száma, oldala, bejegyzés sorának száma ->
+Megkeresni a legutolsó bejegyzést amely a megadott dátumhoz vagy idő tartományhoz tartozik ->
+Feljegyezni az utolsó bejegyzés pontos helyét: Jegyzetfüzet száma, oldala, bejegyzés sorának száma
+
+3.4.4.2 Kiadások és Bevételek szűrése összeg szerint=> 1. lépés: Legelső jegyzetfüzet megkeresése ->
+2. lépés: Kikeresni a legnagyobb összeget az aktuális oldalon -> 3. lépés: Feljegyezni az aktuális bejegyzés 
+pontos helyét: Jegyzetfüzet száma, oldala, bejegyzés sorának száma -> 4. lépés: Végrehajtani a 2. és a 3.
+lépést ameddig el nem végeztük a jegyzetfüzet utolsó oldalán is -> 5. lépés: Megkeresni a soron következő
+jegyzetfüzetet -> 6. lépés: Végrehajtani a 2., 3., 4. és az 5. lépést ameddig el nem végeztük a legutolsó
+jegyzetfüzet legutolsó oldalán is
 
 ## Igényelt üzleti folyamatok
 4.1 **Bevételek Kezelése**
