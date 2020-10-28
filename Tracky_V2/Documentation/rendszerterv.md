@@ -69,6 +69,66 @@
 ## Projekt terv
 
 ## Üzleti folyamatok modellje
+**Üzleti szereplők:** Az üzleti szereplők, mostantól *aktorok*: olyan személyek, akik a megrendelő
+cég alkalmazottai és a jövőben az elkészült programot fogják használni az üzleti folyamatok
+végrehajtásakor.
+
+**Üzleti folyamatok:** 
+
+* **Kiadás felvitele lokális adatbázisba:** Ez a folyamat akkor zajlik le, amikor az aktoroknak új kiadást
+	kell rögziteniük. Ekkor az aktorok megnyitják az applikációt az Androidos okostelefonjukon vagy
+	tabletjükön, amiben lehetőségük nyílik az új kiadás rögzítésére mind kézzel, mind a beépített sablon
+	kezelő modul segítségével, feltételezve, hogy már rendelkeznek korábban rögzített sablonnal. Ez természetesen
+	már hatalmas előny a korábbi üzleti folyamatokkal szemben, azonban ez a rendszer más teljesen új lehetőséget
+	nyit meg az aktorok és a megrendelő számára egyaránt.
+   
+ * **Bevételek felvitele lokális fájlba:** Ez a folyamat akkor zajlik le, amikor az aktoroknak új bevételt
+	kell rögziteniük. Ekkor az aktorok megnyitják az applikációt az Androidos okostelefonjukon vagy
+	tabletjükön, amiben lehetőségük nyílik az új bevétel rögzítésére mind kézzel, mind a beépített sablon
+	kezelő modul segítségével, feltételezve, hogy már rendelkeznek korábban rögzített sablonnal. Ez természetesen
+	már hatalmas előny a korábbi üzleti folyamatokkal szemben, azonban ez a rendszer más teljesen új lehetőséget
+	nyit meg az aktorok és a megrendelő számára egyaránt.
+   
+* **Tételek csoportosítása:**  Ez a folyamat az összesítések alkalmával a legfontosabb, azonban az időközi
+	ellenőrzések alkalmával is ugyanolyan hasznos segítséget nyújt. Amikor az aktoroknak csoportosítania 
+	kell bizonyos tétel csoportokat, az elkészülő program segítségével rengeteg időt és energiát szabadít fel
+	az aktorok számára, valamint jelentős összegeket spórolhat meg a megrendelő ennek köszönhetően.
+	A folyamat működése azon alapszik, hogy a tételek felvitelekor minimális idő és energia befektetésével
+	hosszú távon nagyon sokat meg lehet takarítani. A csoportosítás úgy történik, hogy amikor
+	az aktor felviszi a tételt, megad egy tétel csoportot, ami még manuális munka, azonban a munka
+	számottevő része automatizálható az által, hogy a csoportosítást a számítógép végzi el.
+
+* **Összesítés:** Végül a legtöbb erőforrást igénylő feladatot adjuk át a programnak, amely nem más
+	mint a tételek csoportosítása, valamint azok statisztikai elemzése. Mivel a számítástechnikai 
+	berendezések számtalanszor gyorsabbak az embernél, így a matematikai műveletek elvégzése sem
+	okoz nehézséget neki. Az aktoroknak a kimutatások készítéséhez elegendő specifikálni a szűrőket,
+	mint dátum, vagy összeg határok és amint felpillantanak az összegzést végrehajtó gombról, már el
+	is készült a kimutatás. 
+
+
+**Erőforrás igények:**
+
+* **Jelenlegi üzleti folyamatok:**
+	* Kiadás rögzítése: 1 aktor, 3-5 perc.
+
+	* Bevétel rögzítése: 1 aktor, 3-5 perc.
+
+	* Tételek csoportosítása: 1-2 aktor, 1-2 óra, egy havi bevételek és kiadások esetében, 
+	  amelyek összesített száma nem haladja meg az egyezer tételt.
+	
+	* Összesítés: 2-3 aktor, 6-9 óra egy havi bevételek és kiadások esetében, amelyek
+	  összesített száma nem haladja meg az ötezer tételt.
+
+* **Igényelt üzleti folyamatok:**
+	* Kiadás rögzítése: 1 aktor, kevesebb mint 1 perc.
+
+	* Bevétel rögzítése: 1 aktor, kevesebb mint 1 perc.
+
+	* Tételek csoportosítása: 1 aktor, 2-5 perc akár több mint ötezer tétel esetén is.
+	
+	* Összesítés: 1 aktor, 3-5 perc akár több mint ötezer tétel esetén is.
+
+
 
 ## Követelmények
 
