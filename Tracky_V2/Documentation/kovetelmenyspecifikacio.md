@@ -3,6 +3,21 @@
 ## Jelenlegi helyzet
 
 ## Vágyálom rendszer
+Szeretnénk egy modern és biztonságos rendszert a mindennapi kiadásaink valamint bevételeink vezetéséhez.
+Fontos számunkra, hogy az elkészült rendszert mindenki tudja használni, amely megköveteli a gyors és hibamentes
+működést. Amennyiben mégis hiba történne, az lenne a leghatékonyabb, ha a felhasználók maguk is képesek
+lennének a problémát elhárítani interaktív segítő üzenetek segítségével. A rendszer kezelése során figyelemben
+kell tartani, hogy a felhasználók ideje véges, így minden folyamat elvégzésére a lehető legminimálisabb időt
+szeretnénk ráfordítani. A biztonságos kezelést lehetővé téve, fontos, hogy felhasználóink azonosítani tudják
+magukat amelyhez lehetőség szerint email címeket szeretnénk használni, és csak a saját maguk által felvitt
+adatokhoz férjenek hozzá, mind szerkesztés, mind megtekintés céljából. Egy szintén nem elhanyagolható funkció,
+a csoportosítás. A felhasználóknak nélkülözhetetlen, hogy csoportosítani tudjanak bizonyos tranzakciókat, ezzel
+lehetővé téve a komplex statisztikai kimutatásokat. A rendszer egy másik mérvadó feladata lenne az adatok
+biztonságos tárolásán felül, az abból kinyerhető információk lehető legkönnyebb és leggyorsabb kielemzése.
+Mindezt többféle szűrések segítségével, például dátum, idő-intervallum, pénz mozgás iránya, összeg mértéke
+vagy akár a tétel csoportok használatának segítségével. Végezetül pedig ahhoz, hogy a felhasználóink a
+feldolgozott információt a lehető legkönnyebben értelmezni tudják, a kimutatásokat valamilyen grafikus
+megjelenítéssel is ábrázolja a program, a nyers információkon felül.
 
 ## Jelenlegi üzleti folyamatok
 
@@ -124,3 +139,4 @@ amely lehetőséget ad vagy alkalmas Eszköz lehet adott cél megvalósításáh
 ami rugalmasan alkalmazkodik a különböző eszközök képernyőjének méretéhez.
 
 >*Lokális adattárolás:* Az adatok tárolása az adatkezelő rendszerrel azonos helyen történik.
+
