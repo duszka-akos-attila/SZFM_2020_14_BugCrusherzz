@@ -131,6 +131,141 @@ végrehajtásakor.
 
 
 ## Követelmények
+**Funkcionális követelmények:**
+
+* Lokális adat tárolási modul (Local Data Storage module):
+	Ez a modul végzi az adatok mentését a felhasználó eszközére, valamint a rendszer indulásakor,
+	azoknak a betöltése is ennek a modulnak a feladata. Ezen felül lehetővé teszi a már korábban
+	rögzített adatok exportálását olyan formátumban, hogy kompatibilitást nyújtson más az iparban
+	leggyakrabban használt adat kezelő, tároló és feldolgozó alkalmazásokkal. Természetesen ezeknek
+	az adatoknak az importálását is képes elvégezni az applikációba akár felhasználói beavatkozás nélkül,
+	amennyiben az importálandó fájl a rendszer fejlesztői által előírt formában van elkészítve.
+	
+* Adat kezelői modul (Data Handler module):
+	Az adat kezelői modul mind a felhasználó eszközén, mind a távoli szerveren ugyanazt a feladatot
+	végzi, rögzíti a kívánt felületen a felhasználó által bevitt adatokat, melyeket a bevétel, kiadás,
+	csoport, valamint sablon típusok alkotnak. Magát a bevétel és kiadás típust egységesen tételeknek
+	is hívjuk. Természetesen ahogy a nevéből adódik a modul kezelést biztosít, amely nem csak a tételek
+	létrehozását vagy sablonok létrehozását jelenti. Feladata még az adatok és a felhasználó között
+	kapcsolatot teremteni, ezáltal lehetővé teszi azok szerkesztését, valamint a nem kívánt tartalom
+	törlését is.
+	
+* Adat elemző modul (Data Analytic module):
+	Az adat elemző modul feladata, hogy a felhasználó által korábban rögzített adatokat a
+	felhasználó számára információvá alakítsa. Ez azt jelenti, hogy a rögzített adathalmazból,
+	szűri, rendezi az elemzést végző számára az adatokat, és amennyiben igény van rá, egyéb matematikai
+	műveleteket végez el a már szűrt és rendezett halmazokon. Ilyen lehet például a legutóbbi tíz
+	tranzakció, a legnagyobb kiadás egy bizonyos hónapban, vagy akár a teljes és totális egyenleg,
+	amely minden eddig felvitt tranzakciónak vesszi az összegét.
+	
+* Sablon kezelő modul (Template Handler module):
+	A sablon kezelő modul létezésének egyetlen és legfontosabb célja, az alkalmazás felhasználói
+	életének megkönnyítése, valamint idejük megspórolása. Ezt úgy tudják elérni, hogy lehetőséget
+	biztosítunk nekik sablonok használatára. A sablonok használata az egyszerű működésük miatt
+	gyerek játék, nem beszélve arról, hogy milyen gyorssá teszik a tételek felvitelét. Annyit kell
+	tenni, hogy a tétel felvitelekor kiválasztják a sablonnal történő hozzáadást, ezután amennyiben
+	nem a legutóljára használt sablont kívánják felhasználni, kiválasztják a használandó sablont.
+	Ezt követően amennyiben szükséges, módosítanak a korábban megadott alapértelmezet értékeken,
+	majd hozzáadják az új tételt. Ez akár három érintésre is lerövidítheti az amúgy egy perces
+	műveletet, ahol számos helyen kellene adatokat begépelni.
+	
+* Felhasználó kezelő modul (User Handler module):
+	Egy opcionálisan választható funkciója lesz az applikációnak a kívülről bevonható erőforrások
+	igénybevétele. Ez azt jelenti, hogy ha a jövőben a felhasználó úgy dönt, hogy szeretné igénybe
+	venni a Plussz szolgáltatásainkat, rendkívül fontos, hogy a felhasználó adatait csak saját maga
+	és azok érhessék el, akiknek engedélyt ad erre. Erre nyújt egy biztonságos megoldást a Felhasználó
+	kezlői modul. Feladat, hogy azonosítsa a felhasználót, aki szereretne hozzáférni az adatokhoz,
+	valamint az, hogy megakadályozza azokat a személyeket vagy szervezeteket, akik illetéktelenül
+	szeretnének hozzáférni mások adataihoz.
+	
+* Távoli adat tárolási modul (Remote Data Storage module):
+	Ez a modul végzi az adatok biztonságos mentését a felhasználó által igényelt távoli szerverre,
+	valamint szinkronizálja az adatokat a két rendszer között amikor a felhasználó elindítja
+	az applikációt. Ez számos előnnyel járhat a felhasználók számára: Értékes tárhelyet szabadít
+	fel az eszközön, ezzel biztosítva, hogy a következő rendezvényen az utolsó kép is elkészülhessen;
+	Egy biztonsági mentésként is funkcionál a tárhelyünkön elhelyezett adatok számára, ezzel biztosítva,
+	hogy amennyiben a felhasználó okostelefonja vagy táblagépe olyan károsodást szenvedne, amellyel 
+	elveszítené adatait, az általunk tárolt példányt bármikor vissza állíthatja új eszközén pillanatok
+	alatt, anélkül, hogy elveszítené hónapok vagy évek munkáját; Végül pedig lehetőséget ad olyan 
+	felhasználóknak vagy csoportnak, akiknek gyakran váltaniuk kell készülékeiket vagy szeretnének
+	közösen dolgozni ugyanazon projekten.
+	
+
+**Nem funkcionális követelmények:**
+* Hatékonyság:
+	Elengedhetetlen, hogy a program képes legyen szinte bármilyen készüléken üzemelni, ami
+	azt jelenti, hogy a legnagyobb halmazt alkotó készülékeket is támogatnia kell. Ezek a
+	készülékek a régebbi okostelefonok, illetve a mai, azonban olcsó eszközök. Ezen eszközök
+	leggyakrabban régebbi operációsrendszert használnak, valamint régi hárdver komponenseket,
+	amelyek korlátozzák az egyes modern és gyors program részletek működését, valamint egyes
+	esetekben teljesen meg is akadályozzák azt. Viszont arra is ügyelni kell, hogy a régebbi
+	program részletek is teljesítsék a minimum sebesség és hatékonysági mércéket a modern
+	készülékeken és környezetben.
+	
+* Megbízhatóság:
+	Az egyik legnagyobb előnye a Tracky használatának, a hatékonysága. Azonban a hatékonyságot
+	csak megbízhatósággal lehet garantálni. Az egyik legfontosabb alaptétele a rendszernek
+	az adatbiztonság. Azonban az adatbiztonság nem csak az eltulajdonítás megakadályozást
+	jelenti. A másik kulcsfontosságú szerepe az adatok biztonságos tárolása, amely biztosítja,
+	hogy az adatok információtartalma nem sérülhet, módosulhat, és semmisülhet meg. Ezen felül
+	biztosítani kell azt, hogy a program a lehető legkevesebb hibát hozzon létre, még akkor is,
+	ha ezek a hibák, a felhasználó által, az applikáció helytelen használatából erednek. Ezen
+	felül minden egyéb hiba megoldása nem bízható a felhasználóra.
+	
+* Biztonság:
+	Az applikáció készítésekor törekedni kell arra, hogy az adatok a lehető legbiztonságosabb
+	módon legyenek eltárolva mind jogi, mind infromatikai értelmezésben. Ezen felül minden
+	internetes kommunikáció során azonosítani kell a felhasználót, és titkosított csatornán
+	keresztül kell lefolytatni azt, személyes vagy anyagi értékkel rendelkező adat esetén. Fontos az adatok védelme
+	az illetéktelen hozzáférésekkel szemben mind kommunikáció mind tárolás szempotjából, így
+	minden olyan eszközön biztosítani kell ezt a kritériumot, amely az üzemeltető tulajdonában
+	áll, és adat van tárolva vagy átirányítva.
+
+* Hordozhatóság:
+	Az elkészült alkalmazásnak az Android operációsrendszert használó okostelefonok valamint
+	táblagépek lehető legszélesebb halmazán kell, hogy az elképzelt használat közepes szintjét
+	teljesítse. Ez azt, jelenti, hogy az elfogadható sebességű működésen felül alkalmazkodnia
+	kell olyan eszköz sajátosságokhoz, mint a képernyő mérete, felbontása, az általa futtatott
+	operációsrendszer, valamint a hárdver amelyen a rendszer és az applikáció is fut.
+	
+	Természetesen a hordozhatóság egyik legfelsőbb szintje ha nem csak eszköz szinten lehet az
+	adatokat hordozni, de szoftverek között is. Ezért fontos, hogy az alkalmazás rendelkezzen
+	olyan funkciókkal, amelyek biztosítani tudják ezt. Mivel a pénzügyi környezetben majdnem
+	minden ember érintett, és a sokféle igényt sokféle szoftver próbálja sajátos módon teljesíteni,
+	így fontos, hogy a kompatibilitás a lehető legtöbb ilyen programmal teljesüljön.
+
+* Felhasználhatóság:
+	Mivel a program felhasználói sokféle foglalkozási területről eredhetnek, így nem lehet
+	elvárás semmilyen előzetes szakmai tudás sem informatikai, sem pénzügyi sem bármilyen egyéb
+	más ágazatból. A program használatához szükséges tanulási folyamatot a lehető legkissebb idő
+	alatt teljesíthetővé kell tenni azáltal, hogy alapvető és gyakran használt vezérlési
+	technikát alkalmazhasson a felhasználó. A felületen csak egyértelmű és szigorúan a 
+	felhasználót érintő információ jelenjen meg, lehetőleg fontossági sorrendben. 
+	
+**Törvényi előírások:**
+
+Mivel a program nem hivatalosan elfogadott dokumentumok előállítását végzi, így az adatok
+megjelenítésére, rendezésére, mennyiségére és hitelesítésére jelenleg nem vonatkozik törvényi
+előírás. Az alap alkalmazás nem rendelkezik internetes funkcióval, így arra jelenleg törvényi
+előírás nem érvényesül, azonban a Plussz verzió által elkért, feldolgozott, továbbított
+valamint tárolt személyes adataira az Európai parlament személyes adatok védelméről szóló
+határozat érvényesül, valamint a Magyarország által megkövetelt egyéb, az informatika
+szolgáltatások nyújtásával kapcsolatos más határozatok követése.
+
+**Informatikai szabványok a programban:**
+
+Mivel az applikáció Android operációsrendszerekkel üzemeltetett okostelefonok, táblagépek
+valamint egyéb okos készülékekkel való használatra lett tervezve így fontos, hogy a
+program alkalmazkodjon a mobil készülékek sajátosságaihoz. A program lokális adat tárolása
+lehetőleg Room adatbázis segítségével kerüljön mentésre. A könnyű fejleszthetőség és
+támogatás érdekében szabványos Java programozási nyelvben, annak saját és az
+Androidos program könyvtárak felhasználásával készüljön a lehető legkevesebb külős
+függőségek vagy szoftverek bevonásával. A program által exportált fájlok szabványos
+`.csv` kiterjesztésű adat állományok legyenek, pontosvessző karakter (`;`) szeparátorokkal
+elválasztva. Mivel az applikáció elsődleges célközönsége az európai valamint az észak-amerikai
+kontinens, így csak azon nyelveket kell támogatnia, azonban azt teljes mértékig, ezért
+a programban minden felhasználó által begépelhető és begépelt szöveges adatot az *UTF-8*
+karakter kódolási szabvánnyal kell eltárolni, valamint megjeleníteni. 
 
 ## Funkcionális terv
 
