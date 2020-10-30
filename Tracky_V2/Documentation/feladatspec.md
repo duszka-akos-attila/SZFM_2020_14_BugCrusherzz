@@ -10,10 +10,10 @@ Ezen dokumentum azzal a céllal készül, hogy az applikáció elkészítéséhe
 
 |Modul|ID|Név|Verzió|Kifejtés|Fejlesztő|
 |--|--|--|--|--|--|
-|Lokális adat tárolási modul|F-DS-L-01|Mentés|0.2|Adatok mentése egy lokális adatbázisba||
-|Lokális adat tárolási modul|F-DS-L-02|Megnyitás|0.2|Adatok lekérése egy lokális adatbázisból||
-|Lokális adat tárolási modul|F-DS-L-03|Exportálás|1.1|Adatok mentése .csv fájlba||
-|Lokális adat tárolási modul|F-DS-L-04|Importálás|1.1|Adatok beolvasása .csv fájlból.||
+|Lokális adat tárolási modul|F-DS-L-01|Mentés|0.2|Adatok mentése egy lokális adatbázisba|Duszka Ákos Attila|
+|Lokális adat tárolási modul|F-DS-L-02|Megnyitás|0.2|Adatok lekérése egy lokális adatbázisból|Duszka Ákos Attila|
+|Lokális adat tárolási modul|F-DS-L-03|Exportálás|1.1|Adatok mentése .csv fájlba|Duszka Ákos Attila|
+|Lokális adat tárolási modul|F-DS-L-04|Importálás|1.1|Adatok beolvasása .csv fájlból.|Duszka Ákos Attila|
 |Adat kezelői modul|DH-01|Új bevétel|0.1|Bevétel rögzítése az eszközre.||
 |Adat kezelői modul|DH-02|Bevétel szerkesztése|0.3|A már rögzített bevétel módosítása.||
 |Adat kezelői modul|DH-03|Bevétel törlése|0.1|A már rögzített bevétel törlése.||
@@ -71,14 +71,14 @@ Ezen dokumentum azzal a céllal készül, hogy az applikáció elkészítéséhe
 |0.2||2020.11||
 |0.3||2020.11||
 |0.4||2020.11||
-|0.5|Alpha test|2020.11||
+|0.5|Alpha test|2020.11.07||
 |0.6||2020.11||
 |0.7||2020.11||
 |0.8||2020.11||
-|0.9|First beta test|2020.11||
+|0.9|First beta test|2020.11.14||
 |1.0||2020.11||
 |1.1||2020.11||
 |1.2||2020.11||
-|1.3|Second beta test|2020.11||
+|1.3|Second beta test|2020.11.21||
 |1.4||2020.11||
-|1.5|Relase|2020.11||
+|1.5|Relase|2020.11.28||
