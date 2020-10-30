@@ -62,3 +62,23 @@ Ezen dokumentum azzal a céllal készül, hogy az applikáció elkészítéséhe
 |Grafiukus felhasználói felület vezérlő modul|F-GUI-C-08|Csoport kezelő vezérlő|0.5|||
 |Grafiukus felhasználói felület vezérlő modul|F-GUI-C-09|Egyszerű összesítés vezérlő|0.8|||
 |Grafiukus felhasználói felület vezérlő modul|F-GUI-C-10|Grafikus statisztikai vezérlő|1.2|||
+
+## Verzió kiadási tervezet
+
+|Verzió|Név|Várható kiadási dátum|Tényleges kiadás dátuma|
+|--|--|--|--|
+|0.1||2020.11||
+|0.2||2020.11||
+|0.3||2020.11||
+|0.4||2020.11||
+|0.5|Alpha test|2020.11||
+|0.6||2020.11||
+|0.7||2020.11||
+|0.8||2020.11||
+|0.9|First beta test|2020.11||
+|1.0||2020.11||
+|1.1||2020.11||
+|1.2||2020.11||
+|1.3|Second beta test|2020.11||
+|1.4||2020.11||
+|1.5|Relase|2020.11||
