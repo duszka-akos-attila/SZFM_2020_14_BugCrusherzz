@@ -7,15 +7,15 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Group {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "name")
     private String name;
     @ColumnInfo(name = "color")
     private int color;
 
-    public Group(int id, String name, int color){
-        this.id = id;
+    public Group( String name, int color){
+        this.id = 0;
         this.name = name;
         this.color = color;
     }

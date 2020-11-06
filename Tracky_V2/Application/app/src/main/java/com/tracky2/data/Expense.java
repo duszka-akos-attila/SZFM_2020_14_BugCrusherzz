@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Entity
 public class Expense {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "amount")
     private int amount;
@@ -19,9 +19,9 @@ public class Expense {
     @ColumnInfo(name = "date")
     private Date date;
 
-    public Expense(int id, int amount, String description, int groupId, Date date){
-        this.id = id;
+    public Expense( int amount, String description, int groupId, Date date){
         this.amount = amount;
+        this.id = 0;
         this.description = description;
         this.groupId = groupId;
         this.date = date;

@@ -18,7 +18,7 @@ public class Income {
                 ", date= " + date +
                 '}';
     }
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "amount")
     private int amount;
@@ -27,9 +27,9 @@ public class Income {
     @ColumnInfo(name = "date")
     private Date date;
 
-    public Income(int id, int amount, String description, Date date){
-        this.id = id;
+    public Income( int amount, String description, Date date){
         this.amount = amount;
+        this.id = 0;
         this.description = description;
         this.date = date;
     }

@@ -10,7 +10,7 @@ import com.tracky2.data.Group;
 public class Template {
     @ColumnInfo(name = "isIncome")
     private boolean isIncome;
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "amount")
     private int amount;
@@ -19,9 +19,9 @@ public class Template {
     @ColumnInfo(name = "groupId")
     private int groupId;
 
-    public Template(boolean isIncome, int id, int amount, String description, int groupId ) {
+    public Template(boolean isIncome, int amount, String description, int groupId ) {
         this.isIncome = isIncome;
-        this.id = id;
+        this.id = 0;
         this.amount = amount;
         this.description = description;
         this.groupId = groupId;
