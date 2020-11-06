@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Manager{
 
-    static AppDatabase db = Room.databaseBuilder(MainActivity.context , AppDatabase.class, "TrackyDB").allowMainThreadQueries().build();
+    static AppDatabase db = Room.databaseBuilder(MainActivity.context , AppDatabase.class, "Tracky2DB").allowMainThreadQueries().build();
 
 
     //---------------------------LIST MANAGEMENT----------------------------
