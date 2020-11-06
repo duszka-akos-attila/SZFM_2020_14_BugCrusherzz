@@ -8,9 +8,7 @@ import com.tracky2.MainActivity;
 import com.tracky2.data.Group;
 import com.tracky2.data.Template;
 import com.tracky2.data.base.AppDatabase;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class Manager{
