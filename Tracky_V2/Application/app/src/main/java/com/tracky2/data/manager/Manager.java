@@ -39,17 +39,17 @@ public class Manager{
 
     public static void addIncome(int amount, String description){
         db.incomeDao().insertIncome(new Income( amount, description, Calendar.getInstance().getTime()));
-        //Insert income into remote DB
+        //TODO Insert income into remote DB
     }
 
     public static void deleteIncome(Income income){
         db.incomeDao().deleteIncome(income);
-        //Remove income from remote DB
+        //TODO Remove income from remote DB
     }
 
     public static void editIncome(Income income){
         db.incomeDao().updateIncome(income);
-        //Edit income in remote DB
+        //TODO Edit income in remote DB
     }
 
     //--------------------------------EXPENSE-------------------------------
@@ -57,18 +57,18 @@ public class Manager{
 
     public static void addExpense(int amount, String description, int groupId){
         db.expenseDao().insertExpense(new Expense(amount, description, groupId, Calendar.getInstance().getTime()));
-        //Insert Expense into remote DB
+        //TODO Insert Expense into remote DB
     }
 
     public static void deleteExpense(Expense expense){
         db.expenseDao().deleteExpense(expense);
-        //Delete expense from remote DB
+        //TODO Delete expense from remote DB
 
     }
 
     public static void editExpense( Expense expense){
         db.expenseDao().updateExpense(expense);
-        //Edit Expense in remote DB
+        //TODO Edit Expense in remote DB
     }
 
     //--------------------------------------GROUPS------------------------
@@ -76,19 +76,19 @@ public class Manager{
 
     public static void addGroup(String name, int color){
         db.groupDao().insertGroup(new Group( name, color));
-        //Insert Group into remote DB
+        //TODO Insert Group into remote DB
     }
 
     public static void deleteGroup(Group group){
         db.groupDao().deleteGroup(group);
-        //Delete Group from remote DB
+        //TODO Delete Group from remote DB
 
 
     }
 
     public static void editGroup(Group group){
         db.groupDao().updateGroup(group);
-        //Edit Group in remote DB
+        //TODO Edit Group in remote DB
     }
 
 }
