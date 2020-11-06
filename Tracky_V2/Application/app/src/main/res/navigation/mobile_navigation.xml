@@ -40,6 +40,12 @@
         android:label="Csoportok"
         tools:layout="@layout/fragment_group" />
 
+    <fragment
+        android:id="@+id/nav_grouplist"
+        android:name="com.tracky2.controller.GroupFragmentList"
+        android:label="Csoportlista"
+        tools:layout="@layout/fragment_grouplist" />
+
     <!-- <fragment
          android:id="@+id/nav_template"
          android:name="com.tracky2.controller.TemplateFragment"
