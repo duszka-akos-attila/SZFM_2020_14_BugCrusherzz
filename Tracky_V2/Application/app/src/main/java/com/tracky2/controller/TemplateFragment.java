@@ -16,7 +16,6 @@ public class TemplateFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_template, container, false);
 
 
-
         return root;
     }
 
@@ -73,5 +72,10 @@ public class TemplateFragment extends Fragment {
     /*Sablon törlése
         SABLON OBJEKTUM MEGSZERZÉSE
         Manager.deleteTemplate(template);
+     */
+
+    /*Sablon átalakítása tranzakcióvá
+        SABLON OBJEKTUM MEGSZERZÉSE
+        Manager.convertTemplate(template);
      */
 }
