@@ -82,12 +82,26 @@ public class Manager{
     public static void deleteGroup(Group group){
         db.groupDao().deleteGroup(group);
         //TODO Delete Group from remote DB
-
-
     }
 
     public static void editGroup(Group group){
         db.groupDao().updateGroup(group);
+        //TODO Edit Group in remote DB
+    }
+
+    //--------------------------------------TEMPLATES------------------------
+
+    public static void addTemplate(boolean isIncome, int amount, String desc, int groupId){
+        db.templateDao().insertTemplate(new Template(isIncome, amount, desc, groupId));
+    }
+
+    public static void deleteTemplate(Template template){
+        db.templateDao().deleteTemplate(template);
+        //TODO Delete Group from remote DB
+    }
+
+    public static void editTemplate(Template template){
+        db.templateDao().updateTemplate(template);
         //TODO Edit Group in remote DB
     }
 
