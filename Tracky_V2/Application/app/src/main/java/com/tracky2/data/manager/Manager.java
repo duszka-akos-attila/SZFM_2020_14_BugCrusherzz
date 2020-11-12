@@ -8,6 +8,9 @@ import com.tracky2.MainActivity;
 import com.tracky2.data.Group;
 import com.tracky2.data.Template;
 import com.tracky2.data.base.AppDatabase;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -93,6 +96,7 @@ public class Manager{
 
     public static void addTemplate(boolean isIncome, int amount, String desc, int groupId){
         db.templateDao().insertTemplate(new Template(isIncome, amount, desc, groupId));
+        //TODO Insert Group into remote DB
     }
 
     public static void deleteTemplate(Template template){
@@ -103,6 +107,15 @@ public class Manager{
     public static void editTemplate(Template template){
         db.templateDao().updateTemplate(template);
         //TODO Edit Group in remote DB
+    }
+
+    public static void convertTemplate(@NotNull Template template){
+        if(template.isIncome()){
+            addIncome(template.getAmount(), template.getDescription());
+        }
+        else{
+            addExpense(template.getAmount(), template.getDescription(), template.getGroupId());
+        }
     }
 
 }
