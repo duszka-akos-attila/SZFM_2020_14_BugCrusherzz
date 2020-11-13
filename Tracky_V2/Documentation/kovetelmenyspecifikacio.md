@@ -212,13 +212,13 @@ ezeket kapcsolhassa ki.
 ## Követelménylista
 * K01 Könnyú használhatóság
 * K02 Grafikus felhasználói felület
-* K03 Adattárolás az eszközön
-* K04 
-* K05 
-* K06 
-* K07 
-* K08 
-* K09 
+* K03 Reszponzív Design 
+* K04 Adattárolás az eszközön 
+* K05 Biztonságos adattárolás 
+* K06 Mozgathatóság
+* K07 Grafikus költségkimutatás
+* K08 Grafikus bevételkimutatás
+* K09 Összesített bevétel/költségkimutatás
 
 
 ## Fogalomszótár
