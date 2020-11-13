@@ -275,11 +275,11 @@ megnyomására megjelenik egy oldalsó menü, amelyben a következő opciók jel
 
 ## Funkció - követelmény megfeleltetés
 
-* Adatok helyi tárolása védelemmet nyújt majd nekünk a kéretlen személyektől / feltöréstől. Külső adatbázisra sem lesz így szükség.
-* Könnyű adatmozgathatóság, mivel minden data, egy helyileg tárolt és kezelt fájlba lesz, amit könnyű lesz importálni és exportálni esetleg eszközváltás esetében.
+* Adatok helyi tárolása védelmet nyújt majd nekünk a kéretlen személyektől / feltöréstől. Külső adatbázisra sem lesz így szükség.
+* Könnyű adatmozgathatóság, mivel minden data, egy helyileg tárolt és kezelt fájlba lesz, amit könnyű lesz importálni és exportálni esetleges eszközváltás esetében.
 * Eszköztől függetlenül alkalmazkodik majd a képernyőhöz a program, a reszponzív design által.
-* A programunk könnyen kezelhetőségét és akadálymentességét a grafikus felület fogja biztosítani. A programon belül egy pár kattintással elérünk majd mindent.
-* Könnyű üzemeltethetőség az átlal, hogy helyileg tároljuk majd az adatainkat, ezzel erőfforrást sem fog annyit használni.
+* A programunk könnyű kezelhetőségét és akadálymentességét a grafikus felület fogja biztosítani. A programon belül egy pár kattintással elérünk majd mindent, és nem lesz lehetőség az elveszésre.
+* Könnyű üzemeltethetőség az átlal, hogy helyileg tároljuk majd az adatainkat, ezzel erőfforrást is nyerünk majd.
 
 ## Fogalomszótár
 >*Erőforrás:* Olyan szellemi, anyagi, gazdasági, társadalmi tényező,
