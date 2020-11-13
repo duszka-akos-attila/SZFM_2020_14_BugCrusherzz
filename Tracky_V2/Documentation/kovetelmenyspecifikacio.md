@@ -210,6 +210,10 @@ mappában kell eltárolni.
 ezeket kapcsolhassa ki.
 
 ## Követelménylista
+* K01 Könnyú használhatóság
+* K02 Grafikus felhasználói felület
+* K03 Adattárolás az eszközön
+
 
 ## Fogalomszótár
 >*Erőforrás:* Olyan szellemi, anyagi, gazdasági, társadalmi tényező,
