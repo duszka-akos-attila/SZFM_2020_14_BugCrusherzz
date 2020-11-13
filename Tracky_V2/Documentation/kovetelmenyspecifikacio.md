@@ -3,7 +3,7 @@
 ## Jelenlegi helyzet
 A cégünk jelenleg egy papír alapú vezetési rendszert használ. Ez nagyon sok téren nem effektív és a kezelése is nehéz.
 Egyrészt a munkaerő, és fizikai munka ami benne van. Mindent kézzel kell írni, és vezetni, ami nem egy könnyű munka. Javítási vagy szerkesztőségi lehetőség sem áll nagyon fent, vagy unprofesszionális.
-Mivel papír alapú, így nagyon sok papírt kell felhasználni, és rendezni. Például ha megakarunk találni egy régebbi dokumentumot azt nagyon időígényes és sok 
+Mivel papír alapú, így nagyon sok papírt kell felhasználni, és rendezni. Például ha megakarunk találni egy régebbi dokumentumot, ez nagyon időígényes és sok munkát von maga után mivel, meg kell keresni az évjáratot ( mivel évjárat / hónap szerint vannak rendezve a dokumentumok ), hónapot, és azon belül végigmenni az összes papíron ameddig meg nem találjuk az általunk keresettett.
 
 ## Vágyálom rendszer
 Szeretnénk egy modern és biztonságos rendszert a mindennapi kiadásaink valamint bevételeink vezetéséhez.
