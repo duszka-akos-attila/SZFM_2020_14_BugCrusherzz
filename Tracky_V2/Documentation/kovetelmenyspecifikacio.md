@@ -213,6 +213,12 @@ ezeket kapcsolhassa ki.
 * K01 Könnyú használhatóság
 * K02 Grafikus felhasználói felület
 * K03 Adattárolás az eszközön
+* K04 
+* K05 
+* K06 
+* K07 
+* K08 
+* K09 
 
 
 ## Fogalomszótár
