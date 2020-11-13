@@ -1,6 +1,8 @@
 # Követelmény specifikáció
 
 ## Jelenlegi helyzet
+A cégünk jelenleg egy papír alapú vezetési rendszert használ. Ez nagyon sok téren nem effektív és a kezelése is nehéz.
+
 
 ## Vágyálom rendszer
 Szeretnénk egy modern és biztonságos rendszert a mindennapi kiadásaink valamint bevételeink vezetéséhez.
