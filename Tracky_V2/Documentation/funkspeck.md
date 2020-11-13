@@ -3,6 +3,7 @@
 ## A rendszer céljai és nem céljai
 
 ## Jelenlegi helyzet
+Cégünk egy papír alapú rendszert alkalmaz, ami semmi képpen sem a legeffektívebb és kezelése is nehéz amellett hogy sok munkát vesz igénybe. Ineffektivitása abban jelenik meg, hogy mennyi papírt vesz igénybe, és a tárolás / elérhetősége ezeknek a dokumentumoknak. Például, ha egy heti kiadás és bevétele sok papírra íródik, majd ezek egy dossziéba kerülnek, amik hónapok és évek alapján vannak csoportosítva. Ha ezen belül keresni szeretnénk akkor, először is megkell keresnünk az évjáratot, azon belül a hónapot, és még azon belül is átkell néznünk tömérdeknyi dokumentumot, hogy megtaláljuk amit keresünk. Ráadásul ez mind nagyon sok helyet is vesz igénybe, mivel mindent elkell valahol tárolnunk, úgy hogy akármikor elérhetők is legyenek.
 
 ## Vágyálom rendszer
 Ez a bekezdés a Követelmény specifikáció dokumentumból lett átmásolva.
