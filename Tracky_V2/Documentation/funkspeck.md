@@ -8,7 +8,13 @@
 	* Kiadások táblázatbeli kimutatása
 	* Bevételek táblában való kimutatása
 	* Összesítés mutatása
-	
+	* .csv fájlba való exportálás
+
+* **Nem Célok :**
+	* Online adattárolás
+	* Több felhasználó friendly
+	* Több nyelvű támogatás
+	* Online hitelesítés
 
 ## Jelenlegi helyzet
 Cégünk egy papír alapú rendszert alkalmaz, ami semmi képpen sem a legeffektívebb és kezelése is nehéz amellett hogy sok munka is szükséges hozzá. Ineffektivitása abban jelenik meg, hogy mennyi papírt vesz igénybe, és ennek a sok dokumentunknak a tárolás / elérhetősége. Például, egy heti kiadás és bevétele sok papírra íródik, ezek módosítása elég nehéz, így hibák nincsenek jó szemmel látva. Majd ezek egy dossziéba kerülnek, amik hónapok és évek alapján vannak csoportosítva. Ha ezen belül keresni szeretnénk akkor, először is megkell keresnünk az évjáratot, azon belül a hónapot, és még azon belül is átkell néznünk tömérdeknyi dokumentumot, hogy megtaláljuk amit keresünk. Ráadásul ez mind nagyon sok helyet is vesz igénybe, mivel mindent elkell valahol tárolnunk, úgy hogy akármikor elérhetők is legyenek. 
