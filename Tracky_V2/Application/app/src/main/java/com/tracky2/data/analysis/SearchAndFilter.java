@@ -66,7 +66,7 @@ public class SearchAndFilter {
 
     // ------------------------- EXPENSE SORTING -------------------------
 
-    public ArrayList<Income> sortExpenses(ArrayList<Expense> expenses, String by, String direction){
+    public ArrayList<Expense> sortExpenses(ArrayList<Expense> expenses, String by, String direction){
         if(by.equals("date")) {
             if(direction.equals("asc")) {
                 Collections.sort(expenses, new Comparator<Expense>() {
@@ -103,7 +103,7 @@ public class SearchAndFilter {
             }
 
         }
-        return incomes;
+        return expenses;
     }
 
 }
