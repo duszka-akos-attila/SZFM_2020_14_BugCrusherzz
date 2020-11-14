@@ -1,11 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#D3D3D3"
-    android:layout_marginBottom="2dp">
+    android:background="#FFFFFF"
+    android:layout_marginBottom="2dp"
+    >
 
+
+    <TextView
+        android:id="@+id/data_textView"
+        android:layout_width="107dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="-1000"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+
+        />
+
+    <TextView
+        android:id="@+id/nev_textView"
+        android:layout_width="168dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="Sorocske"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/datum_textView"
+        app:layout_constraintEnd_toStartOf="@+id/osztaly_textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/datum_textView"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:text="2020.05.20"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nev_textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/nev_textView"
+        app:layout_constraintTop_toBottomOf="@+id/nev_textView" />
+
+    <TextView
+        android:id="@+id/osztaly_textView"
+        android:layout_width="86dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="4dp"
+        android:text="Etel-ital"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/data_textView"
+        app:layout_constraintTop_toTopOf="@+id/data_textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
