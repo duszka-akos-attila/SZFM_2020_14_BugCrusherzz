@@ -1,5 +1,6 @@
 package com.tracky2.data.analysis;
 
+import com.tracky2.data.Expense;
 import com.tracky2.data.Income;
 
 import java.util.ArrayList;
@@ -55,6 +56,48 @@ public class SearchAndFilter {
                 Collections.sort(incomes, new Comparator<Income>() {
                     public int compare(Income i1, Income i2) {
                         return Integer.compare(i2.getAmount(), i1.getAmount());
+                    }
+                });
+            }
+
+        }
+        return incomes;
+    }
+
+    // ------------------------- EXPENSE SORTING -------------------------
+
+    public ArrayList<Income> sortExpenses(ArrayList<Expense> expenses, String by, String direction){
+        if(by.equals("date")) {
+            if(direction.equals("asc")) {
+                Collections.sort(expenses, new Comparator<Expense>() {
+                    public int compare(Expense e1, Expense e2) {
+                        return e1.getDate().compareTo(e2.getDate());
+                    }
+                });
+            }
+            if(direction.equals("desc")) {
+                Collections.sort(expenses, new Comparator<Expense>() {
+                    public int compare(Expense e1, Expense e2) {
+                        return e2.getDate().compareTo(e1.getDate());
+                    }
+                });
+            }
+
+        }
+
+        if(by.equals("amount")) {
+            if(direction.equals("asc")) {
+                Collections.sort(expenses, new Comparator<Expense>() {
+                    public int compare(Expense e1, Expense e2) {
+                        return Integer.compare(e1.getAmount(), e2.getAmount());
+
+                    }
+                });
+            }
+            if(direction.equals("desc")) {
+                Collections.sort(expenses, new Comparator<Expense>() {
+                    public int compare(Expense e1, Expense e2) {
+                        return Integer.compare(e2.getAmount(), e1.getAmount());
                     }
                 });
             }
