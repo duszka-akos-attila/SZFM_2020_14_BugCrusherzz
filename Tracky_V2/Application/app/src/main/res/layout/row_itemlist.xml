@@ -13,7 +13,7 @@
         android:id="@+id/data_textView"
         android:layout_width="107dp"
         android:layout_height="35dp"
-        android:layout_marginStart="275dp"
+        android:layout_marginStart="267dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:text="-1000"
@@ -28,13 +28,13 @@
 
     <TextView
         android:id="@+id/nev_textView"
-        android:layout_width="178dp"
-        android:layout_height="26dp"
+        android:layout_width="161dp"
+        android:layout_height="25dp"
         android:text="Sorocske"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/datum_textView"
         app:layout_constraintEnd_toStartOf="@+id/data_textView"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.362"
         app:layout_constraintStart_toEndOf="@+id/datum_textView"
         app:layout_constraintTop_toTopOf="@+id/data_textView"
         app:layout_constraintVertical_bias="0.0" />

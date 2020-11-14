@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tracky2.R;
@@ -33,6 +34,9 @@ public class ExpenseFragmentList extends Fragment {
         expTablaAdapter = new expTablaAdapter(ExpbalanceList);
 
         MainTabla.setAdapter(expTablaAdapter);
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(MainTabla.getContext(), DividerItemDecoration.VERTICAL);
+        MainTabla.addItemDecoration(dividerItemDecoration);
         return root;
 
     }

@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tracky2.R;
@@ -48,6 +49,7 @@ public class IncomeFragmentList extends Fragment {
 
 
         MainTabla.setAdapter(IncTablaAdapter);
+
         return root;
 
     }

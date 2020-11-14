@@ -8,8 +8,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainTablaExp"
-        android:layout_width="410dp"
-        android:layout_height="663dp"
+        android:layout_width="363dp"
+        android:layout_height="582dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="50dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
