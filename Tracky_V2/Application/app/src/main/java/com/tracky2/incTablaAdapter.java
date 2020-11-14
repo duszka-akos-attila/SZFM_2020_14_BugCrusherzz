@@ -17,7 +17,7 @@ public class incTablaAdapter extends RecyclerView.Adapter<incTablaAdapter.ViewHo
     List<String> incbalanceList;
 
     public incTablaAdapter(List<String> balanceList) {
-        this.balanceList = balanceList;
+        this.incbalanceList = incbalanceList;
     }
 
     @NonNull
