@@ -15,11 +15,11 @@ public class SearchAndFilter {
     // ------------------------- INCOME FILTERING -------------------------
 
     public ArrayList<Income> incomesBetweenAmounts(int min, int max){
-
+        return null;
     }
 
     public ArrayList<Income> incomesBetweenDates(Date min, Date max){
-
+        return null;
     }
 
     // ------------------------- INCOME SORTING -------------------------
