@@ -8,17 +8,11 @@
             android:id="@+id/nav_home"
             android:title="Kezdőkép" />
         <item
-            android:id="@+id/nav_income"
+            android:id="@+id/nav_incomelist"
             android:title="Bevételek" />
         <item
-            android:id="@+id/nav_incomelist"
-            android:title="Bevétellista" />
-        <item
-            android:id="@+id/nav_expense"
-            android:title="Kiadások" />
-        <item
             android:id="@+id/nav_expenselist"
-            android:title="Kiadáslista" />
+            android:title="Kiadások" />
         <item
             android:id="@+id/nav_group"
             android:title="Csoportok" />
