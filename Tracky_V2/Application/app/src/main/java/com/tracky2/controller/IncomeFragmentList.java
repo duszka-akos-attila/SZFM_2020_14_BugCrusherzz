@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tracky2.R;
 import com.tracky2.data.manager.Manager;
+import com.tracky2.incTablaAdapter;
 import com.tracky2.mainTablaAdapter;
 
 import java.util.ArrayList;
@@ -20,19 +21,19 @@ import java.util.List;
 public class IncomeFragmentList extends Fragment {
 
     RecyclerView MainTabla;
-    mainTablaAdapter MainTablaAdapter;
+    incTablaAdapter IncTablaAdapter;
 
-    List<String> balanceList;
+    List<String> incbalanceList;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_incomelist, container, false);
 
-        balanceList = new ArrayList<>();
+        incbalanceList = new ArrayList<>();
         //balanceList = Manager.lastBalanceModificaitons(20,"-","auto");
         MainTabla = root.findViewById(R.id.mainTablaInc);
-        MainTablaAdapter = new mainTablaAdapter(balanceList);
+        IncTablaAdapter = new incTablaAdapter(incbalanceList);
 
 /*
         FloatingActionButton fab = root.findViewById(R.id.fab);
@@ -46,7 +47,7 @@ public class IncomeFragmentList extends Fragment {
         });*/
 
 
-        MainTabla.setAdapter(MainTablaAdapter);
+        MainTabla.setAdapter(IncTablaAdapter);
         return root;
 
     }

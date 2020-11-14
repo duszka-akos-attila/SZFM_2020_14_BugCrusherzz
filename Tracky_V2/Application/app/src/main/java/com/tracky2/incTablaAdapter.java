@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class kisTablaAdapter extends RecyclerView.Adapter<kisTablaAdapter.ViewHolder> {
+public class incTablaAdapter extends RecyclerView.Adapter<incTablaAdapter.ViewHolder> {
 
     private static final String TAG = "mainTablaAdapter";
 
-    List<String> balanceList;
+    List<String> incbalanceList;
 
-    public kisTablaAdapter(List<String> balanceList) {
+    public incTablaAdapter(List<String> balanceList) {
         this.balanceList = balanceList;
     }
 
@@ -27,7 +27,7 @@ public class kisTablaAdapter extends RecyclerView.Adapter<kisTablaAdapter.ViewHo
 
         // Log.i(TAG, "onCreateViewHolder: " + count++);
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.row_item, parent, false);
+        View view = layoutInflater.inflate(R.layout.row_itemlist, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
 
 
