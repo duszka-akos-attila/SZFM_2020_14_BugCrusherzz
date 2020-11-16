@@ -12,8 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="24dp"
-        android:textAlignment="viewStart"
+        android:background="@drawable/back"
+        android:fontFamily="monospace"
+        android:padding="5pt"
+        android:textAlignment="textStart"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
 
@@ -33,7 +37,7 @@
         android:layout_width="97dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-
+        android:background="@drawable/back"
         android:layout_marginTop="15dp"
         android:text="Name"
         android:textAlignment="center"
@@ -72,6 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
+        android:fontFamily="monospace"
         android:text="Balance:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="30sp"
