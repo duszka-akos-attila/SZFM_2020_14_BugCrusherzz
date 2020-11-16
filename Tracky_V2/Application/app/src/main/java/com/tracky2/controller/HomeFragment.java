@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
 
         homeBalance = (TextView) root.findViewById(R.id.home_balance);
         //homeBalance.setText(String.valueOf(Manager.getBalance()));
-        homeBalance.setText("1000");
+        homeBalance.setText("7459123");
 
 
         balanceList = new ArrayList<>();
