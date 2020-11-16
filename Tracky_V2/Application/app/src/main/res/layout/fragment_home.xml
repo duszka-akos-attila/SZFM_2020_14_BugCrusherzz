@@ -7,82 +7,82 @@
     tools:context=".controller.HomeFragment">
 
 
-
     <TextView
         android:id="@+id/home_balance"
-        android:layout_width="408dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/back"
+        android:fontFamily="monospace"
+        android:padding="5dp"
+        android:textAlignment="textStart"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainTabla2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="55dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_balance" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="97dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-
-        android:layout_marginTop="5dp"
-        android:text="Név"
+        android:layout_marginTop="15dp"
+        android:text="Name"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_balance" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="5dp"
-        android:text="Csoport"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="15dp"
+        android:text="Group"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/home_balance" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="81dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="5dp"
-        android:text="Ár"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="15dp"
+        android:text="Amount"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/home_balance" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="monospace"
         android:text="Balance:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/home_balance"
-        app:layout_constraintEnd_toEndOf="@+id/home_balance"
-        app:layout_constraintStart_toStartOf="@+id/home_balance" />
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
 
     <Button
         android:id="@+id/devmodebutton"
