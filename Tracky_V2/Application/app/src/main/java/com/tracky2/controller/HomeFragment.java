@@ -32,10 +32,23 @@ public class HomeFragment extends Fragment {
 
     List<String> balanceList;
 
+    Button devMode;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //DEVMODE
+        devMode=(Button) root.findViewById(R.id.devmodebutton);
+
+        devMode.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.context, TestActivity.class);
+                intent.addFlags(intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivity(intent);
+            }
+        });
 
         homeBalance = (TextView) root.findViewById(R.id.home_balance);
         //homeBalance.setText(String.valueOf(Manager.getBalance()));

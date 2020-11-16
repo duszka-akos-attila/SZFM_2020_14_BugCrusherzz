@@ -65,6 +65,7 @@ public class TestActivity extends AppCompatActivity {
 
     protected void init(){
         TableLayout stk = (TableLayout) findViewById(R.id.table_main);
+        stk.removeAllViews();
         TableRow tbrow0 = new TableRow(this);
         TextView tv0 = new TextView(this);
         tv0.setText(" Id ");
