@@ -74,7 +74,7 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:fontFamily="monospace"
         android:text="Balance:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -82,7 +82,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <Button
         android:id="@+id/devmodebutton"
