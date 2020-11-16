@@ -45,10 +45,10 @@ public class mainTablaAdapter extends RecyclerView.Adapter<com.tracky2.mainTabla
       //  holder.osztaly_textView.setText(balanceList.get(position)[3]);
       //  holder.nev_textView.setText(balanceList.get(position)[1]);
 
-        holder.datum_textView.setText("1999.10.10");
-        holder.data_textView.setText("1000");
-        holder.osztaly_textView.setText("hey");
-        holder.nev_textView.setText("termekxd");
+        holder.datum_textView.setText("2020.10.10");
+        holder.data_textView.setText("129,999");
+        holder.osztaly_textView.setText("Elektronika");
+        holder.nev_textView.setText("Táblagép");
     }
 
     @Override

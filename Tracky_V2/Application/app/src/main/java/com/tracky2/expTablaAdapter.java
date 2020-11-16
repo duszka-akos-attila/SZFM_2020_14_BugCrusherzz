@@ -43,10 +43,10 @@ public class expTablaAdapter extends RecyclerView.Adapter<expTablaAdapter.ViewHo
       //  holder.osztaly_textView.setText(balanceList.get(position)[3]);
       //  holder.nev_textView.setText(balanceList.get(position)[1]);
 
-        holder.datum_textView.setText("1999.10.10");
+        holder.datum_textView.setText("2020.3.2");
         holder.data_textView.setText("-25620");
-        holder.osztaly_textView.setText("Group");
-        holder.nev_textView.setText("sajtoskalacshagyma");
+        holder.osztaly_textView.setText("Étel-Ital");
+        holder.nev_textView.setText("McDonalds");
     }
 
     @Override
