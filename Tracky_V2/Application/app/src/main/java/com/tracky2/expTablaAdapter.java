@@ -44,9 +44,9 @@ public class expTablaAdapter extends RecyclerView.Adapter<expTablaAdapter.ViewHo
       //  holder.nev_textView.setText(balanceList.get(position)[1]);
 
         holder.datum_textView.setText("1999.10.10");
-        holder.data_textView.setText("1000");
-        holder.osztaly_textView.setText("hey");
-        holder.nev_textView.setText("termekxd");
+        holder.data_textView.setText("-25620");
+        holder.osztaly_textView.setText("Group");
+        holder.nev_textView.setText("sajtoskalacshagyma");
     }
 
     @Override
