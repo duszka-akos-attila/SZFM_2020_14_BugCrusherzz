@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.tracky2.controller.HomeFragment"
+        android:label="Kezdőkép"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_income"
+        android:name="com.tracky2.controller.IncomeFragment"
+        android:label="Bevételek"
+        tools:layout="@layout/fragment_income" />
+
+    <fragment
+        android:id="@+id/nav_incomelist"
+        android:name="com.tracky2.controller.IncomeFragmentList"
+        android:label="Bevétellista"
+        tools:layout="@layout/fragment_incomelist" />
+
+    <fragment
+        android:id="@+id/nav_expense"
+        android:name="com.tracky2.controller.ExpenseFragment"
+        android:label="Kiadások"
+        tools:layout="@layout/fragment_expense" />
+    <fragment
+        android:id="@+id/nav_expenselist"
+        android:name="com.tracky2.controller.ExpenseFragmentList"
+        android:label="Kiadáslista"
+        tools:layout="@layout/fragment_expenselist" />
+
+    <fragment
+        android:id="@+id/nav_group"
+        android:name="com.tracky2.controller.GroupFragment"
+        android:label="Csoportok"
+        tools:layout="@layout/fragment_group" />
+
+    <fragment
+        android:id="@+id/nav_grouplist"
+        android:name="com.tracky2.controller.GroupFragmentList"
+        android:label="Csoportlista"
+        tools:layout="@layout/fragment_grouplist" />
+
+    <!-- <fragment
+         android:id="@+id/nav_template"
+         android:name="com.tracky2.controller.TemplateFragment"
+         android:label="Sablonok"
+         tools:layout="@layout/fragment_template" /> -->
+
+    <fragment
+        android:id="@+id/nav_summary"
+        android:name="com.tracky2.controller.SummaryFragment"
+        android:label="Összesítés"
+        tools:layout="@layout/fragment_template" />
+</navigation>

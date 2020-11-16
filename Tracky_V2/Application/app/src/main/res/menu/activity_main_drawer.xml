@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Kezdőkép" />
+        <item
+            android:id="@+id/nav_incomelist"
+            android:title="Bevételek" />
+        <item
+            android:id="@+id/nav_expenselist"
+            android:title="Kiadások" />
+        <item
+            android:id="@+id/nav_group"
+            android:title="Csoportok" />
+        <item
+            android:id="@+id/nav_grouplist"
+            android:title="Csoportlista" />
+        <!-- <item
+             android:id="@+id/nav_template"
+             android:title="Sablonok" /> -->
+        <item
+            android:id="@+id/nav_summary"
+            android:title="Összesítés" />
+    </group>
+</menu>
