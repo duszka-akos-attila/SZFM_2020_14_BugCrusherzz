@@ -67,6 +67,24 @@
 	- A rendszernek továbbá nem célja sem egy akadálymentes mód biztosítása, sem pedig különböző nyelvek támogatása.
 
 ## Projekt terv
+1. A program alap GUI-át megcsinálni.
+	* A főscreenen lévő táblázatot
+	* Főscreen gombjai, és Balance-a
+	* Expenslist, táblázata
+	* Incomelist, táblázata
+	* Incomelist és Expenselist swipe funkció
+	* Floating button for Expense and Incomelist
+	* Data customize window
+2. Megcsinálni a programunkhoz tartózó fájlrendszert ebbe:
+    * Tudjunk írni a hozzáadás gomb segítségével
+    * Beolvasni a fájlban lévő adatokat és beilleszteni a táblázatunkba
+    * Szerkeszteni a fájlban / táblázatban lévő adatokat
+    * Törölni adatokat
+3. Az adattípusok elkülönítése.
+4. Az oldalról kijövő menüt, és a menüpontjait, és ezeknek designja.
+5. Statisztika menüpontot, ahol akár hónapos statisztikákat tudunk megnézni a költekezéseinkról, vagy bevételünkről. 
+6. Rendezés, ezzel együtt típus alapú rendezés, amikor csak egy bizonyos típusú elemeket fog megjeleníteni. Például, csak a office kellékek csoportját, és ezen belül tollak, papír stb.
+7. Tudjuk az adatainkat impotálni és exportálni ezzel biztosítva a mozgathatóságot.
 
 ## Üzleti folyamatok modellje
 **Üzleti szereplők:** Az üzleti szereplők, mostantól *aktorok*: olyan személyek, akik a megrendelő

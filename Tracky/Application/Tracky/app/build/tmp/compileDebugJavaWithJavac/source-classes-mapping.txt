@@ -1,0 +1,64 @@
+com/tracky/data/Income.java
+ com.tracky.data.Income
+com/tracky/data/dao/ExpenseDao.java
+ com.tracky.data.dao.ExpenseDao
+com/tracky/data/dao/TemplateDao.java
+ com.tracky.data.dao.TemplateDao
+com/tracky/controller/ExpenseFragment2.java
+ com.tracky.controller.ExpenseFragment2
+com/tracky/controller/TemplateFragment.java
+ com.tracky.controller.TemplateFragment
+ com.tracky.controller.TemplateFragment$1
+ com.tracky.controller.TemplateFragment$2
+ com.tracky.controller.TemplateFragment$3
+com/tracky/data/base/AppDatabase.java
+ com.tracky.data.base.AppDatabase
+com/tracky/controller/SummaryFragment.java
+ com.tracky.controller.SummaryFragment
+ com.tracky.controller.SummaryFragment$1
+com/tracky/data/DateConverter.java
+ com.tracky.data.DateConverter
+com/tracky/TestActivity.java
+ com.tracky.TestActivity
+com/tracky/data/dao/GroupDao.java
+ com.tracky.data.dao.GroupDao
+com/tracky/mainTablaAdapter.java
+ com.tracky.mainTablaAdapter
+ com.tracky.mainTablaAdapter$ViewHolder
+com/tracky/controller/HomeFragment.java
+ com.tracky.controller.HomeFragment
+ com.tracky.controller.HomeFragment$1
+ com.tracky.controller.HomeFragment$2
+com/tracky/data/Group.java
+ com.tracky.data.Group
+com/tracky/BuildConfig.java
+ com.tracky.BuildConfig
+com/tracky/DevModule.java
+ com.tracky.DevModule
+com/tracky/data/manager/Manager.java
+ com.tracky.data.manager.Manager
+com/tracky/controller/IncomeFragment.java
+ com.tracky.controller.IncomeFragment
+ com.tracky.controller.IncomeFragment$1
+ com.tracky.controller.IncomeFragment$2
+ com.tracky.controller.IncomeFragment$3
+com/tracky/controller/ExpenseFragment.java
+ com.tracky.controller.ExpenseFragment
+ com.tracky.controller.ExpenseFragment$1
+ com.tracky.controller.ExpenseFragment$2
+ com.tracky.controller.ExpenseFragment$3
+com/tracky/data/Template.java
+ com.tracky.data.Template
+com/tracky/controller/GroupFragment.java
+ com.tracky.controller.GroupFragment
+ com.tracky.controller.GroupFragment$1
+ com.tracky.controller.GroupFragment$2
+ com.tracky.controller.GroupFragment$3
+com/tracky/MainActivity.java
+ com.tracky.MainActivity
+com/tracky/data/dao/IncomeDao.java
+ com.tracky.data.dao.IncomeDao
+com/tracky/controller/IncomeFragment2.java
+ com.tracky.controller.IncomeFragment2
+com/tracky/data/Expense.java
+ com.tracky.data.Expense
