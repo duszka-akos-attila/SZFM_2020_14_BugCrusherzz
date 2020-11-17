@@ -56,7 +56,7 @@ public interface IncomeDao {
 
     @Query("SELECT * FROM income WHERE amount BETWEEN :min AND :max ORDER BY amount DESC")
     List<Income> selectIncomeBetweenAmountOBAD(int min, int max);
-    
+
 
     // Ordering queries which date has limits by date
 
