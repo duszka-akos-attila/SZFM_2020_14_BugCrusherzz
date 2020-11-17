@@ -7,6 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.tracky2.data.Expense;
+
 import java.util.List;
 @Dao
 public interface ExpenseDao {
@@ -37,4 +38,21 @@ public interface ExpenseDao {
 
     @Query("SELECT * FROM expense ORDER BY amount DESC")
     List<Expense> selectAllExpenseOBAD();
+
+
+    // Ordering queries which amounts has limits by date
+
+    @Query("SELECT * FROM expense WHERE amount BETWEEN :min AND :max ORDER BY date ASC")
+    List<Expense> selectExpenseBetweenAmountOBDA(int min, int max);
+
+    @Query("SELECT * FROM expense WHERE amount BETWEEN :min AND :max ORDER BY date DESC")
+    List<Expense> selectExpenseBetweenAmountOBDD(int min, int max);
+
+    // Ordering queries which amounts has limits by amount
+
+    @Query("SELECT * FROM expense WHERE amount BETWEEN :min AND :max ORDER BY amount ASC")
+    List<Expense> selectExpenseBetweenAmountOBAA(int min, int max);
+
+    @Query("SELECT * FROM expense WHERE amount BETWEEN :min AND :max ORDER BY amount DESC")
+    List<Expense> selectExpenseBetweenAmountOBAD(int min, int max);
 }
