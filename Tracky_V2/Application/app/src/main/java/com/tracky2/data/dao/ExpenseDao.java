@@ -21,4 +21,20 @@ public interface ExpenseDao {
 
     @Delete
     void deleteExpense(Expense expense);
+
+    // Ordering normal queries by date
+
+    @Query("SELECT * FROM expense ORDER BY date ASC")
+    List<Expense> selectAllExpenseOBDA();
+
+    @Query("SELECT * FROM expense ORDER BY date DESC")
+    List<Expense> selectAllExpenseOBDD();
+
+    // Ordering normal queries by amount
+
+    @Query("SELECT * FROM expense ORDER BY amount ASC")
+    List<Expense> selectAllExpenseOBAA();
+
+    @Query("SELECT * FROM expense ORDER BY amount DESC")
+    List<Expense> selectAllExpenseOBAD();
 }
