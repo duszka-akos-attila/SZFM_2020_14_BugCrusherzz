@@ -8,6 +8,7 @@ import androidx.room.Update;
 
 import com.tracky2.data.Income;
 
+import java.util.Date;
 import java.util.List;
 @Dao
 public interface IncomeDao {
@@ -22,4 +23,20 @@ public interface IncomeDao {
 
     @Delete
     void deleteIncome(Income income);
+    
+    // Ordering normal queries by date
+
+    @Query("SELECT * FROM income ORDER BY date ASC")
+    List<Income> selectAllIncomeOBDA();
+
+    @Query("SELECT * FROM income ORDER BY date DESC")
+    List<Income> selectAllIncomeOBDD();
+
+    // Ordering normal queries by amount
+
+    @Query("SELECT * FROM income ORDER BY amount ASC")
+    List<Income> selectAllIncomeOBAA();
+
+    @Query("SELECT * FROM income ORDER BY amount DESC")
+    List<Income> selectAllIncomeOBAD();
 }
