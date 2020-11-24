@@ -43,6 +43,7 @@
         android:text="Balance:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
