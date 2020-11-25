@@ -483,3 +483,38 @@ Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán, il
 ## Telepítési terv
 
 ## Karbantartási terv
+
+A _Tracky_ egy mobilapplikáció, így nem igényelhet fizikai karbantartást, mivel túl sok felhasználója
+van, szerte a világban. Azonban a felhasználótól szintén nem várható el a karbantartás, mert az
+jelentősen rontaná a felhasználói élményt. A megoldás az, hogy a karbantartást maga a fejlesztői
+csapat, a _BugCrusherzz_ végzi. A karbantartás módja, hasonlóan sok más alkalmazáshoz, rendszer
+frissítések segítségével történik. 
+
+###  _Mender_
+
+Az applikáció egy sajátos rendszert használ, a _Mender_ technológiát. Ez a rendszer lehetővé
+teszi az új funkciók beépítését, nem kívánt funkciók eltávolítását, valamint a meglévő funkciók
+javítását, mindezt a felhasználói visszajelzések alapján.
+
+A frissítések úgynevezett _Mending package_-ekkel történik. Ezek olyan komplex adatcsomagok,
+amelyek tartalmazhatnak új modulokat, valamint frissítéseket a már korábban telepített modulokhoz.
+
+A felhasználói visszajelzéseket, valamint az alkalmazás statisztikai elemzéseket követően a fejlesztői
+csapat elkészíti az applikáció új verzióját, amelyről a felhasználó értesítést kap. Ezt követően dönthet
+úgy a felhasználó, hogy módosítja az applikációt.
+
+Amikor a felhasználó úgy dönt, hogy frissít, lehetősége van több fajta csomag közül választani. Megadhatja
+hogy semmilyen frissítés ne történjen, csak biztonsági frissítés történjen, vagy a rendelkezésre álló modulok
+közül szeretne telepíteni. Miután a felhasználó kiválasztotta a frissítés formáját, a többit a rendszer
+automatikusan elvégzi. Természetesen az alapértelmezett beállítások mellett a felhasználónak nem kell
+ezzel foglalkoznia, ugyanis az az átlag felhasználó számára legjobb módon van bekonfigurálva a rendszer.
+
+### Karbantartási adatok
+
+- __Karbantartást végzi:__ A fejlesztői csapat.
+
+- __Karbantartás periódusa:__ A fejlesztő csapat dinamikusan változtatja, azonban 1 és 8 hét között.
+
+- __Karbantartás feladata:__ Új funkciók bevezetése, korábbi funkciók javítása és a biztonság növelése.
+
+
