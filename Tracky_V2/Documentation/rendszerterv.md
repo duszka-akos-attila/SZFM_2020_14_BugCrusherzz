@@ -268,6 +268,62 @@ a programban minden felhasználó által begépelhető és begépelt szöveges a
 karakter kódolási szabvánnyal kell eltárolni, valamint megjeleníteni. 
 
 ## Funkcionális terv
+|Funkció azonosító|Funkció metódusának neve|Metódus rövid leírása|
+|--|--|--|
+|F-DS-L-01|`save()`|A `save()` metódus az _Android_ beépített adatbázis kezelő rendszerének segítségével elmenti a memóriában lévő adatokat, mint a bevételek, kiadások, sablonok.|
+|F-DS-L-02|`open()`|Az `open()` metódus betölti az adatbázisban lévő adatok azon részét, amelyet a felhasználó aktuálisan használ.|
+|F-DS-L-03|`export()`|Az `export()` metódus kiment minden felhasználó által rögzített adatot egy `.csv` kiterjesztésű fájlba.|
+|F-DS-L-04|`import()`|Az `import()` metódus betölti a megadott `.csv` kiterjesztésű fájlt és amennyiben lehetséges, rögzíti azt az adatbázisban.|
+|DH-01|`addIncome()`|Az `addIncome()` metódus létrehoz egy új `Income` egyedet a felhasználó által megadott adatok alapján.|
+|DH-02|`editIncome()`|Az `editIncome()` metódus felülírja egy már rögzített `Income` egyed  adatait a felhasználó által megadott adatokkal.|
+|DH-03|`deleteIncome()`|A `deleteIncome()` metódus kitörli a megadott `Income` egyedet mind a memóriából, mind az adatbázisokból.|
+|DH-04|`addExpense()`|Az `addExpense()` metódus létrehoz egy új `Expense` egyedet a felhasználó által megadott adatok alapján.|
+|DH-05|`editExpense()`|Az `editExpense()` metódus felülírja egy már rögzített `Expense` egyed  adatait a felhasználó által megadott adatokkal.|
+|DH-06|`deleteExpense()`|A `deleteExpense()` metódus kitörli a megadott `Expense` egyedet mind a memóriából, mind az adatbázisokból.|
+|DH-07|`addGroup()`|Az `addGroup()` metódus létrehoz egy új `Group` egyedet.|
+|DH-08|`editGroup()`|Az `editGroup()` metódus módosít egy meglévő `Group` egyedet, a felhasználó által megadott adatokkal.|
+|DH-09|`deleteGroup()`|A `deleteGroup()` metódus törli a felhasználó által megadott `Group` egyedet.|
+|F-DA-01|`balance()`|A `balance()` metódus kiszámítja a bevételek és kiadások összegét.|
+|F-DA-02|`listIncomeByTime()`|A `listIncomeByTime()` kilistázza az összes bevételt idő szerinti szűrésekkel.|
+|F-DA-03|`listExpenseByTime()`|A `listExpenseByTime()` kilistázza az összes kiadást idő szerinti szűrésekkel.|
+|F-DA-04|`listExpenseByGroup()`|A `listExpenseByGroup()` kilistázza az összes kiadást csoportok szerinti szűrésekkel.|
+|F-DA-05|`summarize()`|A `summarize()` metódus információkat állíŧ elő a felhasználó által rögzített adatokból.|
+|F-TH-01|`addExpenseTemplate()`|Az `addExpenseTemplate()` metódus létrehoz egy `Template` típusú egyedet a felhasználó által megadott adatokból.|
+|F-TH-02|`editExpenseTemplate()`|Az `editExpenseTemplate()` metódus módosít egy meglévő `Template` egyedet, a felhasználó által megadott adatokkal.|
+|F-TH-03|`deleteExpenseTemplate()`|A `deleteExpenseTemplate()` metódus törli a megadott `Template` egyedet.|
+|F-TH-04|`addIncomeTemplate()`|Az `addIncomeTemplate()` metódus létrehoz egy `Template` típusú egyedet a felhasználó által megadott adatokból.|
+|F-TH-05|`editIncomeTemplate()`|Az `editIncomeTemplate()` metódus módosít egy meglévő `Template` egyedet, a felhasználó által megadott adatokkal.|
+|F-TH-06|`deleteIncomeTemplate()`|A `deleteIncomeTemplate()` metódus törli a megadott `Template` egyedet.|
+|B-UH-01|`register()`|A `register()` metódus létrehoz egy új felhasználói fiókot a távoli szerveren.|
+|B-UH-02|`deleteAccount()`|A `deleteAccount()` metódus törli a felhasználó fiókját a távoli szerverről.|
+|B-UH-03|`login()`|A `login()` metódus segítségével a felhasználó bejelentkeztetheti az eszközét a távoli szerverre.|
+|B-UH-04|`logout()`|A `logout()` metódus segítségével a felhasználó kijelentkezhet a távoli szerverről.|
+|B-UH-05|`changePassword()`|A `changePassword()` metódus lehetőséget ad a felhasználói fiók jelszavának módosítására.|
+|B-UH-06|`changeMail()`|A `changeMail()` metódus segítségével a felhasználó megváltoztathatja a regisztrált felhasználói fiókjához csatolt email címét.|
+|B-DS-S-05|`sendDataSave()`|A `sendDataSave()` metódus segítségével a lokális eszköz el tudja küldeni a saját adatbázisában tárolt adatokat a szervernek.|
+|B-DS-S-06|`getDataSave()`|A `getDataSave()` metódus segítségével a lokális eszköz le tudja kérni a távoli szerveren tárolt adatokat.|
+
+### A Főmenü felépítése
+
+A Főmenü felépítése az alábbi képen látható, ahol a téglalap alakú elemek a menüpontokat reprezentálják, az ovális alakú elemek pedig az adott menüpont által elérhető oldalon található funkciókat jelenítik meg.
+
+![A Főmenü felépítésének ábrája](images/menu_diagram.png)
+
+### Képernyő tervek
+
+-   **Főképernyő:**
+
+Lejjebb látható a főképernyő terve. A főképernyőn látható a felhasználó aktuális egyenlege,
+valamint néhány a legutolsó egyenleg változások közül.
+
+![A Főképernyő látvány terve](images/home.png)
+
+-   **Főmenü:**
+
+Alább a főmenü terve látható. A fenti képen látható menü gomb (3 vonal) megnyomása után jelenik meg
+a képernyő bal oldalán egy lap, amelyen az egyes menüpontok között tudunk navigálni.
+
+![A Főmenü látvány terve](images/home_menu.png)
 
 ## Fizikai környezet
 - Az alkalmazás androidos mobiltelefonokra, java nyelven kell, hogy elkészüljön, mivel ez a nyelv a legkedveltebb a mobil alkalmazások készítéséhez.
