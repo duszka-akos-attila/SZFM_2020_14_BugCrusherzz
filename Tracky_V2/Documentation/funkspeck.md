@@ -244,21 +244,21 @@ megnyomására megjelenik egy oldalsó menü, amelyben a következő opciók jel
 
 * **Bevétellista**
 	* A bevétellista menüpont kiválasztása után kilistázódnak a már meglévő bevételek, amennyiben
-	a felhasználó elhúzza az ujját, a bevétel törlődik. Ezen felül a képernyő jobb alsó részén
-	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz Bevételt hozzáadni,
-	Bevételt törölni, és Bevételt módosítani.
-	
+	a felhasználó elhúzza az ujját az egyik bevételen, akkor az a bevétel törlődik. Ezen felül,
+	a képernyő jobb alsó részén lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor meg fog
+	jelenni egy másik képernyő, amelyen a felhasználónak lehetősége lesz bevételt hozzáadni.
+
 * **Kiadáslista**
 	* A kiadáslista menüpont kiválasztása után kilistázódnak a már meglévő kiadások, amennyiben
-	a felhasználó elhúzza az ujját, a kiadás törlődik. Ezen felül a képernyő jobb alsó részén
-	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz Kiadást hozzáadni,
-	Kiadást törölni, és Kiadást módosítani.
+	a felhasználó elhúzza az ujját az egyik kiadáson, akkor az a kiadás törlődik. Ezen felül,
+	a képernyő jobb alsó részén lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor meg fog
+	jelenni egy másik képernyő, amelyen a felhasználónak lehetősége lesz kiadást hozzáadni.
 	
 * **Csoportlista**
 	* A csoportista menüpont kiválasztása után kilistázódnak a már meglévő csoportok, amennyiben
-	a felhasználó elhúzza az ujját, a csoport törlődik. Ezen felül a képernyő jobb alsó részén
-	lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor lehetősége lesz csoportot hozzáadni,
-	csoportot törölni, és csoportot módosítani.
+	a felhasználó elhúzza az ujját az egyik csoporton, akkor az a csoport törlődik. Ezen felül,
+	a képernyő jobb alsó részén lesz egy lebegőbomb, Amit ha a felhasználó megnyom, akkor meg fog
+	jelenni egy másik képernyő, amelyen a felhasználónak lehetősége lesz csoportot hozzáadni.
 	
 * **Összesítés**
 	* Az összesítés menüpont kiválasztása után a felhasználó választhat a bevételek listázása idő szerinti szűrésekkel,
