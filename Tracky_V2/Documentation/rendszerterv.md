@@ -494,6 +494,9 @@ Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán, il
 
 ## Telepítési terv
 
+A programunk telepítése nagyon egyszerű lesz, és nem lesz szükségünk semmilyen bővítményre, vagy akarmi másra a futtatáshoz. 
+Olyan lesz mintha csak az appstore-ol töltöttük volna le!
+
 ## Karbantartási terv
 
 A _Tracky_ egy mobilapplikáció, így nem igényelhet fizikai karbantartást, mivel túl sok felhasználója
