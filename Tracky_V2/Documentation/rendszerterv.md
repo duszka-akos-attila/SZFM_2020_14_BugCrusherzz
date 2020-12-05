@@ -490,7 +490,27 @@ Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán, il
 
 ## Implementációs terv
 
+Az implementáció Android Studioba fog történni, Java nyelven. A program cross platform lesz de elsődlegesen androidra lesz a kifejlesztés. Az előbb specifikált funkcionális tervből és képernyőtervből fogunk főleg dolgozni minden más mellett. Elsősorban megtervezzük a programunk alap kinézetét, vagyis a fő ablakunkat, majd erre pakoljuk fel az táblánkat és az első gombokat. Programkódba létrehozzuk ezek gombok működését, és a táblázathoz való metódusokat a funkcionális tervben leírtak alapján. Ha ez megvan tudjuk tesztelni az alapot, és ezt a ciklust folytatva implementálni a többi hiányos elemet is, mindpéldául az oldalsó menü, vagy a keresés gomb / funkció.
+
+
 ## Tesztterv
+
+A projectunket az elejétől kezdve tesztelgetni fogjuk, mint ahogy ezt az implementációs tervben is közölve lett. 
+* Először is amint megvan a programunk legalapja, vagyis a legminimálisabb interfacet fogjuk tesztelni. Ez az elején csak azt fogja jelenteni, hogy a fő ablakban a tábla rendesen megjelenik-e az egyenlegünkkel együtt.. 
+* Majd ezután megcsináljuk az oldalsó menüt, amit a főképen egy gomb megnyomásával fogunk előhozni, de minden alfül alól is majd elérhető lesz.
+* Az egyenlegünket is teszteljük majd, hozzáadunk és kivonunk belőle, nézve hogy jól működik-e.
+* Az oldalsó menü megjelenítése után, az adatbázist fogjuk tesztelni a táblázathoz, és annak megjelenését. Azt szeretnénk hogy:
+    * Hozzá tudjunk adni egy adatot a fájlunkba
+        * Ez az adat formázva legyen, hogy megkönnyítse a későbbiekben a felolvasását. Például, hogy a hozzáadott adat az egy kiadás vagy bevétel, mennyi az adatunk értéke stb.
+        * Ezeken az adatokon változtatni, szerkeszteni abban az esetben ha a felhasználó hibázott volna a bevitele alatt.
+        * Adatok törlése a táblázatból
+    * Ha a fájlrendszerünk jól működik és sikeresen tudunk írni, szerkeszteni bele, akkor a fájlból való olvasást, vagyis, hogy a programunknak sikerül-e ezt a fájlt értelmezni-e. 
+        * Ha a beolvasásunk sikeres és a programunknak sikerül értelmeznie és beolvasnia a fájlból akkor ezt eltárolni egy váltózóba. 
+        * Ha megvan a váltózónk ami tartalmazza az adatainkat akkor beillesztjük őket a táblázatunkba, és leteszteljük, hogy a táblázatunk normális jeleníti-e meg az általunk belerakott adatokat.
+* Az oldalsó menüsávunkat is tesztelni szeretnénk majd, ezt úgy fogjuk megtenni, hogy a menüpont elemeit megnézzük, hogy működnek-e és előhozzák-e a dolgokat amiket kell nekik.
+* A statisztikánkat tesztelni, az előbb táblába, változóba illesztett adatokkal fogjuk. Először is leteszteljük, hogy egy hónapos statisztikát meg tudunk-e jeleníteni, és rendesen mutatja-e a kiadási / bevételi csoportokat.
+* A táblázatba illesztett adatok alapján szűrűnk, hogy csak éppen egy csoport termékeit mutassa
+
 
 ## Telepítési terv
 
