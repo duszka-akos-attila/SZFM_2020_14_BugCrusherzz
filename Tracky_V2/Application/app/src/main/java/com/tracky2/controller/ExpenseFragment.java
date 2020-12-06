@@ -7,11 +7,12 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import com.tracky2.R;
 import com.tracky2.data.manager.Manager;
 
-public class ExpenseFragment extends Fragment {
+public class ExpenseFragment extends DialogFragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
