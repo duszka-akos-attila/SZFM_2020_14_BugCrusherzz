@@ -10,7 +10,7 @@ public class Statistics {
 
     // ------------------------- BALANCE -------------------------
 
-    public int getTotalBalance(){
+    public static int getTotalBalance(){
         int balance = 0;
 
         if(Manager.getIncomes().size() > 0 || Manager.getExpenses().size() > 0){
