@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#2e2e2e"
+    android:background="#1c1c1c"
     android:layout_height="match_parent"
     tools:context=".controller.HomeFragment">
 
@@ -18,21 +18,23 @@
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
     <TextView
         android:id="@+id/home_balance"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_height="36dp"
         android:fontFamily="monospace"
-        android:textColor="#ffffff"
         android:padding="5dp"
         android:textAlignment="textStart"
+        android:textColor="#ffffff"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/view"
@@ -47,12 +49,11 @@
 
     <View
         android:id="@+id/view4"
-        android:layout_width="336dp"
+        android:layout_width="334dp"
         android:layout_height="76dp"
         android:background="@drawable/bgfekete"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.005" />
@@ -69,16 +70,17 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainTabla2"
-        android:layout_width="319dp"
-        android:layout_height="377dp"
+        android:layout_width="329dp"
+        android:layout_height="331dp"
+        android:layout_marginStart="5dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintCircleRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view5"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/textView6"
@@ -92,12 +94,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.218" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_height="38dp"
         android:fontFamily="monospace"
         android:text="Balance:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -105,9 +107,10 @@
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintVertical_bias="0.216" />
 
     <Button
         android:id="@+id/devmodebutton"

@@ -4,63 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF"
+    android:background="#3d3d3d"
     android:layout_marginBottom="2dp"
     >
 
 
     <TextView
         android:id="@+id/data_textView"
-        android:layout_width="107dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="288dp"
+        android:layout_width="102dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
         android:text="-1000"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#d93f3f"
+        app:layout_constraintBottom_toBottomOf="@+id/nev_textView"
+        app:layout_constraintEnd_toStartOf="@+id/nev_textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
 
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/nev_textView"
         android:layout_width="150dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="15dp"
         android:text="Sorocske"
+        android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toTopOf="@+id/datum_textView"
-        app:layout_constraintEnd_toStartOf="@+id/osztaly_textView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
 
     <TextView
         android:id="@+id/datum_textView"
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:text="2020.05.20"
+        android:layout_width="62dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="10dp"
+        android:gravity="bottom"
+        android:text="05.20"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/nev_textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nev_textView"
-        app:layout_constraintTop_toBottomOf="@+id/nev_textView" />
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/data_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/data_textView"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/osztaly_textView"
-        android:layout_width="90dp"
-        android:layout_height="29dp"
-        android:layout_marginEnd="22dp"
-        android:text="Etel-ital"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toStartOf="@+id/data_textView"
-        app:layout_constraintTop_toTopOf="@+id/data_textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
