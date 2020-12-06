@@ -45,7 +45,7 @@ public class incTablaAdapter extends RecyclerView.Adapter<incTablaAdapter.ViewHo
 
         holder.datum_textView.setText("1999.10.10");
         holder.data_textView.setText("1000");
-        holder.osztaly_textView.setText("hey");
+        //holder.osztaly_textView.setText("hey");
         holder.nev_textView.setText("termekxd");
     }
 
@@ -57,13 +57,13 @@ public class incTablaAdapter extends RecyclerView.Adapter<incTablaAdapter.ViewHo
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView data_textView, osztaly_textView, nev_textView, datum_textView;
+        TextView data_textView,  nev_textView, datum_textView;
 
         public  ViewHolder(@NonNull View itemView){
             super(itemView);
 
             data_textView = itemView.findViewById(R.id.data_textView);
-            osztaly_textView = itemView.findViewById(R.id.osztaly_textView);
+            //osztaly_textView = itemView.findViewById(R.id.osztaly_textView);
             datum_textView = itemView.findViewById(R.id.datum_textView);
             nev_textView = itemView.findViewById(R.id.nev_textView);
 

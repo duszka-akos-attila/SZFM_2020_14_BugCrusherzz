@@ -8,14 +8,34 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.tracky2.R;
+import com.tracky2.data.Group;
 import com.tracky2.data.manager.Manager;
+import com.tracky2.adapters.groupTablaAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GroupFragmentList extends Fragment {
+
+    RecyclerView MainTabla;
+    groupTablaAdapter groupTablaAdapter;
+
+    List<Group> groupList;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_grouplist, container, false);
+
+        groupList = Manager.getGroups();
+        //balanceList = Manager.lastBalanceModificaitons(20,"-","auto");
+        MainTabla = root.findViewById(R.id.GroupTablaa);
+        groupTablaAdapter = new groupTablaAdapter(groupList);
+
+
+        MainTabla.setAdapter(groupTablaAdapter);
 
         return root;
     }
