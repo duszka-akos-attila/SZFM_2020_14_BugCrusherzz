@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tracky2.R;
@@ -33,6 +34,9 @@ public class GroupFragmentList extends Fragment {
         //balanceList = Manager.lastBalanceModificaitons(20,"-","auto");
         MainTabla = root.findViewById(R.id.GroupTablaa);
         groupTablaAdapter = new groupTablaAdapter(groupList);
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(MainTabla.getContext(), DividerItemDecoration.VERTICAL);
+        MainTabla.addItemDecoration(dividerItemDecoration);
 
 
         MainTabla.setAdapter(groupTablaAdapter);

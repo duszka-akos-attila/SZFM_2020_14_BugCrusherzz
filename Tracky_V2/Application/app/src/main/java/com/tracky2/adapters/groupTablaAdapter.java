@@ -40,9 +40,13 @@ public class groupTablaAdapter  extends RecyclerView.Adapter<groupTablaAdapter.V
     public void onBindViewHolder(@NonNull com.tracky2.adapters.groupTablaAdapter.ViewHolder holder, int position) {
 
 
+
+        //holder.data_textView.setText("1000");
         holder.description.setText(grouptablaList.get(position).getName());
-        holder.groupBadge.setText(Objects.requireNonNull(Manager.findGroupById(grouptablaList.get(position).getColor())).getName());
-        holder.groupBadge.getBackground().setTint(255*Objects.requireNonNull(Manager.findGroupById(grouptablaList.get(position).getColor())).getColor());
+
+        //holder.groupBadge.setText((Manager.findGroupById(grouptablaList.get(position).getColor())).getName());
+        holder.groupBadge.getBackground().setTint(255*(Manager.findGroupById(grouptablaList.get(position).getId()).getColor()));
+        //holder.groupBadge.getBackground().setTint(255*(Manager.findGroupById(grouptablaList.get(position).getColor())).getColor());
     }
 
     @Override

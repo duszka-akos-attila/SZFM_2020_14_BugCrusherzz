@@ -11,16 +11,16 @@
 
     <TextView
         android:id="@+id/csoportnevtextview"
-        android:layout_width="215dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="198dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
         android:maxLines="1"
-        android:text="TextView"
+        android:text="Valami"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/csoportszintextview"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
 
     <TextView
         android:id="@+id/csoportszintextview"
@@ -31,7 +31,6 @@
         android:layout_marginBottom="12dp"
         android:background="@drawable/group_badge_background_style"
         android:maxLines="1"
-        android:text="None"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
