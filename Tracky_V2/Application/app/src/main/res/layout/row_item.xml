@@ -45,7 +45,7 @@
         android:id="@+id/datum_textView"
         android:layout_width="62dp"
         android:layout_height="26dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="10dp"
         android:gravity="bottom"
         android:text="05.20"
         android:textAlignment="center"

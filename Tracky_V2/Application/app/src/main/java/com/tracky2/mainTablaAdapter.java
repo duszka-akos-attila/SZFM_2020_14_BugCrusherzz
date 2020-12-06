@@ -32,7 +32,6 @@ public class mainTablaAdapter extends RecyclerView.Adapter<com.tracky2.mainTabla
         View view = layoutInflater.inflate(R.layout.row_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
 
-
         return viewHolder;
     }
 

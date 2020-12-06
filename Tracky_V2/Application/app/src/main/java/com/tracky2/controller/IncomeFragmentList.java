@@ -8,9 +8,11 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tracky2.R;
 import com.tracky2.data.manager.Manager;
 import com.tracky2.incTablaAdapter;
@@ -45,8 +47,8 @@ public class IncomeFragmentList extends Fragment {
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.income_frag, fragment);
             }
-        });*/
-
+        });
+*/
 
         MainTabla.setAdapter(IncTablaAdapter);
 

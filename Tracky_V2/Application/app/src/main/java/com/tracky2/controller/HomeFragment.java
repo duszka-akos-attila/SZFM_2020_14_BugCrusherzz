@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -61,6 +62,10 @@ public class HomeFragment extends Fragment {
         //MainTabla.setLayoutManager(new LinearLayoutManager(context));
 
         MainTabla.setAdapter(MainTablaAdapter);
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        dividerItemDecoration.setDrawable(getContext().getResources().getDrawable(R.drawable.dividerdec));
+        MainTabla.addItemDecoration(dividerItemDecoration);
 
         balanceList.add("iron man");
 
