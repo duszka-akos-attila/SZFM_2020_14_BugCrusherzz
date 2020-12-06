@@ -69,9 +69,46 @@ public class HomeFragment extends Fragment {
 
         balanceList.add("iron man");
 
+
+        //ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        //itemTouchHelper.attachToRecyclerView(MainTabla);
         return root;
 
     }
+    /*
+    String[] deletedAdat = null;
 
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+            final int position = viewHolder.getAdapterPosition();
+
+            switch( direction) {
+                case ItemTouchHelper.LEFT:
+                    deletedAdat = balanceList.get(position);
+                    balanceList.remove(position);
+                    MainTablaAdapter.notifyItemRemoved(position);
+                    balanceList = Manager.lastBalanceModificaitons(5,"-","auto");
+                            /*Snackbar.make(MainTabla, deletedAdat, Snackbar.LENGTH_LONG)
+                                    .setAction("Undo", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            //balanceList.add(position, deletedAdat);
+                                            MainTablaAdapter.notifyItemRemoved(position);
+                                        }
+                                    }).show();   // ITt volt egy * /
+                    break;
+
+            }
+        }
+    };
+
+*/
 
 }
