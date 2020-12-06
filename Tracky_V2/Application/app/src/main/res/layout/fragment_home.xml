@@ -24,7 +24,6 @@
         android:fontFamily="monospace"
         android:padding="5dp"
         android:textAlignment="textStart"
-        android:textColor="#ffffff"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
