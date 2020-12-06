@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tracky2.R;
@@ -51,10 +52,10 @@ public class mainTablaAdapter extends RecyclerView.Adapter<com.tracky2.mainTabla
         holder.data_textView.setText(balanceList.get(position)[1]);
         if(balanceList.get(position)[1]!=null && !balanceList.get(position)[1].equals("")){
             if(balanceList.get(position)[1].charAt(0)=='-'){
-                holder.data_textView.setTextColor(0xffdd6666);
+                holder.data_textView.setTextColor(ContextCompat.getColor(context, R.color.red));
             }
             else{
-                holder.data_textView.setTextColor(0xff66dd66);
+                holder.data_textView.setTextColor(ContextCompat.getColor(context, R.color.green));
             }
         }
         //holder.osztaly_textView.setText("Elektronika");
