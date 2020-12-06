@@ -17,21 +17,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.tracky2.MainActivity;
 import com.tracky2.R;
 import com.tracky2.TestActivity;
+import com.tracky2.data.analysis.SearchAndFilter;
+import com.tracky2.data.analysis.Statistics;
 import com.tracky2.data.manager.Manager;
 import com.tracky2.mainTablaAdapter;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.tracky2.MainActivity.context;
+
 public class HomeFragment extends Fragment {
+    String balance;
     TextView homeBalance;
 
     RecyclerView MainTabla;
     mainTablaAdapter MainTablaAdapter;
 
-    List<String> balanceList;
+    List<String[]> balanceList;
 
     Button devMode;
 
@@ -53,10 +59,12 @@ public class HomeFragment extends Fragment {
 
         homeBalance = (TextView) root.findViewById(R.id.home_balance);
         //homeBalance.setText(String.valueOf(Manager.getBalance()));
-        homeBalance.setText("745,912");
+        balance = new DecimalFormat("###,###,### "+context.getString(R.string.currency))
+                .format(Statistics.getTotalBalance());
+        homeBalance.setText(balance);
 
 
-        balanceList = new ArrayList<>();
+        balanceList = SearchAndFilter.lastBalanceModifications(5);
         MainTabla = root.findViewById(R.id.mainTabla2);
         MainTablaAdapter = new mainTablaAdapter(balanceList);
         //MainTabla.setLayoutManager(new LinearLayoutManager(context));
@@ -66,8 +74,6 @@ public class HomeFragment extends Fragment {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
         dividerItemDecoration.setDrawable(getContext().getResources().getDrawable(R.drawable.dividerdec));
         MainTabla.addItemDecoration(dividerItemDecoration);
-
-        balanceList.add("iron man");
 
 
         //ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
