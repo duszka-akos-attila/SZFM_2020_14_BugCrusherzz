@@ -51,8 +51,6 @@ public class mainExpenseListRecycleAdapter extends RecyclerView.Adapter<mainExpe
         holder.description.setText(expenses.get(position).getDescription());
         holder.groupBadge.setText(Objects.requireNonNull(Manager.findGroupById(expenses.get(position).getGroupId())).getName());
         holder.groupBadge.getBackground().setTint(255*Objects.requireNonNull(Manager.findGroupById(expenses.get(position).getGroupId())).getColor());
-        System.out.println(String.format("0x%08x",Manager.findGroupById(expenses.get(position).getGroupId()).getColor()));
-        System.out.println(Manager.findGroupById(expenses.get(position).getGroupId()).getColor());
     }
 
     @Override
