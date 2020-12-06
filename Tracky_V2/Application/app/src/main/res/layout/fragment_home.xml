@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#1c1c1c"
     android:layout_height="match_parent"
     tools:context=".controller.HomeFragment">
 
@@ -12,11 +11,11 @@
         android:id="@+id/view3"
         android:layout_width="236dp"
         android:layout_height="98dp"
-        android:layout_marginEnd="76dp"
         android:layout_marginBottom="36dp"
         android:background="@drawable/backgroundrecy"
         app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view" />
 
     <TextView
         android:id="@+id/home_balance"
@@ -88,7 +87,6 @@
         android:text="Balance History"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/mainTabla2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,11 +100,10 @@
         android:fontFamily="monospace"
         android:text="Balance:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#ffffff"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/view3"
         app:layout_constraintTop_toTopOf="@+id/view3"
         app:layout_constraintVertical_bias="0.216" />
@@ -123,3 +120,9 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--
+
+    android:background="#1c1c1c"
+            <solid android:color="#2e2e2e"/>
+            -->
