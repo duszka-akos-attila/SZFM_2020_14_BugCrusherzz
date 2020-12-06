@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.tracky2.MainActivity;
 import com.tracky2.R;
@@ -40,6 +41,8 @@ public class ExpenseFragmentList extends Fragment {
     List<String> ExpbalanceList;
 
     List<Expense> expenses;
+
+    FloatingActionButton addExpense;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -72,6 +75,19 @@ public class ExpenseFragmentList extends Fragment {
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(mainExpenseListRecycleView);
+
+
+        addExpense = root.findViewById(R.id.addNewExpenseButton);
+
+        addExpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ExpenseFragment expenseFragment = new ExpenseFragment();
+                expenseFragment.setTargetFragment(ExpenseFragmentList.this,1);
+                expenseFragment.show(getFragmentManager(), "ExpenseFragment");
+            }
+        });
+
 
         return root;
 
