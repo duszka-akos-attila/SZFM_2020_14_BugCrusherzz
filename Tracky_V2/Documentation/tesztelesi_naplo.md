@@ -22,7 +22,7 @@ hibákat tudnak kiszűrni, amely teljes mértékben felhasználó eredetű.
 
 |Teszt azonosító|Teszt leírása|Várt eredmény|Kapott eredmény|Tesztelés ideje|Teszt elvégzője|Teszt állapota|
 |--|--|--|--|--|--|--|
-|Btn-1|A menügomb tesztelése|A menü megjelenik|A menü megjelenik|2999.12.31|Fejlesztő 1|Sikeres|
+|Btn-1|A menügomb tesztelése|A menü megjelenik|A menü megjelenik|2999.12.31 23:59|Fejlesztő 1|Sikeres|
 
 
 ## Tesztelési jegyzőkönyv
