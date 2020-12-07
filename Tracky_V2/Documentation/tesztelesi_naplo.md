@@ -42,5 +42,14 @@ hibákat tudnak kiszűrni, amely teljes mértékben felhasználó eredetű.
 |Menu-04|Kiadás menüpont működése|Megnyomás hatására kirajzolódik a Kiadás képernyő|Megnyomás hatására kirajzolódik a Kiadás képernyő|2020.12.07 00:37|Duszka Ákos Attila|Sikeres|
 |Exp-01|A kiadás képernyő megjelenése|A tartalom megjelenik, formázva|A tartalom formázottan megjelenik|2020.12.07 00:38|Duszka Ákos Attila|Sikeres|
 |Exp-02|A lista navigálása|A képernyő görgethető|A képernyő a húzás irányába görgethető|2020.12.07 00:40|Duszka Ákos Attila|Sikeres|
+|Exp-03|Elemek megjelenése|Minden elem megjelenik a listában|Minden elem megjelenik a listában|2020.12.07 00:50|Duszka Ákos Attila|Sikeres|
+|Exp-04|Lista elemek törlése|A lista elem balra húzásakor az elem törlődik|A lista elem balra húzásakor az elem törlődik|2020.12.07 00:52|Duszka Ákos Attila|Sikeres|
+|Exp-05|Értesítés a lista elem törléséről|A képernyő alján megjelenik egy értesítési sáv a törölt elem nevével|A képernyő alján megjelenik egy értesítési sáv a törölt elem nevével|2020.12.07 00:53|Duszka Ákos Attila|Sikeres|
+|Exp-06|Törölés visszavonása|Az értesítési sávon megjelenő `Visszavonás` gomb segítségével újra megjelenik a törölt elem|A `Visszavonás` gomb segítségével megjelenik a törölt elem|2020.12.07 00:55|Duszka Ákos Attila|Sikeres|
+|Exp-07|Törölt és visszavont elem ellenőrzése|Az adatok megegyeznek a törlés előttivel, pozíciója változatlan|Az adatok megegyeznek, pozíciója nem változott|2020.12.07 00:59|Duszka Ákos Attila|Sikeres|
+|Exp-08|Sötét mód ellenőrzése a Kiadások képernyőn|A szöveg látható, a dizájn kivehető|A szöveg látható, a dizájn kivehető|2020.12.07 01:02|Duszka Ákos Attila|Sikeres|
+|Exp-09|A kiadásokhoz csatolt Kiadás csoport színeinek ellenőrzése|A színek megjelennek, a csoport neve könnyen kiolvasható|A színek megjelennek, a szöveg könnyen olvasható|2020.12.07 01:05|Duszka Ákos Attila|Sikeres|
+|Exp-10|A lebegőgomb ellenőrzése|Megfelelő helyen van, megnyomható|Megfelelő helyen van, megnyomható|2020.12.07 01:08|Duszka Ákos Attila|Sikeres|
+|Exp-11|Kiadás hozzáadási képernyő|A képernyő a lebegőgomb megnyomásának hatására megjelenik| A képernyő a lebegőgomb megnyomásának hatására megjelenik|2020.12.07 01:13|Duszka Ákos Attila|Sikeres|
 ||||||||
 
