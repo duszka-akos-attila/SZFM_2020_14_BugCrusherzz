@@ -31,18 +31,24 @@ import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 public class ExpenseFragmentList extends Fragment {
 
+    public static mainExpenseListRecycleAdapter mainExpenseListRecycleAdapter;
     RecyclerView MainTabla;
     expTablaAdapter expTablaAdapter;
 
     //New expense list
     RecyclerView mainExpenseListRecycleView;
-    mainExpenseListRecycleAdapter mainExpenseListRecycleAdapter;
 
     List<String> ExpbalanceList;
 
     List<Expense> expenses;
 
     FloatingActionButton addExpense;
+    
+    static boolean editMode;
+    
+    static Expense expenseToEdit;
+
+    static int elementPosition;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,6 +88,7 @@ public class ExpenseFragmentList extends Fragment {
         addExpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                editMode = false;
                 ExpenseFragment expenseFragment = new ExpenseFragment();
                 expenseFragment.setTargetFragment(ExpenseFragmentList.this,1);
                 expenseFragment.show(getFragmentManager(), "ExpenseFragment");
@@ -124,7 +131,12 @@ public class ExpenseFragmentList extends Fragment {
                     break;
 
                 case ItemTouchHelper.RIGHT:
-
+                    expenseToEdit = expenses.get(position);
+                    editMode = true;
+                    ExpenseFragment expenseFragment = new ExpenseFragment();
+                    expenseFragment.setTargetFragment(ExpenseFragmentList.this,1);
+                    expenseFragment.show(getFragmentManager(), "ExpenseFragment");
+                    elementPosition = position;
                     break;
 
             }

@@ -111,6 +111,15 @@ public class Manager{
         return null;
     }
 
+    public static Group findGroupByName(String name){
+        for(Group group : getGroups()){
+            if(group.getName().equals(name)){
+                return group;
+            }
+        }
+        return null;
+    }
+
     //--------------------------------------TEMPLATES------------------------
 
     public static void addTemplate(boolean isIncome, int amount, String desc, int groupId){

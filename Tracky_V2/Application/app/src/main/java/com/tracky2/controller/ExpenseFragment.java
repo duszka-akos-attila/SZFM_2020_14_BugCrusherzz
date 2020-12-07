@@ -4,19 +4,103 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+
+import com.tracky2.MainActivity;
 import com.tracky2.R;
+import com.tracky2.data.Expense;
 import com.tracky2.data.manager.Manager;
 
 public class ExpenseFragment extends DialogFragment {
 
+    TextView title;
+    TextView descriptionTextBox;
+    TextView amountTextBox;
+    TextView groupTextBox;
+    TextView groupBackground;
+    Button cancel;
+    Button submit;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_expense, container, false);
+
+        title = root.findViewById(R.id.expenseFragmentTitle);
+        descriptionTextBox = root.findViewById(R.id.expenseFragmentDescriptionTextBox);
+        amountTextBox = root.findViewById(R.id.expenseFragmentAmountTextBox);
+        groupTextBox = root.findViewById(R.id.expenseFragmentGroupTextBox);
+        groupBackground = root.findViewById(R.id.expenseFragmentGroupBackground);
+        cancel = root.findViewById(R.id.expenseFragmentCancel);
+        submit = root.findViewById(R.id.expenseFragmentSubmit);
+
+
+        if(ExpenseFragmentList.editMode){
+            title.setText("Kiadás szerkesztése");
+            descriptionTextBox.setText(ExpenseFragmentList.expenseToEdit.getDescription());
+            amountTextBox.setText(String.valueOf(ExpenseFragmentList.expenseToEdit.getAmount()));
+            groupTextBox.setText(Manager.findGroupById(ExpenseFragmentList.expenseToEdit.getGroupId()).getName());
+            groupBackground.setBackgroundColor(255*Manager.findGroupById(ExpenseFragmentList.expenseToEdit.getGroupId()).getColor());
+            submit.setText("Módosítás");
+
+        }
+        else{
+            title.setText("Kiadás hozzáadása");
+            submit.setText("Hozzáadás");
+        }
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ExpenseFragmentList.mainExpenseListRecycleAdapter.notifyItemChanged(ExpenseFragmentList.elementPosition);
+
+                getDialog().dismiss();
+            }
+        });
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(ExpenseFragmentList.editMode){
+                    ExpenseFragmentList.expenseToEdit.setDescription(descriptionTextBox.getText().toString());
+                    ExpenseFragmentList.expenseToEdit.setAmount((int)Integer.parseInt(amountTextBox.getText().toString()));
+                    ExpenseFragmentList.expenseToEdit.setGroup(Manager.findGroupByName(groupTextBox.getText().toString()));
+                    Manager.editExpense(ExpenseFragmentList.expenseToEdit);
+                    ExpenseFragmentList.mainExpenseListRecycleAdapter.notifyItemChanged(ExpenseFragmentList.elementPosition);
+                }
+                else{
+                    int gId=0;
+                    if(!groupTextBox.getText().toString().isEmpty() && groupTextBox.getText().toString()!=""){
+                        gId = Manager.findGroupByName(groupTextBox.getText().toString()).getId();
+                    }
+                    Manager.addExpense((int)Integer.parseInt(amountTextBox.getText().toString()),descriptionTextBox.getText().toString(),gId);
+                    ExpenseFragmentList.mainExpenseListRecycleAdapter.notifyDataSetChanged();
+                }
+
+
+                getDialog().dismiss();
+            }
+        });
+
+        groupTextBox.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    if(!groupTextBox.getText().toString().isEmpty() && groupTextBox.getText().toString()!=""){
+                        groupBackground.setBackgroundColor(255*Manager.findGroupByName(groupTextBox.getText().toString()).getColor());
+                    }
+                }
+            }
+        });
+
 
         return root;
     }
