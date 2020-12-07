@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.tracky2.MainActivity;
 import com.tracky2.R;
@@ -25,12 +26,22 @@ import com.tracky2.adapters.groupTablaAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
+
 public class GroupFragmentList extends Fragment {
 
     RecyclerView MainTabla;
     groupTablaAdapter groupTablaAdapter;
 
-    List<Group> groupList;
+    static List<Group> groupList;
+
+    FloatingActionButton addGroup;
+
+    static boolean editMode;
+
+    static Group groupToEdit;
+
+    static int elementPosition;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -51,6 +62,17 @@ public class GroupFragmentList extends Fragment {
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(MainTabla);
 
+        addGroup = root.findViewById(R.id.fabGroup);
+
+        addGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editMode = false;
+                GroupFragment groupFragment = new GroupFragment();
+                groupFragment.setTargetFragment(GroupFragmentList.this,1);
+                groupFragment.show(getFragmentManager(), "GroupFragment");
+            }
+        });
 
         return root;
     }
@@ -86,13 +108,18 @@ public class GroupFragmentList extends Fragment {
                     break;
 
                 case ItemTouchHelper.RIGHT:
-
+                    groupToEdit = groupList.get(position);
+                    editMode = true;
+                    GroupFragment groupFragment = new GroupFragment();
+                    groupFragment.setTargetFragment(GroupFragmentList.this,1);
+                    groupFragment.show(getFragmentManager(), "GroupFragment");
+                    elementPosition = position;
                     break;
 
             }
 
         }
-/*
+
         @Override
         public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
 
@@ -105,7 +132,7 @@ public class GroupFragmentList extends Fragment {
                     .decorate();
 
             super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
-        }*/
+        }
     };
     //TODO Beilleszteni a kódrészleteket a listenerekbe
     /*Csoport törlése
