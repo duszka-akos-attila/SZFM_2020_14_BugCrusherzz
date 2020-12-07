@@ -66,5 +66,29 @@ hibákat tudnak kiszűrni, amely teljes mértékben felhasználó eredetű.
 |Grp-12|Törlés visszavonása gomb|Az alsó értesítés jobb oldalán megjelenik egy Visszavonás gomb|Az alsó értesítés jobb oldalán megjelenik egy Visszavonás gomb|2020.12.07 02:46|Halász Ádám|Sikeres|
 |Grp-13|Visszavonás gomb működése|A visszavonás gomb megnyomásával újra megjelenik a törölt elemünk|A visszavonás gomb megnyomásával újra megjelenik a törölt elemünk|2020.12.07 02:47|Halász Ádám|Sikeres|
 |Grp-14|Sötét mód működése|Sötét módra váltás esetén a csoportlista alkalmazkodik|A lista sötétmódra váltott|2020.12.07 02:53|Halász Ádám|Sikeres|
+|DB-01|Adatbázis elindítása|Az alkalmazás elindításakor elindul az adatbázis|Az adatbázis elindult | 2020.12.07 10:20|Rácz András|Sikeres|
+|DB-02|Bevétel tábla létrehozása|Az adatbázis elindulásakor létrejön a bevételek tábla|A tábla létrejött|2020.12.07 10:20|Rácz András|Sikeres|
+|DB-03|Kiadás tábla létrehozása|Az adatbázis elindulásakor létrejön a kiadások tábla|A tábla létrejött|2020.12.07 10:20|Rácz András|Sikeres|
+|DB-04|Csoportok tábla létrehozása|Az adatbázis elindulásakor létrejön a csoportok tábla|A tábla létrejött|2020.12.07 10:20|Rácz András|Sikeres|
+|DB-05|Beillesztési folyamat|Az entitások beillesztése az adabázis táblába|Az entitás belekerül a táblába|2020.12.07 10:22|Rácz András|Sikeres|
+|DB-06|Frissítési folyamat|Az entitások frissítése az adabázis táblában|Az entitás frissült a táblában|2020.12.07 10:22|Rácz András|Sikeres|
+|DB-07|Törlési folyamat|Az entitások törlési az adabázis táblából|Az entitás törlésre került a táblából|2020.12.07 10:22|Rácz András|Sikeres|
+|DB-08|Minden elem lekérdezése|Az entitások lekérdezése a táblából|A helyes entitások lettek visszaadva|2020.12.07 10:23|Rácz András|Sikeres|
+|DB-09|Elemek lekérdezése feltételekkel|Az entitások lekérdezése a megadott feltételek alapján|A helyes entitások lettek visszaadva|2020.12.07 10:23|Rácz András|Sikeres|
+|DB-10|Lekérdezések a kiadás táblán|Az előbbi lekérdezések tesztelése a kiadás táblán is| A helyes entitások lettek visszaadva| 2020.12.07 10:24|Rácz András|Sikeres
+|DB-11|Lekérdezések a csoportok táblán|Az előbbi lekérdezések tesztelése a csoportok táblán is| A helyes entitások lettek visszaadva| 2020.12.07 10:24|Rácz András|Sikeres
+|MR-01|Bevételek listázás|A manager meghívja a dao megfelelő metódusát| A megfelelő metódus lett meghívva| 2020.12.07 10:25|Rácz András|Sikeres
+|MR-02|Kiadások listázás|A manager meghívja a dao megfelelő metódusát| A megfelelő metódus lett meghívva| 2020.12.07 10:25|Rácz András|Sikeres
+|MR-03|Csoportok listázás|A manager meghívja a dao megfelelő metódusát| A megfelelő metódus lett meghívva| 2020.12.07 10:25|Rácz András|Sikeres
+|MR-04|Bevétel hozzáadása| A manager meghívja a dao bevétel hozzáadása metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-05|Kiadás hozzáadása| A manager meghívja a dao kiadás hozzáadása metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-06|Csoport hozzáadása| A manager meghívja a dao csoport hozzáadása metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-07|Csoport Törlése| A manager meghívja a dao csoport törlése metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-08|Csoport Frissítése| A manager meghívja a dao csoport frissítése metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-09|Bevétel Frissítése| A manager meghívja a dao bevétel frissítése metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-10|Bevétel Törlése| A manager meghívja a dao bevétel törlése metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-11|Kiadás Törlése| A manager meghívja a dao kiadás törlése metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+|MR-12|Kiadás Frissítése| A manager meghívja a dao kiadás frissítése metódusát| A megfelelő metódus kerül meghívásra| 2020.12.07 10:28|Rácz András|Sikeres
+
 ||||||||
 
