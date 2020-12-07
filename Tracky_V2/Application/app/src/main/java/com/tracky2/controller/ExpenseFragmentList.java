@@ -40,7 +40,7 @@ public class ExpenseFragmentList extends Fragment {
 
     List<String> ExpbalanceList;
 
-    List<Expense> expenses;
+    static List<Expense> expenses;
 
     FloatingActionButton addExpense;
     

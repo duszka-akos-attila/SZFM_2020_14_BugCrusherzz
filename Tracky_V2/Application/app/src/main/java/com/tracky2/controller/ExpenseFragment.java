@@ -82,6 +82,8 @@ public class ExpenseFragment extends DialogFragment {
                         gId = Manager.findGroupByName(groupTextBox.getText().toString()).getId();
                     }
                     Manager.addExpense((int)Integer.parseInt(amountTextBox.getText().toString()),descriptionTextBox.getText().toString(),gId);
+                    ExpenseFragmentList.expenses.clear();
+                    ExpenseFragmentList.expenses.addAll(Manager.getExpensesDescDate());
                     ExpenseFragmentList.mainExpenseListRecycleAdapter.notifyDataSetChanged();
                 }
 
