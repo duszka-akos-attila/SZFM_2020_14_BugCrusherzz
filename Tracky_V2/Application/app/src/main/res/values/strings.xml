@@ -12,4 +12,6 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="income_del"><u>Törlés</u></string>
+
+    <string name="currency"> HUF</string>
 </resources>

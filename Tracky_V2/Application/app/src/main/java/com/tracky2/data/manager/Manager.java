@@ -37,12 +37,27 @@ public class Manager{
         return db.groupDao().selectAllGroup();
     }
 
+    //----------------------------  ORDERED LISTS -------------------------------
+
+    public static List<Expense> getExpensesDescDate(){
+        return db.expenseDao().selectAllExpenseOBDD();
+    }
+
+    public static List<Income> getIncomesDescDate() {
+        return db.incomeDao().selectAllIncomeOBDD();
+    }
+
     //------------------------------------INCOMES----------------------------
 
 
     public static void addIncome(int amount, String description){
         db.incomeDao().insertIncome(new Income( amount, description, Calendar.getInstance().getTime()));
         //TODO Insert income into remote DB
+    }
+
+
+    public static void addIncome(Income income) {
+        db.incomeDao().insertIncome(income);
     }
 
     public static void deleteIncome(Income income){
@@ -61,6 +76,10 @@ public class Manager{
     public static void addExpense(int amount, String description, int groupId){
         db.expenseDao().insertExpense(new Expense(amount, description, groupId, Calendar.getInstance().getTime()));
         //TODO Insert Expense into remote DB
+    }
+
+    public static void addExpense(Expense expense){
+        db.expenseDao().insertExpense(expense);
     }
 
     public static void deleteExpense(Expense expense){
@@ -92,6 +111,24 @@ public class Manager{
         //TODO Edit Group in remote DB
     }
 
+    public static Group findGroupById(int id){
+        for(Group group : getGroups()){
+            if(group.getId()==id){
+                return group;
+            }
+        }
+        return null;
+    }
+
+    public static Group findGroupByName(String name){
+        for(Group group : getGroups()){
+            if(group.getName().equals(name)){
+                return group;
+            }
+        }
+        return null;
+    }
+
     //--------------------------------------TEMPLATES------------------------
 
     public static void addTemplate(boolean isIncome, int amount, String desc, int groupId){
@@ -117,5 +154,7 @@ public class Manager{
             addExpense(template.getAmount(), template.getDescription(), template.getGroupId());
         }
     }
+
+
 
 }

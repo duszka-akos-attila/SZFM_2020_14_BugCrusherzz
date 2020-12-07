@@ -6,24 +6,32 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/GroupTablaa"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/mainExpenseListRecycleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabGroup"
+        android:id="@+id/addNewExpenseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="64dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/GroupTablaa"
-        app:layout_constraintEnd_toEndOf="@+id/GroupTablaa"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
+        android:focusable="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        app:tint="@color/design_default_color_on_primary"
+        app:fabSize="mini"
+        android:contentDescription="Ú kiadás" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

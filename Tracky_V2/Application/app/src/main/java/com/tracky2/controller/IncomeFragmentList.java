@@ -1,63 +1,167 @@
 package com.tracky2.controller;
 
+import android.content.Context;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.tracky2.MainActivity;
 import com.tracky2.R;
+import com.tracky2.adapters.mainIncomeListRecycleAdapter;
+import com.tracky2.data.Income;
 import com.tracky2.data.manager.Manager;
-import com.tracky2.incTablaAdapter;
-import com.tracky2.mainTablaAdapter;
+import com.tracky2.expTablaAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 public class IncomeFragmentList extends Fragment {
 
+    public static mainIncomeListRecycleAdapter mainIncomeListRecycleAdapter;
     RecyclerView MainTabla;
-    incTablaAdapter IncTablaAdapter;
+    expTablaAdapter expTablaAdapter;
 
-    List<String> incbalanceList;
+    //New income list
+    RecyclerView mainIncomeListRecycleView;
+
+    List<String> ExpbalanceList;
+
+    static List<Income> incomes;
+
+    FloatingActionButton addIncome;
+
+    static boolean editMode;
+
+    static Income incomeToEdit;
+
+    static int elementPosition;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_incomelist, container, false);
+        View root = inflater.inflate(R.layout.fragment_incomelist2, container, false);
 
-        incbalanceList = new ArrayList<>();
+        /*
+
+        ExpbalanceList = new ArrayList<>();
         //balanceList = Manager.lastBalanceModificaitons(20,"-","auto");
-        MainTabla = root.findViewById(R.id.mainTablaInc);
-        IncTablaAdapter = new incTablaAdapter(incbalanceList);
+        MainTabla = root.findViewById(R.id.mainTablaExp);
+        expTablaAdapter = new expTablaAdapter(ExpbalanceList);
 
-/*
-        FloatingActionButton fab = root.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        MainTabla.setAdapter(expTablaAdapter);
+
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(MainTabla.getContext(), DividerItemDecoration.VERTICAL);
+        MainTabla.addItemDecoration(dividerItemDecoration);
+
+
+         */
+
+
+        //New income list
+        incomes = Manager.getIncomesDescDate();
+        mainIncomeListRecycleView = root.findViewById(R.id.mainIncomeListRecycleView);
+        mainIncomeListRecycleAdapter = new mainIncomeListRecycleAdapter(incomes);
+        mainIncomeListRecycleView.setAdapter(mainIncomeListRecycleAdapter);
+        DividerItemDecoration decoration = new DividerItemDecoration(mainIncomeListRecycleView.getContext(), DividerItemDecoration.VERTICAL);
+        mainIncomeListRecycleView.addItemDecoration(decoration);
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(mainIncomeListRecycleView);
+
+
+        addIncome = root.findViewById(R.id.addNewIncomeButton);
+
+        addIncome.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Fragment fragment = new IncomeFragment();
-                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.income_frag, fragment);
+            public void onClick(View v) {
+                editMode = false;
+                IncomeFragment incomeFragment = new IncomeFragment();
+                incomeFragment.setTargetFragment(IncomeFragmentList.this,1);
+                incomeFragment.show(getFragmentManager(), "IncomeFragment");
             }
-        });*/
+        });
 
-
-        MainTabla.setAdapter(IncTablaAdapter);
 
         return root;
 
     }
 
-    //TODO kódrészlet beillesztése a listenerekbe
+    Income deletedIncome;
 
-    /*Bevétel törlése kódrészlet
-        Lekérni a bevétel objektumot és
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+            final int position = viewHolder.getAdapterPosition();
+
+            switch (direction){
+                case ItemTouchHelper.LEFT:
+                    deletedIncome = incomes.get(position);
+                    Manager.deleteIncome(incomes.get(position));
+                    incomes.remove(position);
+                    mainIncomeListRecycleAdapter.notifyItemRemoved(position);
+                    Snackbar.make(mainIncomeListRecycleView, "A "+deletedIncome.getDescription()+" leírású elem törölve lett.",Snackbar.LENGTH_LONG)
+                            .setAction("Visszavonás", new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    incomes.add(position, deletedIncome);
+                                    mainIncomeListRecycleAdapter.notifyItemInserted(position);
+                                    Manager.addIncome(deletedIncome);
+                                }
+                            }).show();
+                    break;
+
+                case ItemTouchHelper.RIGHT:
+                    incomeToEdit = incomes.get(position);
+                    editMode = true;
+                    IncomeFragment incomeFragment = new IncomeFragment();
+                    incomeFragment.setTargetFragment(IncomeFragmentList.this,1);
+                    incomeFragment.show(getFragmentManager(), "IncomeFragment");
+                    elementPosition = position;
+                    break;
+
+            }
+
+        }
+
+        @Override
+        public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+
+            new RecyclerViewSwipeDecorator.Builder(MainActivity.context, c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+                    .addSwipeLeftBackgroundColor(ContextCompat.getColor(MainActivity.context,R.color.red))
+                    .addSwipeLeftActionIcon(R.drawable.ic_baseline_delete_24)
+                    .addSwipeRightBackgroundColor(ContextCompat.getColor(MainActivity.context,R.color.blue))
+                    .addSwipeRightActionIcon(R.drawable.ic_baseline_edit_24)
+                    .create()
+                    .decorate();
+
+            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+        }
+    };
+
+    //TODO Ezeket a függvényeket beilleszteni a listenerekbe
+
+    /*Kiadás törlése kódrészlet
+        Lekérni a kiadás objektumot és
         Manager.deleteIncome(income);
         Toast.makeText(getContext(), "Sikeres törlés!", Toast.LENGTH_SHORT).show();
      */

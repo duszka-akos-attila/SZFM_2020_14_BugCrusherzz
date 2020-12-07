@@ -19,4 +19,12 @@ public class DateConverter {
     public static String formatDate(Date date){
         return new SimpleDateFormat("yyyy.MM.dd hh:mm").format(date);
     }
+
+    public static String formatDateGetMonth(Date date){
+        return new SimpleDateFormat("MM.dd").format(date);
+    }
+
+    public static String formatDateGetYear(Date date){
+        return new SimpleDateFormat("yyyy").format(date);
+    }
 }

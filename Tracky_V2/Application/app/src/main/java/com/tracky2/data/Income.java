@@ -4,8 +4,14 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.tracky2.R;
+
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import static com.tracky2.MainActivity.context;
+
 @Entity
 public class Income {
 
@@ -66,14 +72,12 @@ public class Income {
         return date;
     }
 
-    public String[] toStringArray(String noGroupSing, String dateFormat){
+    public String[] toStringArray(){
         return new String[]{
-                String.valueOf(id),
+                DateConverter.formatDateGetMonth(date),
+                new DecimalFormat("+ ###,###,### "+context.getString(R.string.currency))
+                        .format(amount),
                 description,
-                new SimpleDateFormat(dateFormat).format(date),
-                noGroupSing,
-                String.valueOf(amount),
-                "t"
         };
     }
 }

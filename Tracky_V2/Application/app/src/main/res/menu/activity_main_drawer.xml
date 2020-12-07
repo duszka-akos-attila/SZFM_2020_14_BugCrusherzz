@@ -14,11 +14,8 @@
             android:id="@+id/nav_expenselist"
             android:title="Kiadások" />
         <item
-            android:id="@+id/nav_group"
-            android:title="Csoportok" />
-        <item
             android:id="@+id/nav_grouplist"
-            android:title="Csoportlista" />
+            android:title="Csoportok" />
         <!-- <item
              android:id="@+id/nav_template"
              android:title="Sablonok" /> -->
