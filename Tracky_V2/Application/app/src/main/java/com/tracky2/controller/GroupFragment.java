@@ -37,7 +37,7 @@ public class GroupFragment extends DialogFragment {
             submit = root.findViewById(R.id.groupFragmentSubmit);
 
 
-            if(ExpenseFragmentList.editMode){
+            if(GroupFragmentList.editMode){
                 title.setText("Kiadás szerkesztése");
                 descriptionTextBox.setText(GroupFragmentList.groupToEdit.getName());
                 groupTextBox.setText(Manager.findGroupById(ExpenseFragmentList.expenseToEdit.getGroupId()).getName());
@@ -54,7 +54,7 @@ public class GroupFragment extends DialogFragment {
                 @Override
                 public void onClick(View v) {
 
-                    ExpenseFragmentList.mainExpenseListRecycleAdapter.notifyItemChanged(ExpenseFragmentList.elementPosition);
+                    GroupFragmentList.groupTablaAdapter.notifyItemChanged(GroupFragmentList.elementPosition);
 
                     getDialog().dismiss();
                 }
@@ -64,12 +64,10 @@ public class GroupFragment extends DialogFragment {
                 @Override
                 public void onClick(View v) {
 
-                    if(ExpenseFragmentList.editMode){
-                        ExpenseFragmentList.expenseToEdit.setDescription(descriptionTextBox.getText().toString());
-                        ExpenseFragmentList.expenseToEdit.setAmount((int)Integer.parseInt(amountTextBox.getText().toString()));
-                        ExpenseFragmentList.expenseToEdit.setGroup(Manager.findGroupByName(groupTextBox.getText().toString()));
-                        Manager.editExpense(ExpenseFragmentList.expenseToEdit);
-                        ExpenseFragmentList.mainExpenseListRecycleAdapter.notifyItemChanged(ExpenseFragmentList.elementPosition);
+                    if(GroupFragmentList.editMode){
+                        GroupFragmentList.groupToEdit.setName(descriptionTextBox.getText().toString());
+                        Manager.editGroup(GroupFragmentList.groupToEdit);
+                        GroupFragmentList.groupTablaAdapter.notifyItemChanged(GroupFragmentList.elementPosition);
                     }
                     else{
                         int gId=0;

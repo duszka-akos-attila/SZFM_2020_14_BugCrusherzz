@@ -31,7 +31,7 @@ import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 public class GroupFragmentList extends Fragment {
 
     RecyclerView MainTabla;
-    groupTablaAdapter groupTablaAdapter;
+    public static groupTablaAdapter groupTablaAdapter;
 
     static List<Group> groupList;
 
