@@ -71,10 +71,13 @@ public class HomeFragment extends Fragment {
 
         MainTabla.setAdapter(MainTablaAdapter);
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
-        dividerItemDecoration.setDrawable(getContext().getResources().getDrawable(R.drawable.dividerdec));
-        MainTabla.addItemDecoration(dividerItemDecoration);
+        //DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        //dividerItemDecoration.setDrawable(getContext().getResources().getDrawable(R.drawable.dividerdec));
+        //MainTabla.addItemDecoration(dividerItemDecoration);
 
+
+        DividerItemDecoration decoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        MainTabla.addItemDecoration(decoration);
 
         //ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         //itemTouchHelper.attachToRecyclerView(MainTabla);

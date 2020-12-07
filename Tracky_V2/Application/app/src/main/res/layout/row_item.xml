@@ -20,11 +20,11 @@
         android:textColor="#d93f3f"
         app:layout_constraintBottom_toBottomOf="@+id/nev_textView"
         app:layout_constraintEnd_toStartOf="@+id/nev_textView"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/nev_textView"
@@ -43,7 +43,7 @@
         android:id="@+id/datum_textView"
         android:layout_width="62dp"
         android:layout_height="26dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="16dp"
         android:gravity="bottom"
         android:text="05.20"
         android:textAlignment="center"
