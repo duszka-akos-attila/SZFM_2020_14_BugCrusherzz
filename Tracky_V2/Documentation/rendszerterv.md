@@ -68,6 +68,18 @@
 
 ## Projekt terv
 
+ 1. A programunk kezdőscreenjének megcsinálása, ebbe beleértve a fő táblázatunkat ami tartalmazni fogja a 5-5 legfrisebb kiadásunkat és bevételünket. És az egyenlegünk.
+ 2. Megcsinálni a programunkhoz tartózó fájlrendszert ebbe:
+      * Tudjunk írni a hozzáadás gomb segítségével
+      * Beolvasni a fájlban lévő adatokat és beilleszteni a táblázatunkba
+      * Szerkeszteni a fájlban / táblázatban lévő adatokat
+      * Törölni adatokat
+3. Az adattípusok elkülönítése.
+4. Az oldalról kijövő menüt, és a menüpontjait. 
+5. Az oldalról kijövő menüről elérhető bevétel és kiadás fül, ahol majd visszamenőleg meglehet tekinteni a kiadásaink és bevételeink. Ezeken szerkeszteni, és egy gomb megnyomásával újat hozzáadni.
+6. Rendezés, ezzel együtt típus alapú rendezés, amikor csak egy bizonyos típusú elemeket fog megjeleníteni. Például, csak a office kellékek csoportját, és ezen belül tollak, papír stb.
+7. Tudjuk az adatainkat impotálni és exportálni ezzel biztosítva a mozgathatóságot.
+
 ## Üzleti folyamatok modellje
 **Üzleti szereplők:** Az üzleti szereplők, mostantól *aktorok*: olyan személyek, akik a megrendelő
 cég alkalmazottai és a jövőben az elkészült programot fogják használni az üzleti folyamatok
@@ -268,6 +280,62 @@ a programban minden felhasználó által begépelhető és begépelt szöveges a
 karakter kódolási szabvánnyal kell eltárolni, valamint megjeleníteni. 
 
 ## Funkcionális terv
+|Funkció azonosító|Funkció metódusának neve|Metódus rövid leírása|
+|--|--|--|
+|F-DS-L-01|`save()`|A `save()` metódus az _Android_ beépített adatbázis kezelő rendszerének segítségével elmenti a memóriában lévő adatokat, mint a bevételek, kiadások, sablonok.|
+|F-DS-L-02|`open()`|Az `open()` metódus betölti az adatbázisban lévő adatok azon részét, amelyet a felhasználó aktuálisan használ.|
+|F-DS-L-03|`export()`|Az `export()` metódus kiment minden felhasználó által rögzített adatot egy `.csv` kiterjesztésű fájlba.|
+|F-DS-L-04|`import()`|Az `import()` metódus betölti a megadott `.csv` kiterjesztésű fájlt és amennyiben lehetséges, rögzíti azt az adatbázisban.|
+|DH-01|`addIncome()`|Az `addIncome()` metódus létrehoz egy új `Income` egyedet a felhasználó által megadott adatok alapján.|
+|DH-02|`editIncome()`|Az `editIncome()` metódus felülírja egy már rögzített `Income` egyed  adatait a felhasználó által megadott adatokkal.|
+|DH-03|`deleteIncome()`|A `deleteIncome()` metódus kitörli a megadott `Income` egyedet mind a memóriából, mind az adatbázisokból.|
+|DH-04|`addExpense()`|Az `addExpense()` metódus létrehoz egy új `Expense` egyedet a felhasználó által megadott adatok alapján.|
+|DH-05|`editExpense()`|Az `editExpense()` metódus felülírja egy már rögzített `Expense` egyed  adatait a felhasználó által megadott adatokkal.|
+|DH-06|`deleteExpense()`|A `deleteExpense()` metódus kitörli a megadott `Expense` egyedet mind a memóriából, mind az adatbázisokból.|
+|DH-07|`addGroup()`|Az `addGroup()` metódus létrehoz egy új `Group` egyedet.|
+|DH-08|`editGroup()`|Az `editGroup()` metódus módosít egy meglévő `Group` egyedet, a felhasználó által megadott adatokkal.|
+|DH-09|`deleteGroup()`|A `deleteGroup()` metódus törli a felhasználó által megadott `Group` egyedet.|
+|F-DA-01|`balance()`|A `balance()` metódus kiszámítja a bevételek és kiadások összegét.|
+|F-DA-02|`listIncomeByTime()`|A `listIncomeByTime()` kilistázza az összes bevételt idő szerinti szűrésekkel.|
+|F-DA-03|`listExpenseByTime()`|A `listExpenseByTime()` kilistázza az összes kiadást idő szerinti szűrésekkel.|
+|F-DA-04|`listExpenseByGroup()`|A `listExpenseByGroup()` kilistázza az összes kiadást csoportok szerinti szűrésekkel.|
+|F-DA-05|`summarize()`|A `summarize()` metódus információkat állíŧ elő a felhasználó által rögzített adatokból.|
+|F-TH-01|`addExpenseTemplate()`|Az `addExpenseTemplate()` metódus létrehoz egy `Template` típusú egyedet a felhasználó által megadott adatokból.|
+|F-TH-02|`editExpenseTemplate()`|Az `editExpenseTemplate()` metódus módosít egy meglévő `Template` egyedet, a felhasználó által megadott adatokkal.|
+|F-TH-03|`deleteExpenseTemplate()`|A `deleteExpenseTemplate()` metódus törli a megadott `Template` egyedet.|
+|F-TH-04|`addIncomeTemplate()`|Az `addIncomeTemplate()` metódus létrehoz egy `Template` típusú egyedet a felhasználó által megadott adatokból.|
+|F-TH-05|`editIncomeTemplate()`|Az `editIncomeTemplate()` metódus módosít egy meglévő `Template` egyedet, a felhasználó által megadott adatokkal.|
+|F-TH-06|`deleteIncomeTemplate()`|A `deleteIncomeTemplate()` metódus törli a megadott `Template` egyedet.|
+|B-UH-01|`register()`|A `register()` metódus létrehoz egy új felhasználói fiókot a távoli szerveren.|
+|B-UH-02|`deleteAccount()`|A `deleteAccount()` metódus törli a felhasználó fiókját a távoli szerverről.|
+|B-UH-03|`login()`|A `login()` metódus segítségével a felhasználó bejelentkeztetheti az eszközét a távoli szerverre.|
+|B-UH-04|`logout()`|A `logout()` metódus segítségével a felhasználó kijelentkezhet a távoli szerverről.|
+|B-UH-05|`changePassword()`|A `changePassword()` metódus lehetőséget ad a felhasználói fiók jelszavának módosítására.|
+|B-UH-06|`changeMail()`|A `changeMail()` metódus segítségével a felhasználó megváltoztathatja a regisztrált felhasználói fiókjához csatolt email címét.|
+|B-DS-S-05|`sendDataSave()`|A `sendDataSave()` metódus segítségével a lokális eszköz el tudja küldeni a saját adatbázisában tárolt adatokat a szervernek.|
+|B-DS-S-06|`getDataSave()`|A `getDataSave()` metódus segítségével a lokális eszköz le tudja kérni a távoli szerveren tárolt adatokat.|
+
+### A Főmenü felépítése
+
+A Főmenü felépítése az alábbi képen látható, ahol a téglalap alakú elemek a menüpontokat reprezentálják, az ovális alakú elemek pedig az adott menüpont által elérhető oldalon található funkciókat jelenítik meg.
+
+![A Főmenü felépítésének ábrája](images/menu_diagram.png)
+
+### Képernyő tervek
+
+-   **Főképernyő:**
+
+Lejjebb látható a főképernyő terve. A főképernyőn látható a felhasználó aktuális egyenlege,
+valamint néhány a legutolsó egyenleg változások közül.
+
+![A Főképernyő látvány terve](images/home.png)
+
+-   **Főmenü:**
+
+Alább a főmenü terve látható. A fenti képen látható menü gomb (3 vonal) megnyomása után jelenik meg
+a képernyő bal oldalán egy lap, amelyen az egyes menüpontok között tudunk navigálni.
+
+![A Főmenü látvány terve](images/home_menu.png)
 
 ## Fizikai környezet
 - Az alkalmazás androidos mobiltelefonokra, java nyelven kell, hogy elkészüljön, mivel ez a nyelv a legkedveltebb a mobil alkalmazások készítéséhez.
@@ -422,8 +490,66 @@ Ezt az öt komponenset, a tagjait, illetve a kapcsolatait az alábbi ábrán, il
 
 ## Implementációs terv
 
+Az implementáció Android Studioba fog történni, Java nyelven. A program cross platform lesz de elsődlegesen androidra lesz a kifejlesztés. Az előbb specifikált funkcionális tervből és képernyőtervből fogunk főleg dolgozni minden más mellett. Elsősorban megtervezzük a programunk alap kinézetét, vagyis a fő ablakunkat, majd erre pakoljuk fel az táblánkat és az első gombokat. Programkódba létrehozzuk ezek gombok működését, és a táblázathoz való metódusokat a funkcionális tervben leírtak alapján. Ha ez megvan tudjuk tesztelni az alapot, és ezt a ciklust folytatva implementálni a többi hiányos elemet is, mindpéldául az oldalsó menü, vagy a keresés gomb / funkció.
+
+
 ## Tesztterv
+
+A projectunket az elejétől kezdve tesztelgetni fogjuk, mint ahogy ezt az implementációs tervben is közölve lett. 
+* Először is amint megvan a programunk legalapja, vagyis a legminimálisabb interfacet fogjuk tesztelni. Ez az elején csak azt fogja jelenteni, hogy a fő ablakban a tábla rendesen megjelenik-e az egyenlegünkkel együtt.. 
+* Majd ezután megcsináljuk az oldalsó menüt, amit a főképen egy gomb megnyomásával fogunk előhozni, de minden alfül alól is majd elérhető lesz.
+* Az egyenlegünket is teszteljük majd, hozzáadunk és kivonunk belőle, nézve hogy jól működik-e.
+* Az oldalsó menü megjelenítése után, az adatbázist fogjuk tesztelni a táblázathoz, és annak megjelenését. Azt szeretnénk hogy:
+    * Hozzá tudjunk adni egy adatot a fájlunkba
+        * Ez az adat formázva legyen, hogy megkönnyítse a későbbiekben a felolvasását. Például, hogy a hozzáadott adat az egy kiadás vagy bevétel, mennyi az adatunk értéke stb.
+        * Ezeken az adatokon változtatni, szerkeszteni abban az esetben ha a felhasználó hibázott volna a bevitele alatt.
+        * Adatok törlése a táblázatból
+    * Ha a fájlrendszerünk jól működik és sikeresen tudunk írni, szerkeszteni bele, akkor a fájlból való olvasást, vagyis, hogy a programunknak sikerül-e ezt a fájlt értelmezni-e. 
+        * Ha a beolvasásunk sikeres és a programunknak sikerül értelmeznie és beolvasnia a fájlból akkor ezt eltárolni egy váltózóba. 
+        * Ha megvan a váltózónk ami tartalmazza az adatainkat akkor beillesztjük őket a táblázatunkba, és leteszteljük, hogy a táblázatunk normális jeleníti-e meg az általunk belerakott adatokat.
+* Az oldalsó menüsávunkat is tesztelni szeretnénk majd, ezt úgy fogjuk megtenni, hogy a menüpont elemeit megnézzük, hogy működnek-e és előhozzák-e a dolgokat amiket kell nekik.
+* A statisztikánkat tesztelni, az előbb táblába, változóba illesztett adatokkal fogjuk. Először is leteszteljük, hogy egy hónapos statisztikát meg tudunk-e jeleníteni, és rendesen mutatja-e a kiadási / bevételi csoportokat.
+* A táblázatba illesztett adatok alapján szűrűnk, hogy csak éppen egy csoport termékeit mutassa
+
 
 ## Telepítési terv
 
+A programunk telepítése nagyon egyszerű lesz, és nem lesz szükségünk semmilyen bővítményre, vagy akarmi másra a futtatáshoz. 
+Olyan lesz mintha csak az appstore-ol töltöttük volna le!
+
 ## Karbantartási terv
+
+A _Tracky_ egy mobilapplikáció, így nem igényelhet fizikai karbantartást, mivel túl sok felhasználója
+van, szerte a világban. Azonban a felhasználótól szintén nem várható el a karbantartás, mert az
+jelentősen rontaná a felhasználói élményt. A megoldás az, hogy a karbantartást maga a fejlesztői
+csapat, a _BugCrusherzz_ végzi. A karbantartás módja, hasonlóan sok más alkalmazáshoz, rendszer
+frissítések segítségével történik. 
+
+###  _Mender_
+
+Az applikáció egy sajátos rendszert használ, a _Mender_ technológiát. Ez a rendszer lehetővé
+teszi az új funkciók beépítését, nem kívánt funkciók eltávolítását, valamint a meglévő funkciók
+javítását, mindezt a felhasználói visszajelzések alapján.
+
+A frissítések úgynevezett _Mending package_-ekkel történik. Ezek olyan komplex adatcsomagok,
+amelyek tartalmazhatnak új modulokat, valamint frissítéseket a már korábban telepített modulokhoz.
+
+A felhasználói visszajelzéseket, valamint az alkalmazás statisztikai elemzéseket követően a fejlesztői
+csapat elkészíti az applikáció új verzióját, amelyről a felhasználó értesítést kap. Ezt követően dönthet
+úgy a felhasználó, hogy módosítja az applikációt.
+
+Amikor a felhasználó úgy dönt, hogy frissít, lehetősége van több fajta csomag közül választani. Megadhatja
+hogy semmilyen frissítés ne történjen, csak biztonsági frissítés történjen, vagy a rendelkezésre álló modulok
+közül szeretne telepíteni. Miután a felhasználó kiválasztotta a frissítés formáját, a többit a rendszer
+automatikusan elvégzi. Természetesen az alapértelmezett beállítások mellett a felhasználónak nem kell
+ezzel foglalkoznia, ugyanis az az átlag felhasználó számára legjobb módon van bekonfigurálva a rendszer.
+
+### Karbantartási adatok
+
+- __Karbantartást végzi:__ A fejlesztői csapat.
+
+- __Karbantartás periódusa:__ A fejlesztő csapat dinamikusan változtatja, azonban 1 és 8 hét között.
+
+- __Karbantartás feladata:__ Új funkciók bevezetése, korábbi funkciók javítása és a biztonság növelése.
+
+
