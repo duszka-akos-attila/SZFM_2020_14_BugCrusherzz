@@ -43,12 +43,21 @@ public class Manager{
         return db.expenseDao().selectAllExpenseOBDD();
     }
 
+    public static List<Income> getIncomesDescDate() {
+        return db.incomeDao().selectAllIncomeOBDD();
+    }
+
     //------------------------------------INCOMES----------------------------
 
 
     public static void addIncome(int amount, String description){
         db.incomeDao().insertIncome(new Income( amount, description, Calendar.getInstance().getTime()));
         //TODO Insert income into remote DB
+    }
+
+
+    public static void addIncome(Income income) {
+        db.incomeDao().insertIncome(income);
     }
 
     public static void deleteIncome(Income income){
@@ -145,5 +154,7 @@ public class Manager{
             addExpense(template.getAmount(), template.getDescription(), template.getGroupId());
         }
     }
+
+
 
 }
